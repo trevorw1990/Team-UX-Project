@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 // const favicon = require('serve-favicon');
 const logger = require('morgan');
+const projectController = require('./routes/api/project')
 
 
 require('dotenv').config();
@@ -25,6 +26,7 @@ app.use(require('./config/checkToken'));
 
 // routes 
 
+app.use('/api/project', projectController);
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
