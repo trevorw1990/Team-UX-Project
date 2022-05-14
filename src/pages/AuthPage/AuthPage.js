@@ -2,7 +2,7 @@
  
 import { useState } from "react";
 
-export default function AuthPage({ setUser }){
+export default function AuthPage(){
     
     return(
         <main>
