@@ -18,7 +18,16 @@ const userSchema = new Schema({
         trim: true,
         minLength: 3,
         required: true
-    }
+    },
+    country: {
+        type: String,
+        required: true
+    },
+    usState: {
+        type: String,
+        required: true
+    },
+    roles: Array
 }, {
     timestamps: true,
     toJSON: {
