@@ -1,6 +1,6 @@
 import { signUp } from '../../utilities/api/users/users-service'
 import { useState } from 'react'
-import { statesList, artistRoles } from '../utilities/list-items/list-items'
+import { statesList, artistRoles } from '../../utilities/list-items/list-items'
 
 export default function SignUpForm({ props }) {
    
