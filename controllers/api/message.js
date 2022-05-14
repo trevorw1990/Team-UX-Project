@@ -1,8 +1,8 @@
-const Messages = require('../../models/message')
+const Message = require('../../models/Message')
 //get 
 
 const getMessage = (req,res)=>{
-    Messages.find({}, (err, foundMessage) => {
+    Message.find({}, (err, foundMessage) => {
         if (!err) {
           res.status(200).json(foundMessage)
         } else {
@@ -15,7 +15,7 @@ const getMessage = (req,res)=>{
 const setMessage = async (req,res)=>{
     try {
         const { body } = req
-        const createdMessage = await Messages.create(body)
+        const createdMessage = await Message.create(body)
         res.status(200).json({ message: "message sent", createdMessage })
     } catch (error) {
         res.status(400).json({ err: error.message })
@@ -27,7 +27,7 @@ const setMessage = async (req,res)=>{
 
 const updateMessage= (req,res)=>{
     const {body} = req 
-    Messages.findByIdAndUpdate(req.params.id, body,{new: true}, (err, updatedMessage) => {
+    Message.findByIdAndUpdate(req.params.id, body,{new: true}, (err, updatedMessage) => {
         if (!err) {
           res.status(200).json(updatedMessage)
         } else {
@@ -38,7 +38,7 @@ const updateMessage= (req,res)=>{
 //getProject
 
 const deleteMessage = (req,res)=>{
-    Messages.findByIdAndDelete(req.params.id, (err)=>{
+    Message.findByIdAndDelete(req.params.id, (err)=>{
         if (!err) {
             res.status(200).json({message: "Deleted Message"})
           } else {
@@ -48,7 +48,7 @@ const deleteMessage = (req,res)=>{
 }
 
 const showMessage= (req,res)=>{
-    Messages.findById(req.params.id, (err, message)=>{
+    Message.findById(req.params.id, (err, message)=>{
         if (!err) {
             res.status(200).json({message:'showing the message', message})
           } else {
