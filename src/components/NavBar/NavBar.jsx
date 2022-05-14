@@ -3,7 +3,7 @@ import React from "react";
 const NavBar = () => {
     <div className="footer">
         <button>
-            <img src={logo} alt="ProjectConnect"/> 
+            <img src='/images/Logo/Project-Connect.png' alt="ProjectConnect"/> 
         </button>
         <button>
             Log In    
