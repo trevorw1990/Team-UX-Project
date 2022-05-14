@@ -21,21 +21,20 @@ export default function SignUpForm({ props }) {
     const handleChange = (event) => {
         setFormData({...formData, [event.target.name]: event.target.value})
         if(event.target.type === 'password') {
-            setDisableSignUpBtn(formData.password === formData.confirm )   
+            setDisableSignUpBtn(formData.password !== formData.confirm )   
         }
     }
 
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-            const formData = {...this.state}
             delete formData.error
             delete formData.confirm
             const user = await signUp(formData)
             this.props.setUser(user)
             // alert(JSON.stringify(formData)) // print sign up state var to the screen
         } catch (error) {
-            this.setState({error: 'Sign Up Failed'})
+            console.log(error)
         }
     }
 
@@ -79,7 +78,7 @@ export default function SignUpForm({ props }) {
                         ))}   
                     </select>
                     <label>Or enter a zip code</label>
-                    <input type="zipCode" name="zipCode" value={formData.zipCode} onChange={handleChange} required />
+                    <input type="text" name="zipCode" value={formData.zipCode} onChange={handleChange} required />
                     <br/>
 
                     {
