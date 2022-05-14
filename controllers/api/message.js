@@ -1,4 +1,4 @@
-const Messages = require('../../models/message')
+const Messages = require('../../models/Message')
 //get 
 
 const getMessage = (req,res)=>{
