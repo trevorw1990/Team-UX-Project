@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    background-color: #202020;
+}
+
+
+.body_1 {
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 16pt;
+    font-weight: 700;  
+  }
+
+.body_1 button {
+    font-weight: 400;
+}
+
+
+
+.body_2 {
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 14pt;
+    font-weight: 700;
+  }
+
+
+  
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 48pt;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 32pt;
+    font-weight: 400;;
+}
