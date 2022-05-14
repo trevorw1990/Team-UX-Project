@@ -52,7 +52,7 @@ const NavBar = (props) => {
         </form>
       </Modal>
         <button>
-            <img src={logo} alt="ProjectConnect"/> 
+            {/* <img src={logo} alt="ProjectConnect"/>  */}
         </button>
         <button>
             <Link to='/signup'>Sign Up</Link>
