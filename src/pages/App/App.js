@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {Routes, Route} from 'react-router-dom'
+import AuthPage from '../AuthPage/AuthPage';
 import HomePage from '../Homepage';
 
 export default function App() {
@@ -18,7 +19,7 @@ export default function App() {
         
         </>
         :
-        <Route path='/' element={<HomePage/>}/>
+        <Route path='/' element={<AuthPage setUser={setUser}/>}/>
 
       }
 
