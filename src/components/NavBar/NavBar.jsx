@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
+import { useState,useEffect } from 'react';
+
 const customStyles = {
     content: {
       top: '50%',
@@ -13,52 +13,55 @@ const customStyles = {
     },
 };
 
-const NavBar = (props) => {
+export default function NavBar(props){
     let subtitle;
-  const [modalIsOpen, setIsOpen] = useState(false);
+    const [modalIsOpen, setIsOpen] = useState(false);
 
-  function openModal() {
-    setIsOpen(true);
-  }
+    function openModal() {
+        setIsOpen(true);
+    }
 
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    // subtitle.style.color = '#f00';
-  }
+    function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        // subtitle.style.color = '#f00';
+    }
 
-  function closeModal() {
-    setIsOpen(false);
-  }
-    <div className="header">
-        <button onClick={openModal}>Log In</button>
-      <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Log into your Project Connect account</h2>
-        <div>I am a modal</div>
-        <form>
-            <label>Email Adress
-                <input />
-            </label>
-            <label>Password
-                <input type='password' />
-            </label>
-            <button>Log In</button>
-            <div>Don't have an account?<Link to='/signup'>Sign Up</Link></div>
-        </form>
-      </Modal>
-        <button>
+    function closeModal() {
+        setIsOpen(false);
+    }
+
+    return (
+    <div className="navBar">
+
+        <button className='navbar-logo'>
             <img src='/images/Logo/Project-Connect.png' alt="ProjectConnect"/> 
         </button>
+
+        <button onClick={openModal}>Log In</button>
+        <Modal
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            style={customStyles}
+            contentLabel="Example Modal"
+            >
+            <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Log into your Project Connect account</h2>
+            <form>
+                <label>Email Adress
+                    <input />
+                </label>
+                <label>Password
+                    <input type='password' />
+                </label>
+                <button>Log In</button>
+                <div>Don't have an account?<Link to='/signup'>Sign Up</Link></div>
+            </form>
+        </Modal>
+        
         <button>
             <Link to='/signup'>Sign Up</Link>
         </button>
+        
     </div>
+    )
 }
-
-
-export default NavBar;
