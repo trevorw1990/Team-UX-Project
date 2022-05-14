@@ -5,19 +5,22 @@ import centerImage from "../../../public/images/homepage/Home-Page-Center-image.
 import rightImage from "../../../public/images/homepage/Home-Page-Center-image.png"
 
 
+
 export default function HomePage(){
+   
+
 
     return(
         <main>
-            <NavBar />
+            
 
-            <div>
-                <img src={leftImage} className="rounded float-start" />
-                <img src={centerImage} className="rounded float-center" />
-                <img src={rightImage} className="rounded float-none" />
+            <div className="homepage-images">
+                <img src={leftImage} />
+                <img src={centerImage} />
+                <img src={rightImage}  />
             </div>
 
-            <Footer />
+            
         </main>
     )
 }
