@@ -3,12 +3,8 @@ const Schema = mongoose.Schema;
 
 const projectSchema = new Schema({
     projectName: { type: String, required: true },
-    location: {
-        country: String,
-        city: String,
-        state: String,
-        zipCode: String
-    },
+    state: String,
+    zipCode: String,
     remote: { type: Boolean, default: false },
     projectDescription: { type: String, required: true },
     tags: Array,
