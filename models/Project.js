@@ -1,8 +1,15 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const CollaboratorSchema = require("./CollaboratorSchema");
 
 const projectSchema = new Schema({
     projectName: { type: String, required: true },
+    collaborators: [CollaboratorSchema],
+    organizer: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: true
+    },
     usState: String,
     zipCode: String,
     remote: { type: Boolean, default: false },
