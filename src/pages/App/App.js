@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import {Routes, Route} from 'react-router-dom'
-import AuthPage from '../AuthPage/AuthPage';
 import HomePage from '../Homepage';
 
 export default function App() {
