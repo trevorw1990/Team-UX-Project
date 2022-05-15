@@ -23,9 +23,6 @@ export default function SignUpForm({ user, setUser }) {
 
     const handleChange = (event) => {
         setFormData({...formData, [event.target.name]: event.target.value})
-        // if(event.target.type === 'password') {
-        //     setDisableSignUpBtn(formData.password !== formData.confirm )   
-        // }
     }
 
     const handleSubmit = async (event) => {
@@ -40,7 +37,6 @@ export default function SignUpForm({ user, setUser }) {
         } catch (error) {
             console.log(error)
         }
-        
     }
 
     const addRole = (e, aRole) => {
@@ -63,48 +59,50 @@ export default function SignUpForm({ user, setUser }) {
 
     return (
         <div className='user-form'>
-            <div className="form-container">
+
+            <div className='form-container'>
                 <form onSubmit={handleSubmit}>
                     <label>First Name</label>
-                    <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
+                    <input type='text' name='firstName' value={formData.firstName} onChange={handleChange} required />
                     <label>Last Name</label>
-                    <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
+                    <input type='text' name='lastName' value={formData.lastName} onChange={handleChange} required />
                     <label>Email</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+                    <input type='email' name='email' value={formData.email} onChange={handleChange} required />
                     <label>Password</label>
-                    <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+                    <input type='password' name='password' value={formData.password} onChange={handleChange} required />
                     <label>Confirm Password</label>
-                    <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required />
+                    <input type='password' name='confirm' value={formData.confirm} onChange={handleChange} required />
                     <br/>
 
                     <label>Location</label>
-                    <select name="country" value={formData.country} onChange={handleChange} required >
-                        <option value="United States" >United States</option>   
+                    <select name='country' value={formData.country} onChange={handleChange} required >
+                        <option value='United States' >United States</option>   
                     </select>
-                    <select name="usState" value={formData.usState} onChange={handleChange} required >
+                    <select name='usState' value={formData.usState} onChange={handleChange} required >
                         {statesList.map((usState, index) => (
                             <option value={usState.value} key={index} >{usState.label}</option>
                         ))}   
                     </select>
                     <label>Or enter a zip code</label>
-                    <input type="text" name="zipCode" value={formData.zipCode} onChange={handleChange} required />
+                    <input type='text' name='zipCode' value={formData.zipCode} onChange={handleChange} required />
                     <br/>
 
                     {
                         artistRoles.map((theRole, index) => {
                             return(
                                 <label>
-                                    <input type="checkbox" name="roles" value={theRole.role} key={index} onChange={(e) => addRole(e, theRole.role)}/>
+                                    <input type='checkbox' name='roles' value={theRole.role} key={index} onChange={(e) => addRole(e, theRole.role)}/>
                                 {theRole.role}</label>
                             )
                         })
                     }
                     <br/>
 
-                    <button type="submit" disabled={disableSignUpBtn}>SIGN UP</button>           
+                    <button type='submit' disabled={disableSignUpBtn}>SIGN UP</button>           
                 </form>
             </div>
-            <p className="error-message">&nbsp;{formData.error}</p>
+
+            <p className='error-message'>&nbsp;{formData.error}</p>
         </div>
     )
 }
