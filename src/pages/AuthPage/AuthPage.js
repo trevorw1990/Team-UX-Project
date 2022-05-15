@@ -6,7 +6,7 @@ export default function AuthPage({ user, setUser }){
     return(
         <main>
             <div>
-           <SignUpForm />
+                <SignUpForm user={user} setUser={setUser} />
             </div>
 
         </main>

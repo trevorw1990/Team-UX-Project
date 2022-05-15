@@ -1,8 +1,9 @@
 import { signUp } from '../../utilities/api/users/users-service'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { statesList, artistRoles } from '../../utilities/list-items/list-items'
+import { useNavigate } from 'react-router-dom'
 
-export default function SignUpForm({ props }) {
+export default function SignUpForm({ user, setUser }) {
    
     const [ disableSignUpBtn, setDisableSignUpBtn ] = useState (true)
     const [ formData, setFormData ] = useState({
@@ -18,11 +19,13 @@ export default function SignUpForm({ props }) {
         roles: []
     })
 
+    let navigate = useNavigate()
+
     const handleChange = (event) => {
         setFormData({...formData, [event.target.name]: event.target.value})
-        if(event.target.type === 'password') {
-            setDisableSignUpBtn(formData.password !== formData.confirm )   
-        }
+        // if(event.target.type === 'password') {
+        //     setDisableSignUpBtn(formData.password !== formData.confirm )   
+        // }
     }
 
     const handleSubmit = async (event) => {
@@ -31,11 +34,13 @@ export default function SignUpForm({ props }) {
             delete formData.error
             delete formData.confirm
             const user = await signUp(formData)
-            this.props.setUser(user)
+            setUser(user)
             // alert(JSON.stringify(formData)) // print sign up state var to the screen
+            navigate('/')
         } catch (error) {
             console.log(error)
         }
+        
     }
 
     const addRole = (e, aRole) => {
@@ -51,6 +56,10 @@ export default function SignUpForm({ props }) {
             setFormData({...formData, roles: arr})
         }
     }
+
+    useEffect (() => {
+        setDisableSignUpBtn(formData.password !== formData.confirm)
+    },[formData])
 
     return (
         <div className='user-form'>
