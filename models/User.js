@@ -24,6 +24,7 @@ const userSchema = new Schema({
     usState: { type: String, required: true },
     zipCode: { type: String, required: true },
     roles: Array,
+    keywordTags: Array,
     profileImageUrl: String,
     aboutMe: String,
     websiteUrl: String,
