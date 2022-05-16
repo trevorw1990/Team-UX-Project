@@ -16,16 +16,42 @@ export default function SignUpForm({ user, setUser }) {
         country: 'United States',
         usState: '',
         zipCode: '',
-        roles: []
+        roles: [],
+        keywordTags:[],
+        aboutMe: '',
+        websiteUrl: '',
+        instagramUrl: '',
+        pinterestUrl: '',
+        tumblrUrl: ''
     })
+    const [ page, setPage ] = useState(1)
 
     let navigate = useNavigate()
 
     const handleChange = (event) => {
-        setFormData({...formData, [event.target.name]: event.target.value})
-        // if(event.target.type === 'password') {
-        //     setDisableSignUpBtn(formData.password !== formData.confirm )   
-        // }
+        if (event.target.name==='keywordTags') {
+            const val = event.target.value.replace(/^\s+|\s+$/gm,'') // remove spaces from input using regex
+            const arr = [val.split(',')]
+            setFormData({...formData, keywordTags: arr[0]})
+        } else {
+            setFormData({...formData, [event.target.name]: event.target.value})
+        }
+    }
+
+    const profileImageUpload = (event) => {
+
+    }
+
+    const changePage = (action) => {
+        if (action === 'next') {
+            if (page < 3) {
+                setPage(page + 1)
+            }
+        } else {
+            if (page > 1) {
+                setPage(page - 1)
+            }
+        }
     }
 
     const handleSubmit = async (event) => {
@@ -44,9 +70,9 @@ export default function SignUpForm({ user, setUser }) {
     }
 
     const addRole = (e, aRole) => {
-        console.log(e.target.checked)
+        console.log(e.target.checked) // print is checked
         const arr = formData.roles
-        console.log(arr.indexOf(aRole))
+        console.log(arr.indexOf(aRole)) // test if idx is correct
         if (e.target.checked) {
             arr.push(aRole)
             setFormData({...formData, roles: arr})
@@ -65,46 +91,103 @@ export default function SignUpForm({ user, setUser }) {
         <div className='user-form'>
             <div className="form-container">
                 <form onSubmit={handleSubmit}>
-                    <label>First Name</label>
-                    <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
-                    <label>Last Name</label>
-                    <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
-                    <label>Email</label>
-                    <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-                    <label>Password</label>
-                    <input type="password" name="password" value={formData.password} onChange={handleChange} required />
-                    <label>Confirm Password</label>
-                    <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required />
-                    <br/>
-
-                    <label>Location</label>
-                    <select name="country" value={formData.country} onChange={handleChange} required >
-                        <option value="United States" >United States</option>   
-                    </select>
-                    <select name="usState" value={formData.usState} onChange={handleChange} required >
-                        {statesList.map((usState, index) => (
-                            <option value={usState.value} key={index} >{usState.label}</option>
-                        ))}   
-                    </select>
-                    <label>Or enter a zip code</label>
-                    <input type="text" name="zipCode" value={formData.zipCode} onChange={handleChange} required />
-                    <br/>
 
                     {
-                        artistRoles.map((theRole, index) => {
-                            return(
-                                <label>
-                                    <input type="checkbox" name="roles" value={theRole.role} key={index} onChange={(e) => addRole(e, theRole.role)}/>
-                                {theRole.role}</label>
-                            )
-                        })
-                    }
-                    <br/>
+                    page === 1 ?
+                    <div className='signup-form-page'>
+                        <h2>Create Account</h2>
 
-                    <button type="submit" disabled={disableSignUpBtn}>SIGN UP</button>           
+                        <label>First Name*
+                        <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required /></label>
+                        <label>Last Name*
+                        <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required /></label>
+                        <label>Email*
+                        <input type="email" name="email" value={formData.email} onChange={handleChange} required /></label>
+                        <label>Password*
+                        <input type="password" name="password" value={formData.password} onChange={handleChange} required /></label>
+                        <label>Confirm Password*
+                        <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required /></label>
+                        <br/>
+
+                        <label>Location*
+                        <select name="country" value={formData.country} onChange={handleChange} required >
+                            <option value="United States" >United States</option>   
+                        </select>
+                        <select name="usState" value={formData.usState} onChange={handleChange} required >
+                            {statesList.map((usState, index) => (
+                                <option value={usState.value} key={index} >{usState.label}</option>
+                            ))}   
+                        </select></label>
+                        <label>Or enter a zip code
+                        <input type="text" name="zipCode" value={formData.zipCode} onChange={handleChange} required /></label>
+                        <br/>
+                    </div>
+                    :
+                    ''}
+
+                    {
+                    page === 2 ?
+                    <div className='signup-form-page'>
+                        <h2>Tell us about what you do</h2>
+                        <p>Which of these best describes you (select all that apply)*</p>
+
+                        {
+                            artistRoles.map((theRole, index) => {
+                                return(
+                                    <label>
+                                        <input type="checkbox" name="roles" value={theRole.role} key={index} onChange={(e) => addRole(e, theRole.role)}/>
+                                    {theRole.role}</label>
+                                )
+                            })
+                        }
+                        <br/>
+
+                        <label>Add Keyword Tags (optional)
+                            <input type='text' name='keywordTags' value={formData.keywordTags} onChange={handleChange} />
+                            Skills - Specialties - Software - Styles</label>
+                        <br/>
+                    </div>
+                    :
+                    ''}
+                    
+                    {
+                    page === 3 ?
+                    <div className='signup-form-page'>
+                        <h2>Almost done! Complete your Profile</h2>
+                    
+                        <div className='profile-image-upload'>
+                            <button onClick={(e) => {profileImageUpload()}}><ion-icon name="person-circle-outline"></ion-icon></button>
+                            <br/>
+                            <p>Add a Profile image</p>
+                        </div>
+
+                        <label>About me:
+                        <textarea name="aboutMe" value={formData.aboutMe} onChange={handleChange} required /></label>
+                        <br/>
+
+                        <div className='website-links'>
+                            <label>Add your website URL (optional)
+                            <input type="url" name="websiteUrl" value={formData.websiteUrl} onChange={handleChange} /></label>
+                            <label>Instagram (optional)
+                            <input type="url" name="instagramUrl" value={formData.instagramUrl} onChange={handleChange} /></label>
+                            <label>Pinterest (optional)
+                            <input type="url" name="pinterestUrl" value={formData.pinterestUrl} onChange={handleChange} /></label>
+                            <label>Tumblr (optional)
+                            <input type="url" name="tumblrUrl" value={formData.tumblrUrl} onChange={handleChange} /></label>
+                            <p>Skip for Now &gt;</p>
+                        </div>
+                        <button type="submit" disabled={disableSignUpBtn}>SIGN UP</button>
+                    </div>
+                    :
+                    ''}
                 </form>
             </div>
             <p className="error-message">&nbsp;{formData.error}</p>
+
+            <div className='signup-form-buttons'>
+              {page === 1 ? '' : <button onClick={(e) => {changePage('back')}}>&lt; Back</button>}
+              {page === 3 ? '' : <button onClick={(e) => {changePage('next')}}>Next</button>}
+            </div>
         </div>
     )
 }
