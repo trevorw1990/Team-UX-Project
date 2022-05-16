@@ -33,6 +33,8 @@
     height: 125px;
 }
 
+
+
 .user-navbar-buttons {
     color: white;
     float: right;
@@ -103,4 +105,20 @@
     margin: 0;
 }
 
+.signup-form-page {
+    background-color: #202020;
+    color: white;
+    width: 500px;
+    margin-left: 40%;
+    margin-right: 25%;
+}
 
+.signup-form-page input {
+    background-color: #ececec;
+    margin: 10px;
+}
+
+.signup-form-page select {
+    background-color: #ececec;
+    margin: 10px;
+}
