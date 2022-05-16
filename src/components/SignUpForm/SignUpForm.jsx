@@ -185,8 +185,8 @@ export default function SignUpForm({ user, setUser }) {
             <p className="error-message">&nbsp;{formData.error}</p>
 
             <div className='signup-form-buttons'>
-              {page === 1 ? '' : <button onClick={(e) => {changePage('back')}}>&lt; Back</button>}
-              {page === 3 ? '' : <button onClick={(e) => {changePage('next')}}>Next</button>}
+              {page === 1 ? '' : <button id="backButton" onClick={(e) => {changePage('back')}}>&lt; Back</button>}
+              {page === 3 ? '' : <button id="nextButton" onClick={(e) => {changePage('next')}}>Next</button>}
             </div>
         </div>
     )

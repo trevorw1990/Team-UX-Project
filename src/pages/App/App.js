@@ -8,7 +8,6 @@ import { getUser } from '../../utilities/api/users/users-service';
 import ProfilePage from '../ProfilePage/ProfilePage';
 import './App.css';
 
-
 export default function App() {
   const [ user, setUser ] = useState(null)
 
