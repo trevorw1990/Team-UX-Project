@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 
 .footer {
@@ -19,6 +20,7 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
+    background-color: #121212;
 }
 
 .navBar {
@@ -42,7 +44,7 @@
 }
 
 .user-navbar-buttons button {
-    color: white;
+    color: black;
     border-color: #26ccd7;
     background-color: #26ccd7;
     height: 50px;
@@ -56,6 +58,7 @@
 .user-navbar-buttons label {
     color: white;
 }
+
 
 .hr {
     margin: 30px 0;
@@ -85,6 +88,16 @@
     background-color: transparent;
   }
 
+.centered button {
+    background-color: #121212;
+    border-color: #26ccd7;
+    border-radius: 5%;
+    color: #26ccd7;
+    font-size: 16px;
+    height: 70px;
+    width: 250px;
+
+}
 
   h1 {
     font-family: 'Raleway', sans-serif;

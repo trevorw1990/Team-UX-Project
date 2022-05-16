@@ -73,6 +73,10 @@ export default function NavBar({ user, setUser }){
                     </button>
                 </div>
 
+                <div>
+                    <hr></hr>
+                </div>
+
                 <Modal
                     isOpen={modalIsOpen}
                     onAfterOpen={afterOpenModal}

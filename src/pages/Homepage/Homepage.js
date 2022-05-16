@@ -13,6 +13,7 @@ export default function HomePage(){
 
             <div className="centered">
                 <h1>Find Collaborators for Your Next Project</h1>
+                <button>Sign Up for Free</button>
             </div>
         </div>
 
