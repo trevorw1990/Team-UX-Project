@@ -10,7 +10,7 @@ export default function HomePage(){
             
 
             <div className="homepage-images">
-                <img src="/images/Homepage/hmpg_img.png"/>
+                <img src="/images/Homepage/hmpg_img.png" height="700px" width="100%"/>
             </div>
 
             
