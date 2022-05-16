@@ -49,9 +49,9 @@ const deleteCollaborator= (req,res)=>{
 }
 
 const showCollaborator= (req,res)=>{
-    Collaborator.findById(req.params.id, (err, Collaborator)=>{
+    Collaborator.findById(req.params.id, (err, foundCollaborator)=>{
         if (!err) {
-            res.status(200).json({message:'showing the message', Collaborator})
+            res.status(200).json({message:'showing the message', foundCollaborator})
           } else {
             res.status(400).json(err)
           }
