@@ -61,8 +61,7 @@ export default function NavBar({ user, setUser }){
 
     const loginNav = () => {
         return (
-            <div className='navBar' > 
-=======
+            <div className='navBar' >   
                 <div id="navBar-logo">
                     <img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="300px"/> 
                 </div>
