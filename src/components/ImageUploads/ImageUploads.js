@@ -29,8 +29,8 @@ export default function ImageUploads({ image, setImage }) {
     return (
         <div>
             {
-                body.img ? 
-                <img src={body.img} alt='image'/>
+                image ? 
+                <img src={image} alt='image'/>
                 :
                 doNothing
             }
