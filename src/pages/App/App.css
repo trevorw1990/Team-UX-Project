@@ -1,0 +1,57 @@
+
+
+
+
+.footer {
+    background-color: #121212;
+    color: white;
+    display: flex;
+}
+
+.footer button {
+    display: flex;
+    color: white;
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.navBar {
+    display: flex;
+    margin-bottom: 0;
+}
+
+#navBar-logo img{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 125px;
+}
+
+.user-navbar-buttons {
+    color: white;
+    float: right;
+}
+
+.user-navbar-buttons button {
+    color: white;
+    border-color: #26ccd7;
+    height: 50px;
+    width: 150px;
+    border-radius: 5%;
+    margin: 10px;
+    float: right;
+}
+
+.user-navbar-buttons label {
+    color: white;
+}
+
+.homepage-images {
+    display: flex;
+}
+

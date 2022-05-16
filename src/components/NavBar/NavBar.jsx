@@ -3,6 +3,7 @@ import Modal from 'react-modal'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
+
 const customStyles = {
     content: {
       top: '50%',
@@ -60,11 +61,10 @@ export default function NavBar({ user, setUser }){
 
     const loginNav = () => {
         return (
-            <div className='navBar'>
-
-                <button className='navbar-logo'>
-                    <img src='/images/Logo/Project-Connect.png' alt='ProjectConnect'/> 
-                </button>
+            <div className='navBar' >   
+                <div id="navBar-logo">
+                    <img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="300px"/> 
+                </div>
 
                 <div className='user-navbar-buttons'>
                     <button onClick={openModal}>Log In</button>
