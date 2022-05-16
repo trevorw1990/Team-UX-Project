@@ -26,8 +26,9 @@ export default function App() {
         <Route path='/signup' element={<AuthPage user={user} setUser={setUser} />}/>
     
         <Route path='/' element={<HomePage user={user} setUser={setUser} />} />
-  
-
+        <Route path="/" element={<ProfilePage />}/>
+        <Route path="/*" element={<ProfilePage />}/>
+    
 
      </Routes>
 
