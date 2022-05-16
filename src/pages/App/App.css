@@ -122,3 +122,26 @@
     background-color: #ececec;
     margin: 10px;
 }
+
+.signup-form-buttons {
+    margin-left: 40%;
+    margin-right: 25%;
+}
+
+
+#backButton {
+    color: white;
+    width: 150px;
+    margin: 20px;
+    border: none;
+    height: 50px;
+}
+
+#nextButton {
+    background-color: #26ccd7;
+    width: 150px;
+    margin: 20px;
+    border-radius: 5%;
+    height: 50px;
+}
+
