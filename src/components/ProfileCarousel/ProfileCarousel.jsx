@@ -4,47 +4,35 @@ import anime3 from "./ImagesCarousel/anime3.jpeg"
 
 export default function ProfileCarousel(){
     return(
-
-<div className="container">
+        <div className="ImageContainer">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src={anime1} class="d-block w-100" alt="First Image"/>
     
-        <div id="carouselSlider" className="carousel slide">
-            <ol className="carousel-indicators">
-                <li data-target="#carouselSlider" data-slide-to="0" className="active"></li>
-                <li data-target="#carouselSlider" data-slide-to="1"></li>
-                <li data-target="#carouselSlider" data-slide-to="2"></li>
-            </ol>
-            <div className="carousel-inner">
-                <div className="carousel-item active">
-                    <img src={anime1} className="w-100 h-100 "/>
-                    <div className="carousel-caption ">
-                        <h5>First slide</h5>
-                        <p>This is first slide</p>
-                    </div>
-                </div>
-                <div className="carousel-item ">
-                    <img src={anime2} className="w-100 h-100 "/>
-                    <div className="carousel-caption ">
-                        <h5>Second slide</h5>
-                        <p>This is second slide</p>
-                    </div>
-                </div>
-                <div className="carousel-item ">
-                    <img src={anime3} className="w-100 h-100 "/>
-                    <div className="carousel-caption ">
-                        <h5>Third slide</h5>
-                        <p>This is third slide</p>
-                    </div>
-                </div>
-            </div>
-            <a className="carousel-control-prev " href="#carouselSlider" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon "></span>
-                <span>Previous</span>
-            </a>
-            <a className="carousel-control-next " href="#carouselSlider" role="button" data-slide="next">
-                <span className="carousel-control-next-icon "></span>
-                <span>Next</span>
-            </a>
-        </div>
     </div>
+    <div class="carousel-item">
+      <img src={anime2} class="d-block w-100 " alt="Second Image"/>
+    </div>
+    <div class="carousel-item">
+      <img src={anime3} class="d-block w-100" alt="Third Image"/>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
     )
 }
+
