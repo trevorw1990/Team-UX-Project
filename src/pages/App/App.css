@@ -1,11 +1,12 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 
 .footer {
     background-color: #121212;
     color: white;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer button {
@@ -27,7 +28,7 @@
 
 #navBar-logo img{
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 300px;
     margin-bottom: 10px;
     height: 125px;
 }
@@ -35,23 +36,71 @@
 .user-navbar-buttons {
     color: white;
     float: right;
+
 }
 
 .user-navbar-buttons button {
     color: white;
     border-color: #26ccd7;
+    background-color: #26ccd7;
     height: 50px;
     width: 150px;
     border-radius: 5%;
     margin: 10px;
     float: right;
+    margin-top: 50px;
 }
 
 .user-navbar-buttons label {
     color: white;
 }
 
+.hr {
+    margin: 30px 0;
+	height: 1px;
+    border: none;
+    background: #26ccd7;
+}   
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;    
+    display: flex;
+    margin: 0;
+    width: 100%;
+  }
+
+
+ .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Raleway', sans-serif;
+    font-size: 48pt;
+    font-weight: 400;
+    background-color: transparent;
+  }
+
+
+  h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24pt;
+    font-weight: 200;
+    background-color: transparent; 
+}
+
 .homepage-images {
     display: flex;
+    width: 100%;
 }
+
+.homepage-images img {
+    display: flex;
+    height: 700px;
+    width: 100%;
+    margin: 0;
+}
+
 

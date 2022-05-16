@@ -92,7 +92,7 @@ export default function NavBar({ user, setUser }){
                         <div>Don't have an account?<Link to='/signup'>Sign Up</Link></div>
                     </form>
                 </Modal>
-                
+                                
             </div>
         )
     }
