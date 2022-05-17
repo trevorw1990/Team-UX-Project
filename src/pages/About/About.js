@@ -15,7 +15,7 @@ export default function About() {
             <h1> Meet the Team </h1>
             <div className="team">
                 <h2> Damon Fung </h2>
-                
+                <img src='/images/About/Damon Photo.jpg' alt='ProjectConnect'/> 
                 <h2> Orlando Valadez </h2>
                 <h2> Mindy Miller </h2>
                 <h2> Roy Daniel </h2> 
