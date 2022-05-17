@@ -64,7 +64,21 @@ export default function NavBar({ user, setUser }){
                 </div>
 
                 <div>
-                    <hr></hr>
+                    <div id="navBar-logo">
+                        <img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="300px"/> 
+                        
+                    </div>
+
+                    <div className='user-navbar-buttons'>
+                        <div className='userNavButton'>
+                            <button onClick={openModal}>Log In</button>
+                            <button>
+                                <Link to='/signup'>Sign Up</Link>
+                            </button>
+                        </div>
+                    </div>
+
+                    <hr/>
                 </div>
 
                 <Modal className='nav-bar-modal fade-in'
@@ -88,7 +102,7 @@ export default function NavBar({ user, setUser }){
                         </div>
                     </form>
                 </Modal>
-                                
+
             </div>
         )
     }
