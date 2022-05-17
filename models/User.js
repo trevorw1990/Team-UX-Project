@@ -22,7 +22,7 @@ const userSchema = new Schema({
     },
     country: { type: String, required: true },
     usState: { type: String, required: true },
-    zipCode: { type: String, required: true },
+    zipCode: { type: String },
     roles: Array,
     keywordTags: Array,
     profileImageUrl: String,

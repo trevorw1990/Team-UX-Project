@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { uploadImage }  from '../../utilities/image-upload/image-upload'
 
-export default function ImageUploads() {
+export default function ImageUploads({ image, setImage }) {
     
     const [ files, setFiles ] = useState([])
     const [ body, setBody ] = useState({ img: '' })
@@ -13,6 +13,7 @@ export default function ImageUploads() {
         const response = await uploadImage(formData)
         console.log(response)
         setBody({ img: response })
+        setImage(response)
     }   
 
     const handleFiles = (evt) => {
@@ -28,8 +29,8 @@ export default function ImageUploads() {
     return (
         <div>
             {
-                body.img ? 
-                <img src={body.img} alt='image'/>
+                image ? 
+                <img src={image} alt='image'/>
                 :
                 doNothing
             }

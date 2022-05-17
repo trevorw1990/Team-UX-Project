@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 export default function HomePage(){
    
 
@@ -7,13 +9,11 @@ export default function HomePage(){
         <main>
             
         <div className="container">
-            <div className="homepage-images">
-                <img src="/images/Homepage/hmpg_img.png" />
-            </div>
+            <img src="/images/Homepage/hmpg_img.png" />
 
             <div className="centered">
                 <h1>Find Collaborators for Your Next Project</h1>
-                <button>Sign Up for Free</button>
+                <Link to='/signup'><button>Sign Up for Free</button></Link>
             </div>
         </div>
 
