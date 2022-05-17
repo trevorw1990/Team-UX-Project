@@ -61,21 +61,31 @@ export default function NavBar({ user, setUser }){
 
     const loginNav = () => {
         return (
-            <div className='navBar' >   
-                <div id="navBar-logo">
-                    <img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="300px"/> 
-                </div>
-
-                <div className='user-navbar-buttons'>
-                    <button onClick={openModal}>Log In</button>
-                    <button>
-                        <Link to='/signup'>Sign Up</Link>
-                    </button>
-                </div>
+            <div className='navBar' > 
 
                 <div>
-                    <hr></hr>
+                    <div id="navBar-logo">
+                        <img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="300px"/> 
+                        
+                    </div>
+
+                    <div className='user-navbar-buttons'>
+                        <div className='userNavButton'>
+                            <button onClick={openModal}>Log In</button>
+                            <button>
+                                <Link to='/signup'>Sign Up</Link>
+                            </button>
+                        </div>
+                    </div>
+
+                    <hr/>
                 </div>
+
+               
+
+                
+
+                
 
                 <Modal
                     isOpen={modalIsOpen}
@@ -96,7 +106,7 @@ export default function NavBar({ user, setUser }){
                         <div>Don't have an account?<Link to='/signup'>Sign Up</Link></div>
                     </form>
                 </Modal>
-                                
+
             </div>
         )
     }
