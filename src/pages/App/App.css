@@ -35,12 +35,14 @@
     height: 125px;
 }
 
-
+.userNavButton {
+    display: flex;
+}
 
 .user-navbar-buttons {
     color: white;
-    float: right;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .user-navbar-buttons button {
@@ -51,7 +53,6 @@
     width: 150px;
     border-radius: 5%;
     margin: 10px;
-    float: right;
     margin-top: 50px;
 }
 
@@ -60,11 +61,13 @@
 }
 
 
-.hr {
-    margin: 30px 0;
-	height: 1px;
+hr {
     border: none;
-    background: #26ccd7;
+    background: #26ccd7 !important;
+    height: 2px;
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 0;
 }   
 
 .container {
@@ -81,7 +84,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     font-family: 'Raleway', sans-serif;
     font-size: 48pt;
     font-weight: 400;
@@ -99,9 +101,9 @@
 
 }
 
-  h1 {
+h1 {
     font-family: 'Raleway', sans-serif;
-    font-size: 24pt;
+    font-size: 48pt;
     font-weight: 200;
     background-color: transparent; 
 }
