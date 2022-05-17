@@ -12,7 +12,7 @@ const [image, setImage] = useState('')
       
         <div className="ImageContainer">
        
-   
+       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
   
 <ImageUploads image={image} setImage={setImage}/>
@@ -44,7 +44,7 @@ const [image, setImage] = useState('')
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
+</div>
 
     )
 }
