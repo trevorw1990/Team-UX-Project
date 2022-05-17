@@ -63,7 +63,7 @@
 
 hr {
     border: none;
-    background: #26ccd7 !important;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) -15.57%, #26CCD7 45.14%, rgba(0, 0, 0, 0) 123.35%) !important;
     height: 2px;
     width: 1000px;
     margin-top: 20px;
