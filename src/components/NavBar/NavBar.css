@@ -1,4 +1,77 @@
-#footer {
-    background-color: #121212;
-   
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.2s;
+}
+
+.nav-bar-modal{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    right: 15%;
+    bottom: 30%;
+    color: white;
+    border: solid #202020;
+    border-radius: 5px;
+    padding-top: 100px;
+}
+
+.nav-bar-modal > form > label {
+    width: 100%;
+}
+
+.nav-bar-modal > form {
+    margin: 0 10% 0 10%;
+    color: white;
+    border-radius: 5px;
+}
+
+.nav-bar-modal > form > label > input {
+    color: white;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    width: 100%;
+}
+
+.nav-bar-modal > form > button {
+    color: white;
+    border-radius: 5px;
+    background-color: #26CCD7 ;
+}
+
+
+.nav-bar-modal > h2, a {
+    color: #26CCD7;
+    text-align: center;
+}
+
+.navbar-logo img{
+    max-height:400px;
+    max-width: 400px;
+}
+
+.login-form-button {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form-button > button {
+    padding: 5px 30px 5px 30px;
+    color: white;
+    border-radius: 5px;
+    background-color: #26CCD7 ;
 }

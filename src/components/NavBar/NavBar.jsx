@@ -2,18 +2,8 @@ import { login, logout } from '../../utilities/api/users/users-service'
 import Modal from 'react-modal'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import './NavBar.css'
 
-
-const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-}
 
 export default function NavBar({ user, setUser }){
     let subtitle;
@@ -63,7 +53,7 @@ export default function NavBar({ user, setUser }){
         return (
             <div className='navBar' >   
                 <div id="navBar-logo">
-                    <img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="300px"/> 
+                    <Link to='/' ><img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="300px"/></Link>
                 </div>
 
                 <div className='user-navbar-buttons'>
@@ -74,14 +64,28 @@ export default function NavBar({ user, setUser }){
                 </div>
 
                 <div>
-                    <hr></hr>
+                    <div id="navBar-logo">
+                        <img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="300px"/> 
+                        
+                    </div>
+
+                    <div className='user-navbar-buttons'>
+                        <div className='userNavButton'>
+                            <button onClick={openModal}>Log In</button>
+                            <button>
+                                <Link to='/signup'>Sign Up</Link>
+                            </button>
+                        </div>
+                    </div>
+
+                    <hr/>
                 </div>
 
-                <Modal
+                <Modal className='nav-bar-modal fade-in'
                     isOpen={modalIsOpen}
                     onAfterOpen={afterOpenModal}
                     onRequestClose={closeModal}
-                    style={customStyles}
+                    // style={customStyles}
                     contentLabel='Log In Modal'
                     >
                     <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Log into your Project Connect account</h2>
@@ -92,11 +96,13 @@ export default function NavBar({ user, setUser }){
                         <label>Password
                             <input type='password' name='password' onChange={handleChange}/>
                         </label>
-                        <button type='submit'>Log In</button>
-                        <div>Don't have an account?<Link to='/signup'>Sign Up</Link></div>
+                        <div className='login-form-button'>
+                            <button type='submit'>Log In</button>
+                            <div>Don't have an account? <Link to='/signup' onClick={closeModal}>Sign Up</Link></div>
+                        </div>
                     </form>
                 </Modal>
-                                
+
             </div>
         )
     }
