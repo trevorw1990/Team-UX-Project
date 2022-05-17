@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 // const favicon = require('serve-favicon');
 const logger = require('morgan');
-const projectRouter = require('./routes/api/projects')
+const projectRouter = require('./routes/api/projects');
+const collaboratorRouter = require('./routes/api/collaborators')
 
 
 require('dotenv').config();
@@ -24,12 +25,11 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Check if token and create req.user
 app.use(require('./config/checkToken'));
 
-// routes 
-
-app.use('/api/projects', projectRouter);
-
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/projects', projectRouter);
+app.use('/api/collaborators', collaboratorRouter)
+
 
 
 // The following "catch all" route (note the *) is necessary

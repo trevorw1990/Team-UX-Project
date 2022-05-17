@@ -3,7 +3,7 @@ const Collaborator = require('../../models/Collaborator');
 //get 
 
 const getCollaborator = (req,res)=>{
-    Collaborator.find({}, (err, foundCollaborator) => {
+    Collaborator.find({projectId: req.params.projectId}, (err, foundCollaborator) => {
         if (!err) {
           res.status(200).json(foundCollaborator)
         } else {
@@ -11,7 +11,7 @@ const getCollaborator = (req,res)=>{
         }
       })
 }
-//set message
+
 
 const setCollaborator = async (req,res)=>{
     try {
@@ -24,7 +24,7 @@ const setCollaborator = async (req,res)=>{
 }
 
 
-//get Project
+
 
 const updateCollaborator= (req,res)=>{
     const {body} = req 
@@ -36,7 +36,7 @@ const updateCollaborator= (req,res)=>{
         }
       })
 }
-//getProject
+
 
 const deleteCollaborator= (req,res)=>{
     Collaborator.findByIdAndDelete(req.params.id, (err)=>{
@@ -48,20 +48,19 @@ const deleteCollaborator= (req,res)=>{
     })
 }
 
-const showCollaborator= (req,res)=>{
-    Collaborator.findById(req.params.id, (err, foundCollaborator)=>{
-        if (!err) {
-            res.status(200).json({message:'showing the message', foundCollaborator})
-          } else {
-            res.status(400).json(err)
-          }
-    })
-}
+// const showCollaborator= (req,res)=>{
+//     Collaborator.findById(req.params.id, (err, foundCollaborator)=>{
+//         if (!err) {
+//             res.status(200).json({message:'showing the message', foundCollaborator})
+//           } else {
+//             res.status(400).json(err)
+//           }
+//     })
+// }
 
 module.exports = {
     getCollaborator,
     setCollaborator,
     updateCollaborator,
-    deleteCollaborator,
-    showCollaborator
+    deleteCollaborator
 }
