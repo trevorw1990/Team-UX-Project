@@ -1,4 +1,14 @@
+import { useState } from "react";
+
 export default function SearchBar(){
+    const [search,setSearch]=useState({
+        roles:[],
+        keywordTags:[],
+        zipcode:''
+
+             }
+    )
+
     return (
         <form>
             <input 
