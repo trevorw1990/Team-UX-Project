@@ -2,12 +2,10 @@ import { signUp } from '../../utilities/api/users/users-service'
 import { useState, useEffect } from 'react'
 import { statesList, artistRoles } from '../../utilities/list-items/list-items'
 import { useNavigate } from 'react-router-dom'
-import ImageUploads from '../ImageUploads/ImageUploads'
-import './SignUpForm.css'
 
 export default function SignUpForm({ user, setUser }) {
-   
-    const [ image, setImage ] = useState('')
+    
+    const [ counter, setCounter ] = useState(1)
     const [ disableSignUpBtn, setDisableSignUpBtn ] = useState (true)
     const [ formData, setFormData ] = useState({
         firstName: '',
@@ -25,8 +23,7 @@ export default function SignUpForm({ user, setUser }) {
         websiteUrl: '',
         instagramUrl: '',
         pinterestUrl: '',
-        tumblrUrl: '',
-        profileImageUrl: ''
+        tumblrUrl: ''
     })
     const [ page, setPage ] = useState(1)
 
@@ -91,13 +88,6 @@ export default function SignUpForm({ user, setUser }) {
         setDisableSignUpBtn(formData.password !== formData.confirm)
     },[formData])
 
-    useEffect(() => {
-        if (image) {
-            console.log(`loading ${image}`)
-            setFormData({...formData, profileImageUrl: image})
-        }
-    }, [image])
-
     return (
         <div className='user-form'>
             <div className="form-container">
@@ -142,15 +132,20 @@ export default function SignUpForm({ user, setUser }) {
                         <h2>Tell us about what you do</h2>
                         <p>Which of these best describes you (select all that apply)*</p>
 
-                        {
-                            artistRoles.map((theRole, index) => {
-                                return(
-                                    <label>
-                                        <input type="checkbox" name="roles" value={theRole.role} key={index} onChange={(e) => addRole(e, theRole.role)}/>
-                                    {theRole.role}</label>
-                                )
-                            })
-                        }
+                        <div className='form-columns'>
+                            {
+                                artistRoles.map((theRole, index) => {
+                                    return(
+                                        <div className={`form-column-${index % 3 + 1}`}>
+                                            <label>
+                                                <input type="checkbox" name="roles" value={theRole.role} key={index} onChange={(e) => addRole(e, theRole.role)}/>
+                                            {theRole.role}</label>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+
                         <br/>
 
                         <label>Add Keyword Tags (optional)
@@ -167,8 +162,7 @@ export default function SignUpForm({ user, setUser }) {
                         <h2>Almost done! Complete your Profile</h2>
                     
                         <div className='profile-image-upload'>
-                            {/* <button onClick={(e) => {profileImageUpload()}}><ion-icon name="person-circle-outline"></ion-icon></button> */}
-                            <ImageUploads image={image} setImage={setImage}/>
+                            <button onClick={(e) => {profileImageUpload()}}><ion-icon name="person-circle-outline"></ion-icon></button>
                             <br/>
                             <p>Add a Profile image</p>
                         </div>
