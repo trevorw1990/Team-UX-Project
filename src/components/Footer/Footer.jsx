@@ -12,7 +12,7 @@ export default function Footer(props) {
                 Support 
             </button>
             <button>
-                2022 
+                &copy;2022 
             </button>
         </div>
     )

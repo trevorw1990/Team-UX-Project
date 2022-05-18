@@ -1,9 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const { getMessage, setMessage, deleteMessage, updateMessage, showMessage } = require('../../controllers/api/messages')
+const { getSendMessage, getReceiveMessage, setMessage, deleteMessage, updateMessage, showMessage } = require('../../controllers/api/messages')
 
-router.get("/", getMessage) 
+router.get("/sent/:userId", getSendMessage) 
 //
+router.get("/received/:userId", getReceiveMessage)
+
 router.post('/', setMessage)
 //  Update
 router.put('/:id', updateMessage)
