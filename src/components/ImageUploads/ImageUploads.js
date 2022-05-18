@@ -28,18 +28,18 @@ export default function ImageUploads({ image, setImage }) {
         
     return (
         <div>
-            {
+            {/* {
                 image ? 
                 <img src={image} alt='image'/>
                 :
                 doNothing
-            }
+            } */}
             <form className='image-upload-form'>
                 <div className='image-upload-buttons'>
                     <label className='file-upload'>
                         <input className='file-input' type='file' name='img' onChange={handleFiles} />
                     </label>
-                    <button type='button' className='upload-img' onClick={body.img ? doNothing : upload}>{body.img ? "Image Uploaded" : "Upload Image"}</button>
+                    <button type='button' className='upload-img' onClick={upload}>{body.img ? "Image Uploaded" : "Upload Image"}</button>
                 </div>
             </form>
         </div>
