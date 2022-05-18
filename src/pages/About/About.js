@@ -1,4 +1,4 @@
-import './About.css';
+import '../App/App.css';
 
 export default function About() {
 
@@ -27,7 +27,7 @@ export default function About() {
                 </div>
                 <div>
                     <h2> Ashley Webb </h2>
-                    <img src='./images/About/0E7A916 (1).JPG' alt='Ashley'/>
+                    <img src='./images/About/ashley.JPG' alt='Ashley'/>
                     <p> Front-End </p>
                     <link rel="https://github.com/ashleywebb"> Github : ashleywebb </link>
                 </div>
@@ -39,7 +39,7 @@ export default function About() {
                 </div> 
                 <div>
                     <h2> Damon Fung</h2>
-                    <img src='./images/About/Damon Photo.jpg' alt='Damon'/>
+                    <img src='./images/About/damon.jpg' alt='Damon'/>
                     <p> Back-End </p>
                     <link rel="https://github.com/dfung003"> Github : dfung003</link>
                 </div>
