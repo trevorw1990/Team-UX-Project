@@ -103,7 +103,7 @@ export default function SignUpForm({ user, setUser }) {
                         <h2>Create Account</h2>
 
                         <label>First Name*
-                        <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required /></label>
+                        <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required /></label><br/>
                         <label>Last Name*
                         <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required /></label>
                         <label>Email*
