@@ -31,7 +31,7 @@ useEffect(() => {
     return(
       
       
-        <div classNameName="ImageContainer">
+        <div className="ImageContainer">
        <ImageUploads image={image} setImage={setImage}/>
        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-indicators">
