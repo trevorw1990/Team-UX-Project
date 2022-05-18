@@ -29,7 +29,7 @@ export default function App() {
     
         <Route path='/' element={<HomePage user={user} setUser={setUser} />} />
        
-        <Route path="/profile" element={<ProfilePage user={user} setUser={setUser} />}/>
+        <Route path="/profile/:id" element={<ProfilePage user={user} setUser={setUser} />}/>
     
         <Route path='/create-project' element={<CreateProject user={user} setUser={setUser} />}/>
      </Routes>
