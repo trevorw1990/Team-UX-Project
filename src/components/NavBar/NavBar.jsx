@@ -63,7 +63,6 @@ export default function NavBar({ user, setUser }){
                             <Link to='/signup'>Sign Up</Link>
                         </button>
                     </div>
-                    <hr/>
                 </div>
                
                 <Modal className='nav-bar-modal fade-in'
