@@ -5,7 +5,7 @@ export default function Footer(props) {
             <button>
                 Settings 
             </button>
-            <a href="src\pages\About\About.js">
+            <a href="./src/pages/About/About.js">
                 About
             </a>
             <button>
