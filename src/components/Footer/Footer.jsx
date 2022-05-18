@@ -6,7 +6,9 @@ export default function Footer(props) {
             <button>
                 Settings 
             </button>
-            <Link to='/about'>About</Link>
+            <button>
+                <Link to='/about'>About</Link>
+            </button>
             <button>
                 Support 
             </button>
