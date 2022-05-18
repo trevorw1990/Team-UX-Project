@@ -59,7 +59,7 @@ export default function NavBar({ user, setUser }){
                 <div className='user-navbar-buttons'>
                     <div className='userNavButton'>
                         <button onClick={openModal}>Log In</button>
-                        <button>
+                        <button id="signUpButton">
                             <Link to='/signup'>Sign Up</Link>
                         </button>
                     </div>
