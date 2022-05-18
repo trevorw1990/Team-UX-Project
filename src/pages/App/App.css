@@ -87,8 +87,6 @@ hr {
     top: 50%;
     left: 50%;
     font-family: 'Raleway', sans-serif;
-    font-size: 48pt;
-    font-weight: 400;
     background-color: transparent;
   }
 
@@ -98,14 +96,14 @@ hr {
     border-radius: 8%;
     color: #26ccd7;
     font-size: 16px;
-    height: 70px;
-    width: 250px;
+    height: 59.63px;
+    width: 255px;
 
 }
 
 h1 {
     font-family: 'Raleway', sans-serif;
-    font-size: 48pt;
+    font-size: 25pt;
     font-weight: 200;
     background-color: transparent; 
 }
