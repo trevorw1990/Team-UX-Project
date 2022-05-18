@@ -23,7 +23,7 @@ export default function About() {
                     <h2> Orlando Valadez </h2>
                     {/* <img src/> */}
                     <p> Front-End </p>
-                    {/* <a href=""> Github</a> */}
+                    <a href="https://github.com/Orlandouchiha425"> Github: Orlandouchiha425</a> 
                 </div>
                 <div>
                     <h2> Ashley Webb </h2>
@@ -51,8 +51,9 @@ export default function About() {
                 </div>
                 <div>
                     <h2> Jonathan Suarez </h2>
+                    <img src='./images/About/jonathan.png' alt="Jonathan"/>
                     <p> Back-End </p>
-                    <a href=""> Github : </a>
+                    <a href="https://github.com/jonsuarez92"> Github : jonsuarez92 </a>
                 </div>
                 <div>
                     <h2> Kajsa Brown </h2>
