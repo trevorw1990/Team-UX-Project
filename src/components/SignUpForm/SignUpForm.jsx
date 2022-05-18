@@ -57,10 +57,11 @@ export default function SignUpForm({ user, setUser }) {
         try {
             delete formData.error
             delete formData.confirm
-            const user = await signUp(formData)
-            setUser(user)
+            const response = await signUp(formData)
+            setUser(response)
+            // console.log(response) // log new user to screen
             // alert(JSON.stringify(formData)) // print sign up state var to the screen
-            navigate('/')
+            
         } catch (error) {
             console.log(error)
         }
@@ -91,6 +92,13 @@ export default function SignUpForm({ user, setUser }) {
             setFormData({...formData, profileImageUrl: image})
         }
     }, [image])
+
+    useEffect(() => {
+        if (user) {
+            navigate(`/profile/${user._id}`)
+        }
+    }, [user])
+
 
     return (
         <div className='user-form'>
@@ -188,7 +196,6 @@ export default function SignUpForm({ user, setUser }) {
                             <input type="url" name="pinterestUrl" value={formData.pinterestUrl} onChange={handleChange} /></label>
                             <label>Tumblr (optional)
                             <input type="url" name="tumblrUrl" value={formData.tumblrUrl} onChange={handleChange} /></label>
-                            <p>Skip for Now &gt;</p>
                         </div>
                         <button type="submit" disabled={disableSignUpBtn}>SIGN UP</button>
                     </div>
