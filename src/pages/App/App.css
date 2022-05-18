@@ -47,13 +47,14 @@
 
 .user-navbar-buttons button {
     color: black;
-    border-color: #26ccd7;
-    background-color: #26ccd7;
     height: 50px;
     width: 150px;
     border-radius: 5%;
     margin: 10px;
     margin-top: 50px;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
 }
 
 .user-navbar-buttons label {
@@ -63,7 +64,7 @@
 
 hr {
     border: none;
-    background: #26ccd7 !important;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) -15.57%, #26CCD7 45.14%, rgba(0, 0, 0, 0) 123.35%) !important;
     height: 2px;
     width: 1000px;
     margin-top: 20px;
@@ -126,16 +127,22 @@ h1 {
     width: 500px;
     margin-left: 40%;
     margin-right: 25%;
+    font-family: 'Raleway', sans-serif;
 }
 
 .signup-form-page input {
-    background-color: #ececec;
     margin: 10px;
+    background: #C4C4C4;
+    border: 1px solid #ECECEC;
+    border-radius: 8px;
+    
 }
 
 .signup-form-page select {
-    background-color: #ececec;
     margin: 10px;
+    background: #C4C4C4;
+    border: 1px solid #ECECEC;
+    border-radius: 8px;
 }
 
 .signup-form-buttons {
@@ -153,10 +160,13 @@ h1 {
 }
 
 #nextButton {
-    background-color: #26ccd7;
     width: 150px;
     margin: 20px;
     border-radius: 5%;
     height: 50px;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid rgba(38, 204, 215, 0.5);
+    border-radius: 8px;
+    color: rgba(38, 204, 215, 0.5);
 }
 
