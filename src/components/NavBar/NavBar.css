@@ -30,11 +30,13 @@
     border-radius: 5px;
     font-family: 'Raleway', sans-serif;
     padding-top: 30px;
+    font-size: 32px;
 }
 
 .nav-bar-modal > form > label {
     width: 100%;
     font-family: 'Raleway', sans-serif;
+    font-size: 14px;
 
 }
 
@@ -43,7 +45,6 @@
     color: white;
     border-radius: 5px;
     font-family: 'Raleway', sans-serif;
-
 }
 
 .nav-bar-modal > form > label > input {
@@ -70,6 +71,7 @@
     color: #26CCD7;
     text-align: center;
     font-family: 'Raleway', sans-serif;
+    text-decoration: none;
 
 }
 
@@ -79,10 +81,12 @@
 }
 
 .login-form-button {
-    padding-top: 50px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
 }
 
 .login-form-button > button {
@@ -91,5 +95,8 @@
     border-radius: 5px;
     background-color: #26CCD7 ;
     margin: 10px;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid rgba(38, 204, 215, 0.5);
+    border-radius: 8px;
 
 }
