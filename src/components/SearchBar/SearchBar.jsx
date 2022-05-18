@@ -1,5 +1,7 @@
+
+import axios from "axios";
 import { useState, useEffect } from "react";
-import axios from axios
+
 export default function SearchBar(){
     const [search,setSearch]=useState({
         roles:[],
@@ -28,7 +30,7 @@ export default function SearchBar(){
         <form>
             <input 
                   type="text" 
-                   placeholder="Search by Roles..." />
+                   placeholder="Search ..." />
                 <label>
                  
                 </label>
