@@ -17,7 +17,7 @@ export default function About() {
                     <h2> Moses Burkhart </h2>
                     <img src = './images/About/moses.jpeg' alt="Moses"/>
                     <p> GIT Czar </p>
-                    <link rel="https://github.com/mosesb1"> Github : mosesb1 </link>
+                    <a href="https://github.com/mosesb1"> Github : mosesb1 </a>
                 </div>
                 <div>
                     <h2> Orlando Valadez </h2>
@@ -29,30 +29,30 @@ export default function About() {
                     <h2> Ashley Webb </h2>
                     <img src='./images/About/ashley.JPG' alt='Ashley'/>
                     <p> Front-End </p>
-                    <link rel="https://github.com/ashleywebb"> Github : ashleywebb </link>
+                    <a href="https://github.com/ashleywebb"> Github : ashleywebb </a>
                 </div>
                 <div>
                     <h2> Roy Daniel </h2>
                     <img src='./images/About/roy-pic.jpg' alt='Roy'/>
                     <p> Full-Stack </p>
-                    <link rel="https://github.com/fxcircus"> Github : fxcircus </link>
+                    <a href="https://github.com/fxcircus"> Github : fxcircus </a>
                 </div> 
                 <div>
                     <h2> Damon Fung</h2>
                     <img src='./images/About/damon.jpg' alt='Damon'/>
                     <p> Back-End </p>
-                    <link rel="https://github.com/dfung003"> Github : dfung003</link>
+                    <a href="https://github.com/dfung003"> Github : dfung003</a>
                 </div>
                 <div>
                     <h2> Trevor Whitehurst </h2>
                     <img src='./images/About/Trevor.png' alt="Trevor"/>
                     <p> Full Stack </p>
-                    <link rel="https://github.com/trevorw1990"> Github : trevorw1990 </link>
+                    <a href="https://github.com/trevorw1990"> Github : trevorw1990 </a>
                 </div>
                 <div>
                     <h2> Jonathan Suarez </h2>
                     <p> Back-End </p>
-                    <link rel=""> Github : </link>
+                    <a href=""> Github : </a>
                 </div>
                 <div>
                     <h2> Kajsa Brown </h2>
