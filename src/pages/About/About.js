@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import AuthPage from '../AuthPage/AuthPage';
 import { getUser } from '../../utilities/api/users/users-service';
 import ProfilePage from '../ProfilePage/ProfilePage';
-import './App.css';
+
 
 export default function About() {
 
