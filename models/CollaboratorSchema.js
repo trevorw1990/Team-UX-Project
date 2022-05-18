@@ -1,5 +1,6 @@
 const { Schema } = require('mongoose');
 
+
 const collaboratorSchema = new Schema({
     datesAvailable: Array,
     userId: {
@@ -9,6 +10,11 @@ const collaboratorSchema = new Schema({
     },
     role: {
         type: String,
+        required: true
+    },
+    projectId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Project',
         required: true
     }
 })

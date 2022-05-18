@@ -1,17 +1,17 @@
 const express = require('express')
 const router = express.Router()
-const { getCollaborator, setCollaborator, deleteCollaborator, updateCollaborator, showCollaborator } = require('../../controllers/api/collaborators')
+const { getCollaborator, setCollaborator, deleteCollaborator, updateCollaborator } = require('../../controllers/api/collaborators')
 
-router.get("/", getCollaborator) 
+// router.get("/", getCollaborator) 
 //
-router.post('/', setCollaborator)
+router.post('/:projectId', setCollaborator)
 //  Update
 router.put('/:id', updateCollaborator)
 // delete
 router.delete('/:id', deleteCollaborator)
 
-//show
-router.get('/:id', showCollaborator)
+//get
+router.get('/:projectId', getCollaborator)
 
 
 module.exports = router;

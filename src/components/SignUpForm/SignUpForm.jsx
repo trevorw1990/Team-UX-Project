@@ -4,7 +4,8 @@ import { statesList, artistRoles } from '../../utilities/list-items/list-items'
 import { useNavigate } from 'react-router-dom'
 
 export default function SignUpForm({ user, setUser }) {
-   
+    
+    const [ counter, setCounter ] = useState(1)
     const [ disableSignUpBtn, setDisableSignUpBtn ] = useState (true)
     const [ formData, setFormData ] = useState({
         firstName: '',
@@ -131,15 +132,20 @@ export default function SignUpForm({ user, setUser }) {
                         <h2>Tell us about what you do</h2>
                         <p>Which of these best describes you (select all that apply)*</p>
 
-                        {
-                            artistRoles.map((theRole, index) => {
-                                return(
-                                    <label>
-                                        <input type="checkbox" name="roles" value={theRole.role} key={index} onChange={(e) => addRole(e, theRole.role)}/>
-                                    {theRole.role}</label>
-                                )
-                            })
-                        }
+                        <div className='form-columns'>
+                            {
+                                artistRoles.map((theRole, index) => {
+                                    return(
+                                        <div className={`form-column-${index % 3 + 1}`}>
+                                            <label>
+                                                <input type="checkbox" name="roles" value={theRole.role} key={index} onChange={(e) => addRole(e, theRole.role)}/>
+                                            {theRole.role}</label>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+
                         <br/>
 
                         <label>Add Keyword Tags (optional)

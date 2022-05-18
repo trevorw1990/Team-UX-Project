@@ -57,30 +57,15 @@ export default function NavBar({ user, setUser }){
                 </div>
 
                 <div className='user-navbar-buttons'>
-                    <button onClick={openModal}>Log In</button>
-                    <button>
-                        <Link to='/signup'>Sign Up</Link>
-                    </button>
-                </div>
-
-                <div>
-                    <div id="navBar-logo">
-                        <img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="300px"/> 
-                        
+                    <div className='userNavButton'>
+                        <button onClick={openModal}>Log In</button>
+                        <button>
+                            <Link to='/signup'>Sign Up</Link>
+                        </button>
                     </div>
-
-                    <div className='user-navbar-buttons'>
-                        <div className='userNavButton'>
-                            <button onClick={openModal}>Log In</button>
-                            <button>
-                                <Link to='/signup'>Sign Up</Link>
-                            </button>
-                        </div>
-                    </div>
-
                     <hr/>
                 </div>
-
+               
                 <Modal className='nav-bar-modal fade-in'
                     isOpen={modalIsOpen}
                     onAfterOpen={afterOpenModal}
@@ -88,9 +73,9 @@ export default function NavBar({ user, setUser }){
                     // style={customStyles}
                     contentLabel='Log In Modal'
                     >
-                    <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Log into your Project Connect account</h2>
+                    <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Log in to your Project Connect account</h2>
                     <form onSubmit={handleSubmit}>
-                        <label>Email Adress
+                        <label>Email Address
                             <input type='email' name='email' onChange={handleChange}/>
                         </label>
                         <label>Password

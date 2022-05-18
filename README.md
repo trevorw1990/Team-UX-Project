@@ -1,6 +1,6 @@
-#General Assembly SEI Team Two Collaborative UX Project#
+#General Assembly SEI Team Two Collaborative UX Project
 
-##Welcome to Project Connect##
+##Welcome to Project Connect
 
 *What is Project Connect?*
 Project Connect is an application designed to unite creative minds and artiistic souls. Users establish a profile and have the ability to share projects seeking collaboration. In addition, users may connect one-on-one via the messaging resource.
