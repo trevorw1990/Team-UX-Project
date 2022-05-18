@@ -1,5 +1,5 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import axios from axios
 export default function SearchBar(){
     const [search,setSearch]=useState({
         roles:[],
@@ -8,6 +8,21 @@ export default function SearchBar(){
 
              }
     )
+
+
+    useEffect(() => {
+        ( async () => {
+          try {
+            const response = await axios.get(`http://localhost:3001/`)
+            setSearch(response.data)
+          } catch (err) {
+            console.log(err)
+          }
+        })()
+      }, [])
+  
+   
+
 
     return (
         <form>
@@ -18,6 +33,9 @@ export default function SearchBar(){
                  
                 </label>
               </form>
+
+  
+
               );
      }
     
