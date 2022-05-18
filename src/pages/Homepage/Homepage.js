@@ -8,6 +8,10 @@ export default function HomePage(){
     return(
         <main>
             
+            <div>
+                <hr/>
+            </div>
+
             <div className="container">
                 <img src="/images/Homepage/hmpg_img2.png" />
 

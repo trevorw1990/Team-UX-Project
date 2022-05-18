@@ -30,7 +30,7 @@
 
 #navBar-logo img{
     margin-top: 20px;
-    margin-left: 300px;
+    margin-left: 311px;
     margin-bottom: 10px;
     height: 125px;
 }
@@ -43,6 +43,7 @@
     color: white;
     display: flex;
     flex-direction: column;
+    margin-left: 30%;
 }
 
 .user-navbar-buttons button {
@@ -61,14 +62,13 @@
     color: white;
 }
 
-
 hr {
     border: none;
     background: linear-gradient(270deg, rgba(0, 0, 0, 0) -15.57%, #26CCD7 45.14%, rgba(0, 0, 0, 0) 123.35%) !important;
-    height: 2px;
+    height: 4px;
     width: 1000px;
-    margin-top: 20px;
-    margin-left: 0;
+    margin-left: 25%;
+    margin-right: 25%;
 }   
 
 .container {
@@ -78,7 +78,6 @@ hr {
     display: flex;
     margin: 0;
     /* width: 100%; */
-
   }
 
 
@@ -87,25 +86,23 @@ hr {
     top: 50%;
     left: 50%;
     font-family: 'Raleway', sans-serif;
-    font-size: 48pt;
-    font-weight: 400;
     background-color: transparent;
   }
 
 .centered button {
     background-color: #121212;
     border-color: #26ccd7;
-    border-radius: 8%;
+    border-radius: 8px;
     color: #26ccd7;
     font-size: 16px;
-    height: 70px;
-    width: 250px;
+    height: 59.63px;
+    width: 255px;
 
 }
 
 h1 {
     font-family: 'Raleway', sans-serif;
-    font-size: 48pt;
+    font-size: 25pt;
     font-weight: 200;
     background-color: transparent; 
 }
