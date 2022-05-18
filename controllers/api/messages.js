@@ -1,16 +1,25 @@
-
 const Message = require('../../models/Message');
 
 //get 
 
-const getMessage = (req,res)=>{
-    Message.find({}, (err, foundMessage) => {
+const getSendMessage = (req,res)=>{
+    Message.find({sender: req.params.userId }, (err, foundMessage) => {
         if (!err) {
           res.status(200).json(foundMessage)
         } else {
           res.status(400).json(err)
         }
       })
+} 
+
+const getReceiveMessage = (req,res)=>{
+  Message.find({receiver: req.params.userId }, (err, foundMessage) => {
+      if (!err) {
+        res.status(200).json(foundMessage)
+      } else {
+        res.status(400).json(err)
+      }
+    })
 }
 //set message
 
@@ -60,7 +69,8 @@ const showMessage= (req,res)=>{
 }
 
 module.exports = {
-    getMessage,
+    getSendMessage,
+    getReceiveMessage,
     setMessage,
     updateMessage,
     deleteMessage,
