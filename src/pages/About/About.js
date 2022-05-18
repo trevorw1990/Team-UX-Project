@@ -11,7 +11,7 @@ export default function About() {
                     <img src = './images/About/mindy.png' alt="Mindy"/>
                     <p> Project Manager </p>
                     <p> Front-End CSS </p>
-                    <link rel="https://github.com/mmillerks"> Github : mmillerks</link> 
+                    <a href="https://github.com/mmillerks"> Github : mmillerks</a> 
                 </div>
                 <div>
                     <h2> Moses Burkhart </h2>

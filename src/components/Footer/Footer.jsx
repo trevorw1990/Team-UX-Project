@@ -1,13 +1,12 @@
 
+
 export default function Footer(props) {
     return (
         <div className="footer">
             <button>
                 Settings 
             </button>
-            <button>
-                 About 
-            </button>
+            <Link to='/about'>About</Link>
             <button>
                 Support 
             </button>
