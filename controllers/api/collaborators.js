@@ -1,4 +1,5 @@
 const Collaborator = require('../../models/Collaborator');
+const Project = require('../../models/Project') 
 
 //get 
 
@@ -13,14 +14,28 @@ const getCollaborator = (req,res)=>{
 }
 
 
-const setCollaborator = async (req,res)=>{
-    try {
-        const { body } = req
-        const createdCollaborator = await Collaborator.create(body)
-        res.status(200).json({ message: "Collaborator", createdCollaborator })
-    } catch (error) {
-        res.status(400).json({ err: error.message })
-    }
+const setCollaborator = (req,res)=>{
+    Collaborator.create(req.body, (err, newCollaborator) => {
+        if (!err){
+            Project.findByIdAndUpdate(req.params.projectId, {$addToSet: {collaborators: newCollaborator}}, {returnDocument: 'after'}, (projectErr, updatedProject) => {
+                if(!projectErr){
+                res.status(200).json(updatedProject)
+            }else{
+                res.status(400).json(projectErr) 
+            }
+         })
+        } else {
+            res.status(400).json(err) 
+        }
+    })
+    
+    // try {
+    //     const { body } = req
+    //     const createdCollaborator = await Collaborator.create(body)
+    //     res.status(200).json({ message: "Collaborator", createdCollaborator })
+    // } catch (error) {
+    //     res.status(400).json({ err: error.message })
+    // }
 }
 
 

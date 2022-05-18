@@ -4,7 +4,7 @@ const { getCollaborator, setCollaborator, deleteCollaborator, updateCollaborator
 
 // router.get("/", getCollaborator) 
 //
-router.post('/', setCollaborator)
+router.post('/:projectId', setCollaborator)
 //  Update
 router.put('/:id', updateCollaborator)
 // delete
