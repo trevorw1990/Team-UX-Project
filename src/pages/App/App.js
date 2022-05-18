@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import AuthPage from '../AuthPage/AuthPage';
 import { getUser } from '../../utilities/api/users/users-service';
 import ProfilePage from '../ProfilePage/ProfilePage';
-import CreateProject from '../../components/CreateProject/CreatProject';
+import CreateProject from '../CreateProject/CreatProject';
 import './App.css';
 export default function App() {
   const [ user, setUser ] = useState(null)
