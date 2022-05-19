@@ -58,6 +58,7 @@
     background: rgba(38, 204, 215, 0.2);
     border: 1px solid #26CCD7;
     border-radius: 8px;
+    left: 39.38%;
 }
 
 .user-navbar-buttons label {
@@ -148,6 +149,13 @@ h1 {
     /* position: absolute; */
 }
 
+#firstName-su input[type="text"]{
+    left: 0%;
+    right: 0%;
+    top: 34.33%;
+    bottom: 0%;
+}
+
 .signup-form-page input[type="email"]{
     width: 540px;
     height: 44px;
@@ -157,6 +165,18 @@ h1 {
     width: 540px;
     height: 44px;
 } 
+
+.signup-form-page button[type="submit"] {
+    width: 160px;
+    height: 44px;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid rgba(38, 204, 215, 0.5);
+    border-radius: 8px;
+    color: rgba(38, 204, 215, 0.5);
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+}
 
 .signup-form-page h2 {
     display: flex;
@@ -261,9 +281,11 @@ textarea {
     border: 1px solid #ECECEC;
     border-radius: 8px;
 }
-/* 
-.website-links > label > input[type="url"] {
+
+.website-links input[type="url"] {
     background: #C4C4C4;
     border: 1px solid #ECECEC;
     border-radius: 8px;
-} */
+    height: 44px;
+    width: 350px;
+} 
