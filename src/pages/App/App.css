@@ -8,6 +8,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    margin-top: 700px;
 }
 
 .footer button {
@@ -125,7 +127,11 @@ h1 {
     width: 500px;
     margin-left: 40%;
     margin-right: 25%;
+    margin-top: 20%;
     font-family: 'Raleway', sans-serif;
+    /* position: absolute; */
+    transform: translate(-50%,-50%);
+    
 }
 
 .signup-form-page input {
@@ -136,11 +142,37 @@ h1 {
     
 }
 
+.signup-form-page input[type="text"] {
+    width: 255px;
+    height: 44px;
+    /* position: absolute; */
+}
+
+.signup-form-page input[type="email"]{
+    width: 540px;
+    height: 44px;
+}
+
+.signup-form-page input[type="password"] {
+    width: 540px;
+    height: 44px;
+} 
+
+.signup-form-page h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    margin-top: 15%;
+    margin-bottom: 20px;
+}
+
 .signup-form-page select {
     margin: 10px;
     background: #C4C4C4;
     border: 1px solid #ECECEC;
     border-radius: 8px;
+    height: 44px;
+    width: 200px;
 }
 
 .signup-form-buttons {
@@ -159,7 +191,6 @@ h1 {
 
 #nextButton {
     width: 150px;
-    margin: 20px;
     border-radius: 5%;
     height: 50px;
     background: rgba(38, 204, 215, 0.2);

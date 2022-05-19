@@ -37,7 +37,7 @@ export default function NavBar({ user, setUser }){
         try {
             const user = await login(formData)
             setUser(user)
-            navigate('/')
+            navigate(`/profile/${user._id}`)
             closeModal()
         } catch (error) {
             console.log(error)
