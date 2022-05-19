@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 import { statesList, artistRoles } from '../../utilities/list-items/list-items'
 import ImageUploads from '../ImageUploads/ImageUploads'
+import { createProject } from '../../utilities/api/projects/projects-api'
 import './CreateProjectForm.css'
 
 export default function CreateProjectForm({ user, setUser }) {
@@ -10,7 +11,7 @@ export default function CreateProjectForm({ user, setUser }) {
     const [ formData, setFormData ] = useState({
         projectName: '',
         country: 'United States',
-        usState: '',
+        usState: 'Alabama',
         zipCode: '',
         isRemote: false,
         projectDescription: '',
@@ -19,7 +20,8 @@ export default function CreateProjectForm({ user, setUser }) {
         dateStartEnd: [],
         datesMultiple: [],
         isRange: true,
-        imageUrl: ''
+        imageUrl: '',
+        organizer: ''
     })
 
     let navigate = useNavigate()
@@ -39,6 +41,7 @@ export default function CreateProjectForm({ user, setUser }) {
         event.preventDefault()
         try {
             // alert(JSON.stringify(formData)) // print sign up state var to the screen
+            createProject(formData)
             navigate('/')
         } catch (error) {
             console.log(error)
@@ -85,6 +88,10 @@ export default function CreateProjectForm({ user, setUser }) {
             setFormData({...formData, imageUrl: image})
         }
     }, [image])
+
+    useEffect(() => {
+        setFormData({ ...formData, organizer: user._id})
+    },[])
 
     return (
         <form onSubmit={handleSubmit} className='create-project-form'>

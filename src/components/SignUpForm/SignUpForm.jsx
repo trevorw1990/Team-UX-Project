@@ -15,7 +15,7 @@ export default function SignUpForm({ user, setUser }) {
         confirm: '',
         error: '',
         country: 'United States',
-        usState: '',
+        usState: 'Alabama',
         zipCode: '',
         roles: [],
         keywordTags:[],

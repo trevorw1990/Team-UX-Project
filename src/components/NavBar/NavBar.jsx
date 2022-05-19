@@ -102,7 +102,7 @@ export default function NavBar({ user, setUser }){
                 <div className='user-navbar-links'>
                     <Link to ='/find-projects'>Find Projects</Link>
                     <Link to ='/collaborators'>Find Collaborators</Link>
-                    <Link to ='/new-project'>Create Projects</Link>
+                    <Link to ='/create-project'>Create Project</Link>
                     <Link to ='/' onClick={(e) => {logOut()}}>Log Out</Link>
                     <Link to ='/inbox'><ion-icon name='mail-outline'></ion-icon></Link>
                 </div>
