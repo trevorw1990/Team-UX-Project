@@ -37,7 +37,7 @@ export default function About() {
 
                 <div id="columnOneTeam">
                     <div className='teamMember'>
-                        <img src='./images/About/ashley.JPG' alt='Ashley'/>
+                        <img src='./images/About/ashley.jpg' alt='Ashley'/>
                         <h2> Ashley Webb </h2>
                         <p> Front-End </p>
                         <a href="https://github.com/ashleywebb"> Github : ashleywebb </a>
@@ -61,14 +61,14 @@ export default function About() {
                 <div id="columnOneTeam">
                     
                     <div className='teamMember'>
-                        <img src='./images/About/Trevor.png' alt="Trevor"/>
+                        <img src='./images/About/Trevor.jpg' alt="Trevor"/>
                         <h2> Trevor Whitehurst </h2>
                         <p> Full Stack </p>
                         <a href="https://github.com/trevorw1990"> Github : trevorw1990 </a>
                     </div>
 
                     <div className='teamMember'>
-                        <img src='./images/About/jonathan.png' alt="Jonathan"/>
+                        <img src='./images/About/jonathan.jpg' alt="Jonathan"/>
                         <h2> Jonathan Suarez </h2>
                         <p> Back-End </p>
                         <a href="https://github.com/jonsuarez92"> Github : jonsuarez92 </a>
