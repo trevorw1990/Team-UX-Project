@@ -199,3 +199,42 @@ h1 {
     color: rgba(38, 204, 215, 0.5);
 }
 
+.team {
+    display: flex;
+    margin-top: 7%;
+}
+
+.team img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.team p {
+    color: white;
+    margin: 0;
+}
+
+.team h1 {
+    color: #26ccd7;
+}
+
+.team h2 {
+    color: white;
+    font-size: 36px;
+}
+
+.teamMember {
+    margin-bottom: 30px;
+}
+
+#columnOneTeam {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#aboutTitle h1 {
+    color: #26CCD7; 
+    font-size: 48px;
+    margin-top: 30px;
+}
