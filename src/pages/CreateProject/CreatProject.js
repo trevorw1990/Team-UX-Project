@@ -1,5 +1,11 @@
-export default function CreateProject(){
+import CreateProjectForm from '../../components/CreateProjectForm/CreateProjectForm.jsx'
+import './CreatProject.css'
+
+export default function CreateProject({ user }){
+
     return(
-        <h1>This is the CreateProject page</h1>
+        <main className='CreateProjectForm'>
+            <CreateProjectForm user={user} />
+        </main>
     )
 }
