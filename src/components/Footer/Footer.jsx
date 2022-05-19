@@ -1,4 +1,5 @@
 
+
 export default function Footer(props) {
     return (
         <div className="footer">
@@ -6,7 +7,7 @@ export default function Footer(props) {
                 Settings 
             </button>
             <button>
-                About 
+                <Link to='/about'>About</Link>
             </button>
             <button>
                 Support 
