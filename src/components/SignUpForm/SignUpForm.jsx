@@ -112,8 +112,11 @@ export default function SignUpForm({ user, setUser }) {
 
                         <label>First Name*
                         <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required /></label><br/>
+                      
+
                         <label>Last Name*
                         <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required /></label>
+                        
                         <label>Email*
                         <input type="email" name="email" value={formData.email} onChange={handleChange} required /></label>
                         <label>Password*
@@ -174,7 +177,7 @@ export default function SignUpForm({ user, setUser }) {
                         <h2>Almost done! Complete your Profile</h2>
 
                         <div>
-                            <img src="/images/ProfilePg/uploadpic.png" />
+                            <img src="/images/ProfilePg/uploadpic.png" height="104.17px" width="104.17px"/>
                         </div>
                     
                         <div className='profile-image-upload'>
@@ -201,7 +204,7 @@ export default function SignUpForm({ user, setUser }) {
                             <label>Tumblr (optional)
                             <input type="url" name="tumblrUrl" value={formData.tumblrUrl} onChange={handleChange} /></label>
                         </div>
-                        <button type="submit" disabled={disableSignUpBtn}>SIGN UP</button>
+                        <button type="submit" disabled={disableSignUpBtn}>Save</button>
                     </div>
                     :
                     ''}
