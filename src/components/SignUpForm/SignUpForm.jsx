@@ -15,7 +15,7 @@ export default function SignUpForm({ user, setUser }) {
         confirm: '',
         error: '',
         country: 'United States',
-        usState: '',
+        usState: 'Alabama',
         zipCode: '',
         roles: [],
         keywordTags:[],
@@ -112,8 +112,11 @@ export default function SignUpForm({ user, setUser }) {
 
                         <label>First Name*
                         <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required /></label><br/>
+                      
+
                         <label>Last Name*
                         <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required /></label>
+                        
                         <label>Email*
                         <input type="email" name="email" value={formData.email} onChange={handleChange} required /></label>
                         <label>Password*
@@ -172,6 +175,10 @@ export default function SignUpForm({ user, setUser }) {
                     page === 3 ?
                     <div className='signup-form-page'>
                         <h2>Almost done! Complete your Profile</h2>
+
+                        <div>
+                            <img src="/images/ProfilePg/uploadpic.png" height="104.17px" width="104.17px"/>
+                        </div>
                     
                         <div className='profile-image-upload'>
                             {/* <button onClick={(e) => {profileImageUpload()}}><ion-icon name="person-circle-outline"></ion-icon></button> */}
@@ -197,7 +204,7 @@ export default function SignUpForm({ user, setUser }) {
                             <label>Tumblr (optional)
                             <input type="url" name="tumblrUrl" value={formData.tumblrUrl} onChange={handleChange} /></label>
                         </div>
-                        <button type="submit" disabled={disableSignUpBtn}>SIGN UP</button>
+                        <button type="submit" disabled={disableSignUpBtn}>Save</button>
                     </div>
                     :
                     ''}
