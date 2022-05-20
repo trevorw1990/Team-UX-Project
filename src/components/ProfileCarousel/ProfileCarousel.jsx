@@ -1,26 +1,32 @@
 import ImageUploads from "../ImageUploads/ImageUploads"
+import { updateUser } from '../../utilities/api/users/users-api'
 import { useState, useEffect } from "react"
 
-export default function ProfileCarousel(){
+
+export default function ProfileCarousel({ user, setUser }){
 const [image, setImage] = useState('')
 const [carousel, setCarousel] = useState([''])
 const [counter, setCounter ] = useState(0)
 const [formData, setFormData] = useState({
-  profileImageUrl: '',
+  carouselImg: '',
 })
+const [ newUserData, SetNewUserData ] = useState(user)
 
-const doNothing = () => {
-  return
+const updateUserOnMongoDb = async () => {
+  const response = await updateUser(newUserData)
+  console.log(response)
+  setUser(newUserData)
 }
 
 useEffect(() => {
   if (image) {
       console.log(`loading ${image}`)
-      setFormData({...formData, profileImageUrl: image})
+      setFormData({...formData, carouselImg: image})
       const arr = carousel
       arr[counter] = image
       setCounter(counter + 1)
       setCarousel(arr)
+      SetNewUserData({ ...newUserData, profileCarousel: carousel})
   }
 }, [image])
   
