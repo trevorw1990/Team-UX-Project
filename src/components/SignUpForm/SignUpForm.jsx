@@ -175,15 +175,11 @@ export default function SignUpForm({ user, setUser }) {
                     page === 3 ?
                     <div className='signup-form-page'>
                         <h2>Almost done! Complete your Profile</h2>
-
-                        <div>
-                            <img src="/images/ProfilePg/uploadpic.png" height="104.17px" width="104.17px"/>
-                        </div>
                     
                         <div className='profile-image-upload'>
                             {/* <button onClick={(e) => {profileImageUpload()}}><ion-icon name="person-circle-outline"></ion-icon></button> */}
                             {
-                                image ? <img src={image} /> : ""
+                                image ? <img src={image} /> : <img src="/images/ProfilePg/uploadpic.png" height="104.17px" width="104.17px"/>
                             }
                             <ImageUploads image={image} setImage={setImage} /> 
                             <br/>
