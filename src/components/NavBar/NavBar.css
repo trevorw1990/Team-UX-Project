@@ -113,9 +113,6 @@
     height: 44px;
     font-size: 16px;
     margin: 40px;
-
-
-    
 }
 
 #signUpButton {
@@ -130,3 +127,21 @@
     text-decoration: none;
     color: black;
 }
+
+.user-navbar-links {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.user-navbar-links a {
+    color: #ECECEC !important;
+    margin: 20px;
+}
+
+

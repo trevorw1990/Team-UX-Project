@@ -12,9 +12,9 @@ export default function ProfilePage({ user, setUser }){
         return(
             <main>
                 <ProfilePageUserArea user={user} />
-                <hr/>
+            
                 <ProfilePageProjects user={user} />
-                <hr/>
+                
                 <ProfileCarousel />
             </main>
         )

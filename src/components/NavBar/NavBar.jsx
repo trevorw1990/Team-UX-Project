@@ -96,7 +96,7 @@ export default function NavBar({ user, setUser }){
         return (
             <div className='navBar'>
                 <button className='navbar-logo'>
-                        <img src='/images/Logo/Project-Connect.png' alt='ProjectConnect'/> 
+                        <img src='/images/Logo/project_logo.png' alt='ProjectConnect' /> 
                 </button>
 
                 <div className='user-navbar-links'>
