@@ -69,6 +69,6 @@ export const artistRoles = [
     {role: "Videographer"},
     {role: "Fashion Designer"},
     {role: "Performer"},
-    {role: "Filmaker"},
+    {role: "Film Maker"},
     {role: "other"}
 ]

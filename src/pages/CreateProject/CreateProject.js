@@ -1,5 +1,5 @@
 import CreateProjectForm from '../../components/CreateProjectForm/CreateProjectForm.jsx'
-import './CreatProject.css'
+import './CreateProject.css'
 
 export default function CreateProject({ user }){
 
