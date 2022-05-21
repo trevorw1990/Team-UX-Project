@@ -10,6 +10,7 @@ import CreateProject from '../CreateProject/CreateProject';
 import About from '../About/About';
 import ProjectPage from '../ProjectPage/ProjectPage';
 import Inbox from '../Inbox/Inbox';
+import CollaboratorSearchPage from '../CollaboratorSearchPage/CollaboratorSearchPage';
 import './App.css';
 export default function App() {
   const [ user, setUser ] = useState(null)
@@ -37,6 +38,8 @@ export default function App() {
         <Route path='/about' element={<About />}/>
           
         <Route path='/projects/:id' element={<ProjectPage user={user} setUser={setUser}/>} />
+
+        <Route path='/collaborators' element={<CollaboratorSearchPage user={user}/>} />
 
         <Route path='/inbox' element={<Inbox user={user} setUser={setUser} />} />
 
