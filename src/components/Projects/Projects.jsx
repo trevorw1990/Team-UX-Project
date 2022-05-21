@@ -1,4 +1,5 @@
 import ProjectCollaborators from "../ProjectCollaborators/ProjectCollaborators";
+import ProjectLookingFor from "../ProjectLookingFor/ProjectLookingFor";
 import { useState,useEffect } from "react"
 import { getProject } from "../../utilities/api/projects/projects-api"
 import { useParams } from "react-router-dom"
@@ -48,6 +49,7 @@ getOneProject()
                     </ul> */}
                     <p>{project.projectDescription}</p>
                 </div>
+                <ProjectLookingFor project={project} user={user} />
                 <ProjectCollaborators project={project} user={user}/>
             </main>
         )
