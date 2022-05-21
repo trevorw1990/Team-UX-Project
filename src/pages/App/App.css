@@ -179,7 +179,7 @@ h1 {
 }
 
 .signup-form-page p {
-    ont-family: 'Open Sans';
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -267,7 +267,14 @@ h1 {
 }
 
 .form-columns {
-
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #ECECEC;
 }
 
 .image-upload-buttons button {
