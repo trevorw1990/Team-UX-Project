@@ -34,8 +34,10 @@ export default function App() {
         <Route path='/create-project' element={<CreateProject user={user} setUser={setUser} />}/>
 
         <Route path='/about' element={<About />}/>
+          
         <Route path='/projects/:id' element={<ProjectPage user={user} setUser={setUser}/>} />
 
+        <Route path='/inbox' element={<Inbox user={user} setUser={setUser} />} />
 
      </Routes>
 
