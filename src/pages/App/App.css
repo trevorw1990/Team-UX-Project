@@ -379,3 +379,8 @@ textarea {
     width: 730px;
     height: 487.43px;
 }
+
+.profile-pg-container {
+    margin-left: 10%;
+    margin-right: 10%;
+}

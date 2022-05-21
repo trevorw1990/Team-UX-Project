@@ -10,11 +10,11 @@ export default function ProfilePage({ user, setUser }){
 
     const loaded = () => {
         return(
-            <main>
+            <main className="profile-pg-container">
                  <ProfilePageUserArea user={user} setUser={setUser}/>
-                <hr/>
+                
                 <ProfilePageProjects user={user} setUser={setUser}/>
-                <hr/>
+                
                 <ProfileCarousel user={user} setUser={setUser}/>
             </main>
         )
