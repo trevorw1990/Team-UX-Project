@@ -34,6 +34,7 @@ export default function ProjectCollaborator({collaborator, user}){
                     })}
                 </ul>
                 <p>{collaborator.role}</p>
+                {user._id !== userInfo._id && <button>Message</button>}
             </div>
         )
     }
