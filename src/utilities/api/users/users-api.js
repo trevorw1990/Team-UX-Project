@@ -20,3 +20,7 @@ export async function updateUser(userDetails) {
 export function getUser(userId){
     return sendRequest(`${BASE_URL}/${userId}`);
 }
+
+export function getUsers(){
+    return sendRequest(`${BASE_URL}`);
+}

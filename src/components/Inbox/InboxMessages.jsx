@@ -3,10 +3,11 @@ import InboxDrafts from './InboxDrafts'
 import InboxSent from './InboxSent'
 import InboxTrash from './InboxTrash'
 import InboxUnread from './InboxUnread'
+import InboxComposeMessage from './InboxComposeMessage'
 import { useState, useEffect } from 'react'
 
 
-export default function InboxMessages({ user, setUser, pageToShow,  setPageToShow}) {
+export default function InboxMessages({ user, setUser, pageToShow,  setPageToShow, params, receiverId, setReceiverId, setTheMessage, createNewThread }) {
 
     const pageNavigator = () => {
         if (pageToShow === 'InboxMessages') {
@@ -21,9 +22,10 @@ export default function InboxMessages({ user, setUser, pageToShow,  setPageToSho
             return <InboxTrash user={ user } setUser={ setUser } />
         } else if (pageToShow === 'InboxUnread') {
             return <InboxUnread  user={ user } setUser={ setUser }/>
+        } else if (pageToShow === 'InboxComposeMessage') {
+            return <InboxComposeMessage  user={ user } setUser={ setUser } params={params} receiverId={receiverId} setReceiverId={setReceiverId} setTheMessage={setTheMessage} createNewThread={createNewThread} />
         }
     }
-
     useEffect(() => {
 
     }, [pageToShow])
