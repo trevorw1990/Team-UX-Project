@@ -165,9 +165,11 @@ export default function SignUpForm({ user, setUser }) {
 
                         <br/>
 
-                        <label>Add Keyword Tags (optional)
-                            <input type='text' name='keywordTags' value={formData.keywordTags} onChange={handleChange} />
-                            Skills - Specialties - Software - Styles</label>
+                        <div>
+                            <label id="keywordLabel">Add Keyword Tags (optional)
+                                <input type='text' name='keywordTags' value={formData.keywordTags} onChange={handleChange} />
+                                Skills - Specialties - Software - Styles</label>
+                        </div>
                         <br/>
                     </div>
                     :

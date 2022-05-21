@@ -130,7 +130,6 @@ h1 {
     margin-right: 25%;
     margin-top: 23%;
     font-family: 'Raleway', sans-serif;
-    /* position: absolute; */
     transform: translate(-50%,-50%);
     
 }
@@ -146,15 +145,8 @@ h1 {
 .signup-form-page input[type="text"] {
     width: 255px;
     height: 44px;
-    /* position: absolute; */
 }
 
-#firstName-su input[type="text"]{
-    left: 0%;
-    right: 0%;
-    top: 34.33%;
-    bottom: 0%;
-}
 
 .signup-form-page input[type="email"]{
     width: 540px;
@@ -186,6 +178,16 @@ h1 {
     margin-bottom: 20px;
 }
 
+.signup-form-page p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #ECECEC;
+}
+
 .signup-form-page select {
     margin: 10px;
     background: #C4C4C4;
@@ -193,6 +195,11 @@ h1 {
     border-radius: 8px;
     height: 44px;
     width: 200px;
+}
+
+#keywordLabel input[type="text"] {
+    width: 540px;
+    height: 44px;
 }
 
 .signup-form-buttons {
@@ -262,8 +269,14 @@ h1 {
 }
 
 .form-columns {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
     display: flex;
-
+    align-items: center;
+    color: #ECECEC;
 }
 
 .image-upload-buttons button {
@@ -291,3 +304,78 @@ textarea {
     height: 44px;
     width: 350px;
 } 
+
+.profile-img-and-links img {
+    width: 255px;
+    height: 255px;
+    border: 1px solid #ECECEC;
+
+}
+
+.social-links a{
+    height: 18px;
+    width: 18px;
+}
+
+.ProfilePageUserArea h1 {
+    color: #26CCD7;
+    font-size: 48px;
+}
+
+
+.profile-about-and-roles-area {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ECECEC;
+    height: 132px ;
+    width: 635px;
+}
+
+
+.profile-about-and-roles-area ul {
+    width: 186px;
+    height: 90px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #ECECEC;
+}
+
+.userURL {
+    height: 30px;
+    width: 255px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #26CCD7;
+}
+
+.divider hr {
+    width: 980px;
+    border: 1px solid #ECECEC;
+
+}
+
+
+.image-upload-buttons button {
+    margin: 40px;
+}
+
+
+.ImageContainer h1 {
+    color: #ECECEC;
+    font-size: 48px;
+}
+
+
+.carousel-inner {
+    width: 730px;
+    height: 487.43px;
+}

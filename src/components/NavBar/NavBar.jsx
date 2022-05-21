@@ -95,11 +95,9 @@ export default function NavBar({ user, setUser }){
     const userNav = () => {
         return (
             <div className='navBar'>
-                <Link to ='/'>
-                    <button className='navbar-logo'>
-                            <img src='/images/Logo/Project-Connect.png' alt='ProjectConnect'/> 
-                    </button>
-                </Link>
+                <button className='navbar-logo'>
+                        <img src='/images/Logo/project_logo.png' alt='ProjectConnect' /> 
+                </button>
 
                 <div className='user-navbar-links'>
                     <Link to ='/find-projects'>Find Projects</Link>

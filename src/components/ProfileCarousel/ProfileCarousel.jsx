@@ -1,3 +1,6 @@
+// import anime1 from "./ImagesCarousel/anime1.jpeg"
+// import anime2 from "./ImagesCarousel/anime2.jpeg"
+// import anime3 from "./ImagesCarousel/anime3.jpeg"
 import ImageUploads from "../ImageUploads/ImageUploads"
 import { updateUser } from '../../utilities/api/users/users-api'
 import { useState, useEffect } from "react"

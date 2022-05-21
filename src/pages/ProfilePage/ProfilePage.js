@@ -11,7 +11,7 @@ export default function ProfilePage({ user, setUser }){
     const loaded = () => {
         return(
             <main>
-                <ProfilePageUserArea user={user} setUser={setUser}/>
+                 <ProfilePageUserArea user={user} setUser={setUser}/>
                 <hr/>
                 <ProfilePageProjects user={user} setUser={setUser}/>
                 <hr/>
