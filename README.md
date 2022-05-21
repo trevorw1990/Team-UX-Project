@@ -20,22 +20,22 @@ Austin O'Brien (UX Designer)
 
 <img />
 
-*Link*
-https://project-connect-team.herokuapp.com/
+## [Heroku Link](https://project-connect-team.herokuapp.com/)
 
-*Github Link*
-https://github.com/mosesb1/Team-UX-Project
+## [Github Link](https://github.com/mosesb1/Team-UX-Project/)
 
-*Installation*
+
+## Installation
 This is a cloud-based application that does not require installation. 
 
-*How to Use*
+## How to Use
 
 
-*Project Structure*
-![ERD](https://lucid.app/lucidchart/61c42514-d3a1-4877-81fe-c817b9fd1cbc/edit?viewport_loc=-66%2C-64%2C2080%2C1142%2C0_0&invitationId=inv_0c918acc-2563-4917-b4b9-7b3cd66d6808)
+## Project Structure
+* [Figma Link](https://www.figma.com/file/IIYsZWpnttAQwDiAbwZABK/P6?node-id=326%3A19125)
+* [ERD Link](https://lucid.app/lucidchart/61c42514-d3a1-4877-81fe-c817b9fd1cbc/edit?viewport_loc=-66%2C-64%2C2080%2C1142%2C0_0&invitationId=inv_0c918acc-2563-4917-b4b9-7b3cd66d6808)
 
-*Technologies Used*
+## Technologies Used
 * JavaScript
 * HTML
 * CSS
@@ -49,8 +49,9 @@ This is a cloud-based application that does not require installation.
 * Postman
 
 
-*Project Management*
-Development of this application was managed using a Trello board and communicating via Slack. 
+## Project Management
+Development of this application was managed using a Trello board and communicating via Slack. <br />
+[Trello Board Link](https://trello.com/b/Ly1i6XJE/team-velma-ux-sei-project-connect)
 
 *Unresolved Challenges*
 
