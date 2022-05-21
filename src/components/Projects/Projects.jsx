@@ -1,3 +1,4 @@
+import ProjectCollaborators from "../ProjectCollaborators/ProjectCollaborators";
 import { useState,useEffect } from "react"
 import { getProject } from "../../utilities/api/projects/projects-api"
 import { useParams } from "react-router-dom"
@@ -5,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 
 export default function Projects({user,setUser}){
-    const[project, setProject ] = useState({})
+    const [project, setProject ] = useState({})
     const params = useParams()
     const projectId = params.id
 
@@ -36,16 +37,19 @@ getOneProject()
 
     const loaded = () =>{ 
         return (
-            <div>
-                <h1>{project.projectName}</h1>
-                <ul>
-                    <li>{project.dateStartEnd} </li>
-                </ul>
-                {/* <ul>
-                    <li>{project.datesMultiple}</li>
-                </ul> */}
-            <p>{project.projectDescription}</p>
-            </div>
+            <main>
+                <div>
+                    <h1>{project.projectName}</h1>
+                    <ul>
+                        <li>{project.dateStartEnd} </li>
+                    </ul>
+                    {/* <ul>
+                        <li>{project.datesMultiple}</li>
+                    </ul> */}
+                    <p>{project.projectDescription}</p>
+                </div>
+                <ProjectCollaborators project={project} user={user}/>
+            </main>
         )
     }
 
