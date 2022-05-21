@@ -7,7 +7,8 @@ export default function InboxComposeMessage({ user, setUser, pageToShow,  setPag
     const getTheUsers = async () => {
         const response = await getUsers()
         setUserList(response)
-        console.log(response)
+        setReceiverId(response[0]._id)
+        // console.log(response) // print user list
     }
 
     const handleChange = (event) => {
@@ -19,8 +20,8 @@ export default function InboxComposeMessage({ user, setUser, pageToShow,  setPag
     }
 
     const roleToInvite = () => {
-        const inviteText = `Hey${receiverId ? receiverId : ''}! do you want to collaborate on my project- ${params.state.projectName}, as a ${params.state.theRole}?`
-
+        const inviteText = `Hey! do you want to collaborate on my project- ${params.state.projectName}, as a ${params.state.theRole}?`
+        setTheMessage(inviteText)
         return inviteText
     }
 
