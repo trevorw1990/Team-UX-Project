@@ -28,7 +28,7 @@ export default function About() {
                     </div>
                     
                     <div className='teamMember'>
-                        {/* <img src/> */}
+                        <img src = './images/About/orlando.jpg' alt="Orlando"/>
                         <h2> Orlando Valadez </h2>
                         <p> Front-End </p>
                         <a href="https://github.com/Orlandouchiha425"> Github: Orlandouchiha425</a> 
