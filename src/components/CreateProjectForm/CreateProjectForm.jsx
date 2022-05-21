@@ -113,7 +113,7 @@ export default function CreateProjectForm({ user, setUser }) {
                 <label> And/Or  <input type="checkbox" name="isRemote" value={formData.isRemote} onChange={(e) => setFormData({...formData, isRemote: !formData.isRemote})}/>Remote</label>
             </label>
             
-            <label>Project Description*
+            <label>Project Description* <br/>
             <textarea name="projectDescription" value={formData.projectDescription} onChange={handleChange} required /></label>
             <br/>
 
