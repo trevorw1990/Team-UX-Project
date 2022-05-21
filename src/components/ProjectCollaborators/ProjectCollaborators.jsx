@@ -21,6 +21,7 @@ export default function ProjectCollaborators({project, user}){
         return (
             <div>
                 <hr/>
+                <h3>Collaborators</h3>
                 {collaborators}
                 <hr/>
             </div>
