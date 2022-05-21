@@ -131,7 +131,8 @@ h1 {
     margin-top: 23%;
     font-family: 'Raleway', sans-serif;
     transform: translate(-50%,-50%);
-    
+    position: absolute;
+    top: 36%;
 }
 
 .signup-form-page input {
@@ -268,16 +269,17 @@ h1 {
     margin-top: 30px;
 }
 
+
 .form-columns {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-    display: flex;
     align-items: center;
     color: #ECECEC;
 }
+
 
 .image-upload-buttons button {
     background: rgba(38, 204, 215, 0.2);
