@@ -22,8 +22,17 @@ This is a cloud-based application that does not require installation.
 ERD
 
 *Technologies Used*
-REACT
-MongoDB
+* JavaScript
+* HTML
+* CSS
+* Bootstrap v.5.0.2
+* REACT
+* Mongoose/MongoDB
+* NodeJS
+* JWT User Authentication
+* Cloudinary
+* Heroku
+* Postman
 
 
 *Project Management*
