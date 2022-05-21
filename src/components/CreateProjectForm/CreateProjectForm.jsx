@@ -141,12 +141,12 @@ export default function CreateProjectForm({ user, setUser }) {
                 </div>
                 :
                 <div className='date-multi-select'>
-                    <p>Enteer Specific Date(s):</p>
+                    <p>Enter Specific Date(s):</p>
                     <label>Date: <input type="date" name="datesMultiple" onChange={(e) => {addDate(e)}}/></label>
                 </div>
             }
 
-            <button onClick={(e) => {setFormData({ ...formData, isRange: !formData.isRange})}}>{ formData.isRange? 'Or slect dates' : 'Or select range' }</button>
+            <button onClick={(e) => {setFormData({ ...formData, isRange: !formData.isRange})}}>{ formData.isRange? 'Or select dates' : 'Or select range' }</button>
 
             <p>Choose a cover image (optional): </p>
 
