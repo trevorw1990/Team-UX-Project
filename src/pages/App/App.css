@@ -126,13 +126,12 @@ h1 {
     background-color: #202020;
     color: white;
     width: 500px;
-    margin-left: 40%;
+    margin-left: 48%;
     margin-right: 25%;
-    margin-top: 23%;
+    margin-top: 20%;
     font-family: 'Raleway', sans-serif;
     transform: translate(-50%,-50%);
-    position: absolute;
-    top: 36%;
+    
 }
 
 .signup-form-page input {
@@ -271,6 +270,7 @@ h1 {
 
 
 .form-columns {
+    columns: 3;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
