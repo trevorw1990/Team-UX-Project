@@ -9,10 +9,22 @@ export default function ProjectLookingForItem({item, user, project}){
         }
         return false
     }
+
+    const determineDisplay = () => {
+        return user._id === project.organizer || isCollaborator()
+    }
+
+    const invite = () => {
+        return
+    }
+
+    const interested = () => {
+        return
+    }
     return (
         <div>
             <h4>{item}</h4>
-            <button>{user._id === project.organizer || isCollaborator() ? 'Invite' : "I'm interested"}</button>
+            <button onClick={determineDisplay() ? invite : interested}>{determineDisplay() ? 'Invite' : "I'm interested"}</button>
         </div>
     )
 }
