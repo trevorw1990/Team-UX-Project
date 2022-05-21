@@ -11,7 +11,6 @@ export default function Projects({user,setUser}){
     const params = useParams()
     const projectId = params.id
 
-// let navigate= useNavigate()
 
     const getOneProject  = async() => {
         try{ 
@@ -40,16 +39,31 @@ getOneProject()
         return (
             <main>
                 <div>
+                    <div>
                     <h1>{project.projectName}</h1>
+                  </div>  
+                    
+                    <div className="d-flex justify-content-center">
+                    <h3>organizer: <br/>
+                         <img src={user.profileImageUrl} alt='profileImg'/></h3>
+                    </div>
+
+
+
                     <ul>
                         <li>{project.dateStartEnd} </li>
                     </ul>
-                    {/* <ul>
-                        <li>{project.datesMultiple}</li>
-                    </ul> */}
+                
                     <p>{project.projectDescription}</p>
                 </div>
-                <ProjectLookingFor project={project} user={user} />
+
+
+            
+                <ProjectLookingFor  project={project} user={user} />
+
+     
+         
+               
                 <ProjectCollaborators project={project} user={user}/>
             </main>
         )
