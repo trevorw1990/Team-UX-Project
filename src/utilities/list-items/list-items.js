@@ -51,24 +51,24 @@ export const statesList = [
     {label: 'Wyoming', value: 'Wyoming'}
   ]
 
-export const artistRoles = [
+export const artistRoles=[
     {role: "Photographer"},
-    {role: "Artist"},
-    {role: "Costume Maker"},
     {role: "Model"},
-    {role: "Painter"},
-    {role: "Photo Retoucher"},
     {role: "Make Up Artist"},
-    {role: "Illustrator"},
-    {role: "Prop Maker"},
-    {role: "Hairstylist"},
-    {role: "Digitar Artist"},
-    {role: "Actor"},
-    {role: "Wardrobe Stylist"},
-    {role: "Graphic Designer"},
-    {role: "Videographer"},
+    {role: "Hairystlist"},
+    {role: "Wardrope Stylist"},
     {role: "Fashion Designer"},
+    {role: "Artist"},
+    {role: "Painter"},
+    {role: "Illustrator"},
+    {role: "Digitar Artist"},
+    {role: "Graphic Designer"},
     {role: "Performer"},
+    {role: "Costume Maker"},
+    {role: "Photo Retoucher"},
+    {role: "Prop Maker"},
+    {role: "Actor"},
+    {role: "Videographer"},
     {role: "Film Maker"},
     {role: "other"}
-]
+  ]
