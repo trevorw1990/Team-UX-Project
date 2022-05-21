@@ -8,7 +8,7 @@ export default function ProjectCollaborators({project, user}){
     const getCollaborators = () => {
         setCollaborators(project.collaborators.map((collaborator, idx) => {
             return (
-                <ProjectCollaborator key={idx} collaborator={collaborator} />
+                <ProjectCollaborator key={idx} collaborator={collaborator} user={user}/>
             )
         }))
     }
