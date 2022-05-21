@@ -4,7 +4,7 @@ import { useState,useEffect } from "react"
 import { getProject } from "../../utilities/api/projects/projects-api"
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-
+import ProfileCarousel from "../../components/ProfileCarousel/ProfileCarousel"
 
 export default function Projects({user,setUser}){
     const [project, setProject ] = useState({})
@@ -65,6 +65,8 @@ getOneProject()
          
                
                 <ProjectCollaborators project={project} user={user}/>
+
+                <ProfileCarousel setUser={setUser} user={user} />
             </main>
         )
     }
