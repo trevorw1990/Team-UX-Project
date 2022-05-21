@@ -16,3 +16,7 @@ export async function login(credentials) {
 export async function updateUser(userDetails) {
     return sendRequest(`${BASE_URL}/${userDetails._id}`, 'PUT', userDetails)
 }
+
+export function getUser(userId){
+    return sendRequest(`${BASE_URL}/${userId}`);
+}
