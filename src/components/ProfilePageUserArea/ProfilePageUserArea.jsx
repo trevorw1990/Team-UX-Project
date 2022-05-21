@@ -6,7 +6,7 @@ export default function ProfilePageUserArea({ user }) {
     return (
         <div className='ProfilePageUserArea'>
 
-            <h1>name</h1>
+           <h1> {user.firstName} </h1> 
             
             <div className='profile-img-and-links'>
                 <img src={user.profileImageUrl} alt='profileImg'/>
