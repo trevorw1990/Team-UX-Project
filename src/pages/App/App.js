@@ -8,7 +8,7 @@ import { getUser } from '../../utilities/api/users/users-service';
 import ProfilePage from '../ProfilePage/ProfilePage';
 import CreateProject from '../CreateProject/CreateProject';
 import About from '../About/About';
-
+import ProjectPage from '../ProjectPage/ProjectPage';
 import './App.css';
 export default function App() {
   const [ user, setUser ] = useState(null)
@@ -34,6 +34,8 @@ export default function App() {
         <Route path='/create-project' element={<CreateProject user={user} setUser={setUser} />}/>
 
         <Route path='/about' element={<About />}/>
+        <Route path='/projects/:id' element={<ProjectPage user={user} setUser={setUser}/>} />
+
 
      </Routes>
 
