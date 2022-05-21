@@ -89,9 +89,11 @@
 
 }
 
-.navbar-logo img{
-    max-height:400px;
+#navbar-logo img{
+    max-height: 400px;
     max-width: 400px;
+    margin-top: 20px;
+    height: 100px;
 }
 
 .login-form-button {

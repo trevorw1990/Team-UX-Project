@@ -28,14 +28,17 @@
 .navBar {
     display: flex;
     margin-bottom: 0;
+    margin-top: 2%;
+    justify-content: center;
 }
 
-#navBar-logo img{
+#navbar-logo img{
+    max-height: 200px;
+    max-width: 200px;
     margin-top: 20px;
-    margin-left: 311px;
-    margin-bottom: 10px;
-    height: 125px;
+    height: 100px;
 }
+
 
 .userNavButton {
     display: flex;
@@ -78,11 +81,17 @@ hr {
     position: relative;
     text-align: center;
     color: white;    
-    display: flex;
+    /* display: flex; */
     margin: 0;
-    /* width: 100%; */
+    width: 100%;
   }
 
+#logo-image {
+    display: flex;
+    position:relative;
+    /* width:100%; */
+
+  }
 
  .centered {
     position: absolute;
