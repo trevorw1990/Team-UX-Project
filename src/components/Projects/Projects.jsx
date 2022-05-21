@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 
 export default function Projects({user,setUser}){
-    const[project, setProject ] = useState({})
+    const [project, setProject ] = useState({})
     const params = useParams()
     const projectId = params.id
 
@@ -48,7 +48,7 @@ getOneProject()
                     </ul> */}
                     <p>{project.projectDescription}</p>
                 </div>
-                <ProjectCollaborators project={project} user={user} />
+                <ProjectCollaborators project={project} user={user}/>
             </main>
         )
     }
