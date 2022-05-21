@@ -26,6 +26,7 @@ const userSchema = new Schema({
     roles: Array,
     keywordTags: Array,
     profileImageUrl: String,
+    profileCarousel: Array,
     aboutMe: String,
     websiteUrl: String,
     instagramUrl: String,
