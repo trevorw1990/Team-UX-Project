@@ -39,7 +39,7 @@ export default function App() {
           
         <Route path='/projects/:id' element={<ProjectPage user={user} setUser={setUser}/>} />
 
-        <Route path='/collaborators' element={<CollaboratorSearchPage user={user}/>} />
+        <Route path='/collaborators' element={<CollaboratorSearchPage user={user} setUser={setUser}/>} />
 
         <Route path='/inbox' element={<Inbox user={user} setUser={setUser} />} />
 
