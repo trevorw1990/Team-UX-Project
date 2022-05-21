@@ -10,7 +10,10 @@ This application was conceptualized and developed by General Assembly students i
 <img />
 
 *Link*
-website address
+https://project-connect-team.herokuapp.com/
+
+*Github Link*
+https://github.com/mosesb1/Team-UX-Project
 
 *Installation*
 This is a cloud-based application that does not require installation. 
