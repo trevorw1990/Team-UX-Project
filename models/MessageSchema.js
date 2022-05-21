@@ -15,6 +15,14 @@ const messageSchema = new Schema({
         type: String,
         required: true
     },
+    isRead: {
+        type: Boolean,
+        default: false
+    },
+    isInvite: {
+        type: Boolean,
+        default: false
+    },
     thread: {
         type: Schema.Types.ObjectId,
         ref: 'MessageThread',
