@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import { statesList, artistRoles } from '../../utilities/list-items/list-items'
 import { useNavigate } from 'react-router-dom'
 import ImageUploads from '../ImageUploads/ImageUploads'
+import '../../pages/App/App.css'
+import './SignUpForm.css'
 
 export default function SignUpForm({ user, setUser }) {
     const [ image, setImage ] = useState('')

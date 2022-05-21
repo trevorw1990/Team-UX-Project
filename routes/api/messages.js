@@ -6,7 +6,7 @@ router.get("/sent/:userId", getSendMessage)
 //
 router.get("/received/:userId", getReceiveMessage)
 
-router.post('/', setMessage)
+router.post('/:threadId', setMessage)
 //  Update
 router.put('/:id', updateMessage)
 // delete

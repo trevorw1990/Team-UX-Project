@@ -128,7 +128,7 @@ h1 {
     width: 500px;
     margin-left: 40%;
     margin-right: 25%;
-    margin-top: 25%;
+    margin-top: 23%;
     font-family: 'Raleway', sans-serif;
     transform: translate(-50%,-50%);
     
@@ -224,6 +224,8 @@ h1 {
     border: 1px solid rgba(38, 204, 215, 0.5);
     border-radius: 8px;
     color: rgba(38, 204, 215, 0.5);
+    position: absolute;
+    top: 120%;
 }
 
 .team {
