@@ -6,7 +6,7 @@ import { getUsers } from '../../utilities/api/users/users-api';
 export default function CollaboratorSearch({user}){
     const [collaborators, setCollaborators] = useState([]);
     const [filter, setFilter] = useState({
-        state: '',
+        usState: 'Alabama',
         zipCode: '',
         roles: [],
         keyword: ''
@@ -31,10 +31,19 @@ export default function CollaboratorSearch({user}){
     useEffect(() => {
         getCollaborators();
     },[])
-    return (
+
+    const loaded = () => {
+        return (
         <main>
             <SearchBar type="collaborator" user={user} filter={filter} setFilter={setFilter}/>
             {collaborators}
         </main>
-    )
+        )
+    }
+
+    const loading = () => {
+        return
+    }
+
+    return collaborators.length ? loaded() : loading();
 }
