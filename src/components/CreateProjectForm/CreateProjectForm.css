@@ -31,20 +31,25 @@
     color: #000000;
 }
 
-/* .create-project-form button {
-    width: 77px;
-    height: 22px;
+.create-project-form button {
+    width: 160px;
+    height: 44px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 22px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: rgba(38, 204, 215, 0.5);
-} */
+    background-color: rgba(38, 204, 215, 0.5);
+    margin: 20px;
+    border-radius: 8pt;
+}
 
+
+.file-input input[type="file"] {
+    background: #C4C4C4;
+    border: 1px solid #ECECEC;
+    border-radius: 8pt;
+    height: 44px;
+}
 
 .date-range-select input[type="date"] {
     width: 160px;
