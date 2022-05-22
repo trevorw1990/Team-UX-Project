@@ -25,6 +25,23 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
     }
   }
 
+  const addDate = (event, isStart) => {
+
+    const newDate = event.target.value
+
+    if(event.target.name === 'dateStartEnd') {
+
+        const dateArr = filter.dates
+        if (isStart) {
+            dateArr[0] = newDate
+            setFilter({ ...filter, dates: dateArr })
+        } else if (!isStart) {
+            dateArr[1] = newDate
+            setFilter({ ...filter, dates: dateArr })
+        } 
+    }
+  }
+
   const clearFilter = (evt) => {
     if(type === 'collaborator'){
       setFilter({
@@ -34,7 +51,12 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
         keyword: ''
       })
     } else {
-      return
+      setFilter({
+        usState: '',
+        zipCode: '',
+        roles: [],
+        dates: []
+      })
     }
     setRefreshFilter(!refreshFilter);
   }
@@ -79,7 +101,45 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
   }
 
   const projectSearch = () => {
-    return
+    return (
+    <div>
+      <div>
+        <label> state
+          <select name="usState" value={filter.usState} onChange={handleChange} required >
+              {statesList.map((usState, index) => (
+                <option value={usState.value} key={index} >{usState.label}</option>
+              ))}   
+          </select>
+        </label>
+        <label>zip code
+            <input type="text" name="zipCode" value={filter.zipCode} onChange={handleChange} required />
+        </label>
+      </div>
+      <div className='form-columns'>
+        {
+          artistRoles.map((theRole, index) => {
+            return(
+              <div className={`form-column-${index % 3 + 1}`} key={index}>
+                  <label>
+                      <input type="checkbox" name="roles" value={theRole.role} onChange={(e) => addRole(e, theRole.role)}/>
+                      {theRole.role}
+                  </label>
+              </div>
+            )
+          })
+        }
+      </div>
+      {
+        <div className='date-range-select'>
+            <p>Date Range:</p>
+            <label>Start: <input type="date" name="dateStartEnd" onChange={(e) => {addDate(e, true)}}/></label>
+            <label>End: <input type="date" name="dateStartEnd" onChange={(e) => {addDate(e, false)}}/></label>
+        </div>
+      }
+      <button onClick={applyFilter}>Apply Filters</button>
+      <button onClick={clearFilter}>Clear Filter</button>
+    </div>
+    )
   }
 
   return type === 'collaborator' ? collaboratorSearch() : projectSearch();

@@ -10,7 +10,7 @@ export default function ProjectSearchPage({user, setUser}){
         usState: '',
         zipCode: '',
         roles: [],
-        date: []
+        dates: []
     })
     const [refreshFilter, setRefreshFilter] = useState(false);
 
