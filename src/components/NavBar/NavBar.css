@@ -149,10 +149,13 @@
     width: 44px;
     border-radius: 50%;
     border: 1px solid #ECECEC;
+    margin-top: -25px;
 
 }
 
 ion-icon {
     font-size: 36px;
-    margin: 20px;
+    margin-top: 55px;
+    margin-right: 20px;
+    margin-left: 50px;
 }

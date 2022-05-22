@@ -31,12 +31,12 @@ export default function ProfilePageUserArea({ user }) {
 
                 </div>
 
-                <div>
-                    <div className='social-links '>
+                <div className='text'>
+                    {/* <div className='social-links '>
                         <a href={user.instagramUrl} target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
                         <a href={user.pinterestUrl} target="_blank"><ion-icon name="logo-pinterest"></ion-icon></a>
                         <a href={user.tumblrUrl} target="_blank"><ion-icon name="logo-tumblr"></ion-icon></a>
-                    </div>
+                    </div> */}
 
                     <div className='userURL'>
                         <a href={user.websiteUrl} target="_blank">{user.websiteUrl}</a>
@@ -44,6 +44,7 @@ export default function ProfilePageUserArea({ user }) {
 
                     <div className='profile-edit-link'><Link to='/'>Edit My Profile</Link></div>
                 </div>
+
             </div>
 
             

@@ -34,6 +34,7 @@ useEffect(() => {
 }, [image])
   
   return(
+
     carousel[0] ?
     <div className="ImageContainer">
       
@@ -80,7 +81,9 @@ useEffect(() => {
         </button>
 
       </div>
+      
       <ImageUploads image={image} setImage={setImage}/>
+
     </div>
     :
     <ImageUploads image={image} setImage={setImage}/>

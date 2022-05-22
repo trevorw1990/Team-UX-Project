@@ -5,11 +5,16 @@ export default function ProfilePageProjects({ user }) {
 
     return (
         <div className='ProfilePageProjects'>
-            <h2>My Projects</h2>
+
+            <div className='myProjects '>
+                <h2>My Projects</h2>
+                <button>Create Project</button>
+            </div>
 
             <div className='divider'>
                 <hr/>
             </div>
+       
         </div>
     )
 }
