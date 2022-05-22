@@ -283,13 +283,6 @@ h1 {
     color: #ECECEC;
 }
 
-
-.image-upload-buttons button {
-    background: rgba(38, 204, 215, 0.2);
-    border: 1px solid rgba(38, 204, 215, 0.5);
-    color: white;
-}
-
 textarea {
     box-sizing: border-box;
     width: 730.78px;
@@ -323,11 +316,16 @@ textarea {
     width: 18px;
 }
 
+/* .ProfilePageProjects {
+    display: flex;
+    flex-direction: row;
+} */
+
 .ProfilePageUserArea h1 {
     color: #26CCD7;
     font-size: 48px;
-    margin-left: 309px;
     margin-bottom: 90px;
+    margin-left: -95px;
 }
 
 
@@ -368,29 +366,37 @@ textarea {
 .divider hr {
     width: 980px;
     border: 1px solid #ECECEC;
-
+    margin-left: -30px;
 }
-
 
 .image-upload-buttons button {
-    margin: 40px;
+    height: 44px;
+    width: 160px;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    color: #26CCD7;
 }
-
 
 .ImageContainer h1 {
     color: #ECECEC;
     font-size: 48px;
 }
 
+.ImageContainer {
+    margin-left: 96px;
+}
 
 .carousel-inner {
     width: 730px;
     height: 487.43px;
+    margin-top: 64px;
+    margin-bottom: 50px;
 }
 
 .profile-pg-container {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 404px;
+    margin-right: 404px;
     margin-top: 6%;
 }
 
@@ -461,6 +467,7 @@ textarea {
     color: #ECECEC;
     text-align: left;
     margin-left: 30px;
+    display: grid;
 }
 
 .userAbout-roles {
@@ -470,10 +477,39 @@ textarea {
     margin-bottom: 20px;
 }
 
-.profile-img-and-links {
-    margin-left: 404px;
+.ProfilePageProjects h2 {
+    margin-top: 30px;
+    margin-right: 500px;
 }
 
-.ProfilePageProjects h2 {
-    margin-left: 404px;
+.myProjects {
+    display: flex;
 }
+
+.myProjects button {
+    height: 44px;
+    width: 160px;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    color: #26CCD7;
+    margin-top: 30px;
+}
+
+.gallery-header button {
+    height: 44px;
+    width: 160px;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    color: #26CCD7;
+    margin-left: 523px;
+}
+
+.gallery-header {
+    display: flex;
+    margin-top: 50px;
+}
+
+
+
