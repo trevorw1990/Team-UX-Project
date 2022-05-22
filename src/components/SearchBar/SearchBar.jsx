@@ -2,7 +2,7 @@ import './SearchBar.css';
 import { useState, useEffect } from "react";
 import { statesList, artistRoles } from "../../utilities/list-items/list-items";
 
-export default function SearchBar({user, filter, setFilter, type}){
+export default function SearchBar({user, filter, setFilter, type, refreshFilter, setRefreshFilter}){
 
   const handleChange = (evt) => {
     setFilter({
@@ -25,7 +25,7 @@ export default function SearchBar({user, filter, setFilter, type}){
     }
   }
 
-  const clearFilter = () => {
+  const clearFilter = (evt) => {
     if(type === 'collaborator'){
       setFilter({
         usState: '',
@@ -36,6 +36,11 @@ export default function SearchBar({user, filter, setFilter, type}){
     } else {
       return
     }
+    setRefreshFilter(!refreshFilter);
+  }
+
+  const applyFilter = (evt) => {
+    setRefreshFilter(!refreshFilter);
   }
 
   const collaboratorSearch = () => {
@@ -68,6 +73,7 @@ export default function SearchBar({user, filter, setFilter, type}){
             })
           }
         </div>
+        <button onClick={applyFilter}>Apply Filters</button>
       </div>
     )
   }

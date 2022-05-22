@@ -6,7 +6,7 @@ import { getUsers } from '../../utilities/api/users/users-api';
 
 export default function CollaboratorSearchPage({user, setUser}){
     const [collaborators, setCollaborators] = useState([]);
-    const [displayedCollaborators, setDisplayedCollaborators] = useState([]);
+    const [refreshFilter, setRefreshFilter] = useState(false);
     const [filter, setFilter] = useState({
         usState: '',
         zipCode: '',
@@ -49,12 +49,12 @@ export default function CollaboratorSearchPage({user, setUser}){
 
     useEffect(() => {
         getCollaborators();
-    },[filter])
+    },[refreshFilter])
 
     const loaded = () => {
         return (
         <main>
-            <SearchBar type="collaborator" user={user} filter={filter} setFilter={setFilter}/>
+            <SearchBar type="collaborator" user={user} filter={filter} setFilter={setFilter} refreshFilter={refreshFilter} setRefreshFilter={setRefreshFilter}/>
             {collaborators}
         </main>
         )
