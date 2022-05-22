@@ -9,14 +9,13 @@ import { useParams, useLocation } from 'react-router-dom'
 export default function Inbox({ user, setUser}){
 
     const [ pageToShow, setPageToShow ] = useState ('InboxAllMail')
-    const [ currentThread, setCurrentThread ] = useState (null)
     const [ newThread, setNewThread ] = useState(null)
     const [ receiverId, setReceiverId ] = useState(null)
     const [ theMessage, setTheMessage ] = useState("")
     const params = useLocation()
 
     const getParams = () => {
-        console.log(params)
+        // console.log(params)
         if (params.state) {
             setPageToShow('InboxComposeMessage')
         }
@@ -45,13 +44,13 @@ export default function Inbox({ user, setUser}){
         sendMessage(response)
     }
 
-    const sendMessage = async () => {
+    const sendMessage = async (aThread) => {
         const response = await createMessage(
             user._id,
             receiverId,
             theMessage,
-            newThread.createdThread._id)
-        console.log(`Message reply: ${response}`)
+            aThread.createdThread._id)
+        // console.log(`Message reply: ${response}`)
     }
 
     useEffect(() => {
