@@ -26,9 +26,13 @@ export default function CollaboratorSearchPage({user, setUser}){
                     return (
                         <CollaboratorItem 
                             key={idx} 
+                            id={currUser._id}
                             user={user} 
+                            website={currUser.websiteUrl}
                             roles={currUser.roles} 
                             location={currUser.usState} 
+                            description={currUser.aboutMe}
+                            image={currUser.profileImageUrl}
                             name={`${currUser.firstName} ${currUser.lastName}`}
                             instagram={currUser.instagramUrl}
                             pinterest={currUser.pinterestUrl}
