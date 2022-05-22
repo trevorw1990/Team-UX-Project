@@ -19,7 +19,18 @@ export default function ProjectSearchPage({user, setUser}){
             const foundProjects = await getAllProjects();
             setProjects(foundProjects.map((project,idx) => {
                 return (
-                    <ProjectItem key={idx}/>
+                    <ProjectItem 
+                        key={idx}
+                        id={project._id}
+                        name={project.projectName}
+                        image={project.imageUrl}
+                        location={project.usState}
+                        description={project.projectDescription}
+                        roles={project.lookingForItems}
+                        datesRange={project.dateStartEnd}
+                        datesMultiple={project.datesMultiple}
+                        organizer={project.organizer}
+                    />
                 )
             }))
         } catch (err) {
