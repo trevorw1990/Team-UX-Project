@@ -410,3 +410,33 @@ textarea {
     background-color: #454545;
     margin-top: 10px; 
 }
+
+.inbox-header {
+    width: 1110px;
+    border-bottom: 1px solid #26CCD7;
+    background: #121212;
+    padding: 20px;
+}
+
+/* .inbox-navbar-categories {
+} */
+
+
+
+.inbox-navbar-categories button {
+    width: 255px;
+    height: 44px;
+    background: #454545;
+    border: 2px solid #353535;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color:#ECECEC;
+}
+
+/* .inbox-page {
+    background: #121212;
+    width: 1110px;
+    height: 850px;  
+} */
