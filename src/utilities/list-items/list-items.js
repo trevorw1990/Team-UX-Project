@@ -55,13 +55,13 @@ export const artistRoles=[
     {role: "Photographer"},
     {role: "Model"},
     {role: "Make Up Artist"},
-    {role: "Hairystlist"},
-    {role: "Wardrope Stylist"},
+    {role: "Hair stylist"},
+    {role: "Wardrobe Stylist"},
     {role: "Fashion Designer"},
     {role: "Artist"},
     {role: "Painter"},
     {role: "Illustrator"},
-    {role: "Digitar Artist"},
+    {role: "Digital Artist"},
     {role: "Graphic Designer"},
     {role: "Performer"},
     {role: "Costume Maker"},
@@ -70,5 +70,5 @@ export const artistRoles=[
     {role: "Actor"},
     {role: "Videographer"},
     {role: "Film Maker"},
-    {role: "other"}
+    {role: "Other"}
   ]
