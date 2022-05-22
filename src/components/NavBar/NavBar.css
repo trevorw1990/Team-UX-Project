@@ -144,9 +144,15 @@
     margin: 20px;
 }
 
-.profile-image-navbar img{
+.profile-image-navbar {
     height: 44px;
     width: 44px;
     border-radius: 50%;
+    border: 1px solid #ECECEC;
+
 }
 
+ion-icon {
+    font-size: 36px;
+    margin: 20px;
+}
