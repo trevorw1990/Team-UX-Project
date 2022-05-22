@@ -326,6 +326,8 @@ textarea {
 .ProfilePageUserArea h1 {
     color: #26CCD7;
     font-size: 48px;
+    margin-left: 309px;
+    margin-bottom: 90px;
 }
 
 
@@ -450,3 +452,28 @@ textarea {
     padding-left: 20px;
 }
 
+.userAbout-text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ECECEC;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.userAbout-roles {
+    margin-left: 30px;
+    color: #ECECEC;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.profile-img-and-links {
+    margin-left: 404px;
+}
+
+.ProfilePageProjects h2 {
+    margin-left: 404px;
+}
