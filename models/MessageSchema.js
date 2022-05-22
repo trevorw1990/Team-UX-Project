@@ -11,6 +11,14 @@ const messageSchema = new Schema({
         ref: 'User',
         required: true
     },
+    senderName: {
+        type: String,
+        required: true
+    },
+    receiverName: {
+        type: String,
+        required: true
+    },
     message: {
         type: String,
         required: true
@@ -29,6 +37,8 @@ const messageSchema = new Schema({
         required: true
     }
    
+}, {
+    timestamps: true
 })
 
 module.exports = messageSchema;
