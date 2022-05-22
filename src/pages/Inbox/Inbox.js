@@ -59,8 +59,14 @@ export default function Inbox({ user, setUser}){
 
     return(
         <div className='inbox-page'>
-            <InboxNavBar user={user}  setUser={setUser} pageToShow={pageToShow} setPageToShow={setPageToShow} />
-            <InboxMessages user={user} setUser={setUser} pageToShow={pageToShow} setPageToShow={setPageToShow} params={params} setReceiverId={setReceiverId} setTheMessage={setTheMessage} createNewThread={createNewThread} receiverId={receiverId}/>
+            <div>
+                <InboxNavBar user={user}  setUser={setUser} pageToShow={pageToShow} setPageToShow={setPageToShow} />
+            </div>
+
+            <div>
+                <InboxMessages user={user} setUser={setUser} pageToShow={pageToShow} setPageToShow={setPageToShow} params={params} setReceiverId={setReceiverId} setTheMessage={setTheMessage} createNewThread={createNewThread} receiverId={receiverId}/>
+            </div>        
+        
         </div>
     )
 }
