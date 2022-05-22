@@ -235,8 +235,11 @@ h1 {
 
 .team img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ECECEC;
+    margin-right: 20px;
+
 }
 
 .team p {
@@ -441,3 +444,9 @@ textarea {
     width: 1110px;
     height: 850px;  
 } */
+
+
+.teamMember-name {
+    padding-left: 20px;
+}
+
