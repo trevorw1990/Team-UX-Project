@@ -387,3 +387,26 @@ textarea {
     margin-right: 10%;
     margin-top: 6%;
 }
+
+.image-placeholder {
+    background-color: #454545;
+    display: block;
+    height: 255px;
+    width: 255px;
+    margin: 5px;
+    width: 260px;
+    align-items: center;
+    border: 1px solid #26CCD7;
+}
+
+.image-placeholder > h4 {
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    background-color: #454545;
+}
+
+.image-placeholder img {
+    background-color: #454545;
+    margin-top: 10px; 
+}
