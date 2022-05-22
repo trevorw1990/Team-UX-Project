@@ -23,11 +23,25 @@ export default function SearchBar({user, filter, setFilter, type}){
         arr.splice(indexToDelete, 1)
         setFilter({...filter, roles: arr})
     }
-}
+  }
+
+  const clearFilter = () => {
+    if(type === 'collaborator'){
+      setFilter({
+        usState: '',
+        zipCode: '',
+        roles: [],
+        keyword: ''
+      })
+    } else {
+      return
+    }
+  }
 
   const collaboratorSearch = () => {
     return (
       <div>
+        <button onClick={clearFilter}>Clear Filter</button>
         <div>
           <label> state
             <select name="usState" value={filter.usState} onChange={handleChange} required >
