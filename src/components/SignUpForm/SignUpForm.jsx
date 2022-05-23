@@ -177,7 +177,7 @@ export default function SignUpForm({ user, setUser }) {
                     
                     {
                     page === 3 ?
-                    <div className='signup-form-page'>
+                    <div className='pg-three'>
                         <h2>Almost done! Complete your Profile</h2>
                     
                         <div className='profile-image-upload'>
@@ -191,17 +191,17 @@ export default function SignUpForm({ user, setUser }) {
                         </div>
 
                         <label>About me:
-                        <textarea name="aboutMe" value={formData.aboutMe} onChange={handleChange} required /></label>
+                        <textarea id="aboutMe"name="aboutMe" value={formData.aboutMe} onChange={handleChange} required /></label>
                         <br/>
 
                         <div className='website-links'>
-                            <label>Add your website URL (optional)
+                            <label id="website">Add your website URL (optional)
                             <input type="url" name="websiteUrl" value={formData.websiteUrl} onChange={handleChange} /></label>
-                            <label>Instagram (optional)
+                            <label id="website">Instagram (optional)
                             <input type="url" name="instagramUrl" value={formData.instagramUrl} onChange={handleChange} /></label>
-                            <label>Pinterest (optional)
+                            <label id="website">Pinterest (optional)
                             <input type="url" name="pinterestUrl" value={formData.pinterestUrl} onChange={handleChange} /></label>
-                            <label>Tumblr (optional)
+                            <label id="website">Tumblr (optional)
                             <input type="url" name="tumblrUrl" value={formData.tumblrUrl} onChange={handleChange} /></label>
                         </div>
                         <button type="submit" disabled={disableSignUpBtn}>Save</button>
