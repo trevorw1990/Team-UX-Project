@@ -75,8 +75,6 @@ export default function CollaboratorSearchPage({user, setUser}){
                 <div>
                     {collaborators}
                 </div>
-
-
             </div>
 
         </main>
