@@ -11,7 +11,20 @@ export default function ProfilePageUserArea({ user }) {
                 </div>
             
                 <div className='profile-img-and-links container'>
-                    <img src={user.profileImageUrl} alt='profileImg'/>
+                    <div>
+                        <img src={user.profileImageUrl} alt='profileImg'/>
+
+                        <div className="social-links">
+                            <a href={user.instagramUrl} target="_blank"><img src= "/images/ProfilePg/instagram-logo.png"/> </a>
+                            <a href={user.pinterestUrl} target="_blank"><img src= "/images/ProfilePg/pinterest-logo.png"/> </a>
+                            <a href={user.tumblrUrl} target="_blank"><img src= "/images/ProfilePg/tumblr-logo.png"/> </a>
+                        </div>
+
+                        <div className='userURL'>
+                            <a href={user.websiteUrl} target="_blank">{user.websiteUrl}</a>
+                        </div>
+                
+                    </div>
 
                     <div className='profile-about-and-roles-area'>
                     
@@ -29,21 +42,12 @@ export default function ProfilePageUserArea({ user }) {
                         </ul>
                     </div>
 
-                </div>
-
-                <div className='text'>
-                    {/* <div className='social-links '>
-                        <a href={user.instagramUrl} target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
-                        <a href={user.pinterestUrl} target="_blank"><ion-icon name="logo-pinterest"></ion-icon></a>
-                        <a href={user.tumblrUrl} target="_blank"><ion-icon name="logo-tumblr"></ion-icon></a>
+                    {/* <div className='"userAbout-edit'>  
+                        <Link to='/'>Edit My Profile</Link>
                     </div> */}
 
-                    <div className='userURL'>
-                        <a href={user.websiteUrl} target="_blank">{user.websiteUrl}</a>
-                    </div>
-
-                    <div className='profile-edit-link'><Link to='/'>Edit My Profile</Link></div>
                 </div>
+
 
             </div>
 
