@@ -15,9 +15,9 @@ export default function ProfilePageUserArea({ user }) {
                         <img src={user.profileImageUrl} alt='profileImg'/>
 
                         <div className="social-links">
-                            <a href={user.instagramUrl} target="_blank"><img src= "/images/ProfilePg/social-instagram.png"/> </a>
-                            <a href={user.pinterestUrl} target="_blank"><img src= "/images/ProfilePg/social-pinterest.png"/> </a>
-                            <a href={user.tumblrUrl} target="_blank"><img src= "/images/ProfilePg/social-tumblr.png"/> </a>
+                            <a href={user.instagramUrl} target="_blank"><img src= "/images/ProfilePg/instagram-logo.png"/> </a>
+                            <a href={user.pinterestUrl} target="_blank"><img src= "/images/ProfilePg/pinterest-logo.png"/> </a>
+                            <a href={user.tumblrUrl} target="_blank"><img src= "/images/ProfilePg/tumblr-logo.png"/> </a>
                         </div>
 
                         <div className='userURL'>
@@ -42,9 +42,9 @@ export default function ProfilePageUserArea({ user }) {
                         </ul>
                     </div>
 
-                    <div className='"userAbout-edit'>  
+                    {/* <div className='"userAbout-edit'>  
                         <Link to='/'>Edit My Profile</Link>
-                    </div>
+                    </div> */}
 
                 </div>
 

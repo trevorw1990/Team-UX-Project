@@ -364,6 +364,10 @@ textarea {
     margin-bottom: 48px;
 }
 
+.userURL a:hover {
+    color: #ab1d46;
+}
+
 .divider hr {
     width: 980px;
     border: 1px solid #ECECEC;
@@ -651,4 +655,9 @@ textarea {
 .collab-col-3 {
     display: flex;
     flex-direction: column;
+}
+
+.inbox-page {
+    margin-left: 308px;
+    margin-top: 60px;
 }
