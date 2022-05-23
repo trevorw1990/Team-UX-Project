@@ -25,7 +25,9 @@ const userSchema = new Schema({
     zipCode: { type: String },
     roles: Array,
     keywordTags: Array,
-    profileImageUrl: String,
+    profileImageUrl: {
+        type: String, 
+        default: '/public/images/ProfilePg/account_circle.png' },
     profileCarousel: Array,
     aboutMe: String,
     websiteUrl: String,
