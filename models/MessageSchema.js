@@ -19,6 +19,10 @@ const messageSchema = new Schema({
         type: String,
         required: true
     },
+    project: {
+        type: Schema.Types.ObjectId,
+        ref: 'Project'
+    },
     message: {
         type: String,
         required: true
