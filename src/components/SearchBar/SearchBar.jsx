@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { statesList, artistRoles } from "../../utilities/list-items/list-items";
 
 export default function SearchBar({user, filter, setFilter, type, refreshFilter, setRefreshFilter}){
-  const [checks, setChecks] = useState([false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false])
+  const [checks, setChecks] = useState([...Array(19)].fill(false))
 
   const handleChange = (evt) => {
     setFilter({
@@ -18,9 +18,7 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
         idx === index ? !check : check
       )
     }))
-    console.log(e.target.checked) // print is checked
     const arr = filter.roles
-    console.log(arr.indexOf(aRole)) // test if idx is correct
     if (e.target.checked) {
         arr.push(aRole)
         setFilter({...filter, roles: arr})
@@ -62,7 +60,7 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
         usState: '',
         zipCode: '',
         roles: [],
-        dates: []
+        dates: ["",""]
       })
     }
     setChecks(checks.map((check, idx) => {
@@ -132,8 +130,8 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
               type === 'project' && 
                 <div className='date-range-select'>
                   <p>Date Range:</p>
-                  <label>Start: <input type="date" name="dateStartEnd" onChange={(e) => {addDate(e, true)}}/></label>
-                  <label>End: <input type="date" name="dateStartEnd" onChange={(e) => {addDate(e, false)}}/></label>
+                  <label>Start: <input type="date" name="dateStartEnd" value={filter.dates[0]} onChange={(e) => {addDate(e, true)}}/></label>
+                  <label>End: <input type="date" name="dateStartEnd" value={filter.dates[1]} onChange={(e) => {addDate(e, false)}}/></label>
                 </div>
             }
 

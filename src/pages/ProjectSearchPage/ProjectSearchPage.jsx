@@ -10,28 +10,46 @@ export default function ProjectSearchPage({user, setUser}){
         usState: '',
         zipCode: '',
         roles: [],
-        dates: []
+        dates: ["",""]
     })
     const [refreshFilter, setRefreshFilter] = useState(false);
+
+    const haveCommonRoles = (arr1, arr2) => {
+        return arr1.some(item => arr2.includes(item));
+    }
+
+    const haveCommonDates = (searchDates, projectDates) => {
+        const startDate = new Date(searchDates[0])
+        const endDate = new Date(searchDates[1])
+        for(let i = 0; i < projectDates; i++) {
+            const compareDate = new Date(projectDates[i]);
+            if(compareDate > startDate && compareDate < endDate){
+                return true
+            }
+        }
+        return false
+    }
 
     const getProjects = async () => {
         try {
             const foundProjects = await getAllProjects();
             setProjects(foundProjects.map((project,idx) => {
-                return (
-                    <ProjectItem 
-                        key={idx}
-                        id={project._id}
-                        name={project.projectName}
-                        image={project.imageUrl}
-                        location={project.usState}
-                        description={project.projectDescription}
-                        roles={project.lookingForItems}
-                        datesRange={project.dateStartEnd}
-                        datesMultiple={project.datesMultiple}
-                        organizer={project.organizer}
-                    />
-                )
+                if((!filter.usState || filter.usState === project.usState) && (!filter.zipCode || filter.zipCode === project.zipCode) && (!filter.roles.length || haveCommonRoles(filter.roles, project.lookingForItems) && (!(filter.dates[0] && filter.dates[1]) || haveCommonDates(filter.dates, project.dateStartEnd ? project.dateStartEnd : project.datesMultiple)))){
+                    return (
+                        <ProjectItem 
+                            key={idx}
+                            id={project._id}
+                            name={project.projectName}
+                            image={project.imageUrl}
+                            location={project.usState}
+                            description={project.projectDescription}
+                            roles={project.lookingForItems}
+                            datesRange={project.dateStartEnd}
+                            datesMultiple={project.datesMultiple}
+                            organizer={project.organizer}
+                        />
+                    )
+                }
             }))
         } catch (err) {
             console.error(err);
