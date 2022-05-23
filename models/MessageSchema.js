@@ -27,6 +27,9 @@ const messageSchema = new Schema({
         type: String,
         required: true
     },
+    role: {
+        type: String
+    },
     isRead: {
         type: Boolean,
         default: false
