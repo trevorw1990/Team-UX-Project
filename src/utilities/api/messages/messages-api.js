@@ -1,13 +1,25 @@
 import { sendRequest } from "../send-request"
 const BASE_URL = '/api/messages'
 
-export async function createMessage(senderId, receiverId, theMessage, threadId) {
+export async function createMessage(senderId,
+                                    receiverId,
+                                    userName,
+                                    receiverN,
+                                    theMessage,
+                                    threadId,
+                                    inviteBool,
+                                    projectId) {
     const payload = {
         sender: senderId,
         receiver: receiverId,
+        senderName: userName,
+        receiverName: receiverN,
         message: theMessage,
-        thread: threadId
+        thread: threadId,
+        isInvite: inviteBool,
+        project: projectId
     }
+    console.log(payload)
     return sendRequest(`${BASE_URL}/${threadId}`, 'POST', payload)
 }
 

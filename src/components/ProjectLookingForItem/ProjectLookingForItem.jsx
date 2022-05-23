@@ -34,7 +34,9 @@ export default function ProjectLookingForItem({item, user, project}){
                     projectId: project._id,
                     projectName: project.projectName,
                     senderId: user._id,
-                    theRole: item
+                    senderName: `${user.firstName} ${user.lastName}`,
+                    theRole: item,
+                    isInvite: true
                 }}>Invite</Link>:
                 "I'm interested"}
             </button>
