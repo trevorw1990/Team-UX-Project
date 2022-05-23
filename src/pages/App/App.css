@@ -672,3 +672,11 @@ textarea {
     display: flex;
     flex-direction: column;
 }
+
+
+.findProject-columns {
+    display: flex;
+}
+.findProject-column-1 .findProject-column-2 {
+    margin-top: 20px;
+}
