@@ -47,7 +47,7 @@ export default function ProjectItem({name, image, id, location, description, rol
                     </label>
                     <label>Possible Dates
                         <ul>
-                            {datesRange ? 
+                            {datesRange.length ? 
                                 <li key={0}>{datesRange[0]}-{datesRange[1]}</li>
                             :
                                 datesMultiple.map((date, idx) => {
