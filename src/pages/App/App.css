@@ -414,6 +414,7 @@ textarea {
     width: 260px;
     align-items: center;
     border: 1px solid #26CCD7;
+    margin-left: 350px;
 }
 
 .image-placeholder > h4 {
@@ -661,3 +662,9 @@ textarea {
     margin-left: 308px;
     margin-top: 60px;
 }
+
+.create-project-form  h2{
+    margin-left:370px;
+    margin-bottom: 64px;
+}
+
