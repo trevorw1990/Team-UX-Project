@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     position: sticky;
-    margin-top: 700px;
+    margin-top: 800px;
 }
 
 .footer button {
@@ -28,13 +28,13 @@
 .navBar {
     display: flex;
     margin-bottom: 0;
-    margin-top: 2%;
+    margin-top: 0;
     justify-content: center;
 }
 
-#navbar-logo img{
+#navBar-logo img{
     max-height: 200px;
-    max-width: 200px;
+    max-width: 300px;
     margin-top: 20px;
     height: 100px;
 }
@@ -81,7 +81,7 @@ hr {
     position: relative;
     text-align: center;
     color: white;    
-    /* display: flex; */
+    display: flex;
     margin: 0;
     width: 100%;
   }
@@ -89,8 +89,7 @@ hr {
 #logo-image {
     display: flex;
     position:relative;
-    /* width:100%; */
-
+    width:100%;
   }
 
  .centered {
@@ -212,22 +211,29 @@ h1 {
 }
 
 .signup-form-buttons {
-    margin-left: 40%;
+    /* margin-left: 40%;
     margin-right: 25%;
-    position: absolute;
-    top: 110%;
+    position: fixed;
+    top: 75%; */
+    background-color: rgba(0, 0, 0, 0);
+    
 }
 
 
 #backButton {
     color: white;
+    background-color: rgba(0, 0, 0, 0);
     width: 150px;
     margin: 20px;
     border: none;
+    margin-left: 30%;
+    margin-right: 70%;
+    position: absolute;
+    top: 93%;
     height: 50px;
 }
 
-#nextButton {
+#nextButton{
     width: 150px;
     border-radius: 5%;
     height: 50px;
@@ -235,6 +241,10 @@ h1 {
     border: 1px solid rgba(38, 204, 215, 0.5);
     border-radius: 8px;
     color: rgba(38, 204, 215, 0.5);
+    margin-left: 60%;
+    margin-right: 25%;
+    position: absolute;
+    top: 95%;
 }
 
 .team {
