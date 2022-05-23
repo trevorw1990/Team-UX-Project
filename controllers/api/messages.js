@@ -22,6 +22,16 @@ const getReceiveMessage = (req,res)=>{
       }
     })
 }
+
+const getMessagesByUser = (req,res)=>{
+  Message.find({$or: [{receiver: req.params.userId}, {sender: req.params.userId}] }, (err, foundMessages) => {
+      if (!err) {
+        res.status(200).json(foundMessages)
+      } else {
+        res.status(400).json(err)
+      }
+    })
+}
 //set message
 
 const setMessage = (req,res) => {
@@ -85,6 +95,7 @@ const showMessage= (req,res)=>{
 module.exports = {
     getSendMessage,
     getReceiveMessage,
+    getMessagesByUser,
     setMessage,
     updateMessage,
     deleteMessage,

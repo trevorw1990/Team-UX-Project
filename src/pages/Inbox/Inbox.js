@@ -3,34 +3,87 @@ import './Inbox.css'
 import InboxNavBar from '../../components/Inbox/InboxNavBar'
 import InboxMessages from '../../components/Inbox/InboxMessages'
 import { createThread, getThread, deleteThread} from '../../utilities/api/message-threads/message-threads-api'
-import { createMessage, deleteMessage} from '../../utilities/api/messages/messages-api'
+import { createMessage, deleteMessage, getMessagesByUser} from '../../utilities/api/messages/messages-api'
+import { useParams, useLocation } from 'react-router-dom'
 
+export default function Inbox({ user, setUser}){
 
-export default function Inbox({ user, setUser }){
     const [ pageToShow, setPageToShow ] = useState ('InboxAllMail')
-    const [ currentThread, setCurrentThread ] = useState (null)
     const [ newThread, setNewThread ] = useState(null)
     const [ receiverId, setReceiverId ] = useState(null)
+    const [ theMessage, setTheMessage ] = useState("")
+    const [ allMessages, setAllMessages ] = useState(null)
+    const [ messageToShow, setMessageToShow ] = useState(null)
+    const params = useLocation()
 
-    const getTheThread = async () => {
-        const response = await getThread()
-        setNewThread(response.thread)
+    const getParams = () => {
+        // console.log(params)
+        if (params.state) {
+            setPageToShow('InboxComposeMessage')
+        }
+    }
+
+    // const getTheThread = async () => {
+    //     const response = await getThread()
+    //     setNewThread(response[1])
+    //     sendMessage(response[1])
+    // }
+
+    const getAllMessages = async () => {
+        console.log(`getting messages for ${user._id}`)
+        const response = await getMessagesByUser(user._id)
+        console.log(response)
+        setAllMessages(response)
     }
 
     const createNewThread = async () => {
         const users = [user._id, receiverId]
-        const response = await createThread(users)
-        setCurrentThread(response)
+        const usersObj = { users }
+        const response = await createThread(usersObj)
+        setNewThread(response)
+        sendMessage(response)
+    }
+
+    const sendMessage = async (aThread) => {
+        const response = await createMessage(
+            user._id,
+            receiverId,
+            theMessage,
+            aThread.createdThread._id)
+        // console.log(`Message reply: ${response}`)
     }
 
     useEffect(() => {
-
+        getParams()
+        getAllMessages()
     }, [])
 
-    return(
-        <div className='inbox-page'>
-            <InboxNavBar user={user}  setUser={setUser} pageToShow={pageToShow} setPageToShow={setPageToShow} />
-            <InboxMessages user={user} setUser={setUser} pageToShow={pageToShow} setPageToShow={setPageToShow} />
-        </div>
-    )
+    const loaded = () => {
+        return(
+            <div className='inbox-page'>
+                <div>
+                    <InboxNavBar user={user}  setUser={setUser} pageToShow={pageToShow} setPageToShow={setPageToShow} />
+                </div>
+    
+                <div>
+                    <InboxMessages
+                    user={user} setUser={setUser}
+                    pageToShow={pageToShow} setPageToShow={setPageToShow}
+                    params={params}
+                    receiverId={receiverId} setReceiverId={setReceiverId}
+                    setTheMessage={setTheMessage}
+                    createNewThread={createNewThread}
+                    allMessages={allMessages} 
+                    messageToShow={messageToShow} setMessageToShow={setMessageToShow}/>
+                </div>        
+            
+            </div>
+        )
+    }
+
+    const loading = () => {
+        return
+    }
+
+    return allMessages ? loaded() : loading()
 }
