@@ -6,8 +6,12 @@ export default function CollaboratorItem({key,user,id,website,roles,location,ima
         <div>
             <div>
                 <h5>{name}</h5>
+
+                <div className='collab-img'>
+                    <img src={image} alt="Profile image" width="127.5" height="127.5" />
+                </div>
+
                 <div>
-                    <img src={image} alt="Profile image" />
                     <ul>
                         {
                             roles.map((role,idx) => {

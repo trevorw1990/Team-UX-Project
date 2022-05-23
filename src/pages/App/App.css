@@ -627,3 +627,9 @@ textarea {
     font-size: 16px;
 
 } */
+
+.collab-pic img {
+    width: 127.5px;
+    height: 127.5px;
+    border-radius: 50%;
+}
