@@ -19,6 +19,7 @@ export default function ProjectSearchPage({user, setUser}){
     }
 
     const haveCommonDates = (searchDates, projectDates) => {
+        if(!searchDates[0] || !searchDates[1]) return true
         const searchStartDate = new Date(searchDates[0])
         const searchEndDate = new Date(searchDates[1])
         const projectStartDate = new Date(projectDates[0])
@@ -34,7 +35,7 @@ export default function ProjectSearchPage({user, setUser}){
         try {
             const foundProjects = await getAllProjects();
             setProjects(foundProjects.map((project,idx) => {
-                if((!filter.usState || filter.usState === project.usState) && (!filter.zipCode || filter.zipCode === project.zipCode) && (!filter.roles.length || haveCommonRoles(filter.roles, project.lookingForItems) && ((!filter.dates[0] && !filter.dates[1]) || haveCommonDates(filter.dates, project.dateStartEnd)))){
+                if((!filter.usState || filter.usState === project.usState) && (!filter.zipCode || filter.zipCode === project.zipCode) && (!filter.roles.length || haveCommonRoles(filter.roles, project.lookingForItems)) && haveCommonDates(filter.dates, project.dateStartEnd)){
                     return (
                         <ProjectItem 
                             key={idx}
