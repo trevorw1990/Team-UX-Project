@@ -1,4 +1,5 @@
 export const statesList = [
+    {label: '', value: ''},
     {label: 'Alabama', value: 'Alabama'},
     {label: 'Alaska', value: 'Alaska'},
     {label: 'Arizona', value: 'Arizona'},

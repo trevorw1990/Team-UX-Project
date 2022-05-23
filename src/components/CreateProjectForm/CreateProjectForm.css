@@ -1,9 +1,10 @@
 .create-project-form {
     display: flex;
     flex-direction: column;
-    margin-left: 25%;
+    margin-left: 404px;
     margin-top: 6%;
 }
+
 
 .create-project-form input[type="text"] {
     width: 540px;
@@ -11,8 +12,12 @@
     background: #ECECEC;
     border: 2px solid #26CCD7;
     border-radius: 8px;
-    margin-left: 10px;
+    margin-left: 125px;
 }
+
+/* .create-project-form label {
+    margin-left: 125px;
+} */
 
 .create-project-form select {
     width: 200px;
@@ -20,7 +25,6 @@
     background: #ECECEC;
     border: 1px solid #ECECEC;
     border-radius: 8px;
-    margin: 20px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
@@ -29,6 +33,7 @@
     display: flex;
     align-items: center;
     color: #000000;
+    margin-left: 240px;
 }
 
 .create-project-form button {
@@ -59,4 +64,14 @@
     border-radius: 8px;
     margin: 20px;
     padding: 5px;
+}
+
+.create-project-form textarea {
+    width: 731px;
+    height: 166px;
+    margin-left: 124px;
+}
+
+#project-other-input input[type="text"]{
+    margin-left: 130px;
 }
