@@ -1,41 +1,41 @@
 import { Link, useNavigate } from 'react-router-dom'
 import './ProfilePageUserArea.css'
 
-export default function ProfilePageUserArea({ user }) {
+export default function ProfilePageUserArea({ user, profileUser }) {
 
     return (
         <div className='ProfilePageUserArea'>
 
                 <div>
-                    <h1> {user.firstName} {user.lastName}</h1> 
+                    <h1> {profileUser.firstName} {profileUser.lastName}</h1> 
                 </div>
             
                 <div className='profile-img-and-links container'>
                     <div>
-                        <img src={user.profileImageUrl} alt='profileImg'/>
+                        <img src={profileUser.profileImageUrl} alt='profileImg'/>
 
                         <div className="social-links">
-                            <a href={user.instagramUrl} target="_blank"><img src= "/images/ProfilePg/instagram-logo.png"/> </a>
-                            <a href={user.pinterestUrl} target="_blank"><img src= "/images/ProfilePg/pinterest-logo.png"/> </a>
-                            <a href={user.tumblrUrl} target="_blank"><img src= "/images/ProfilePg/tumblr-logo.png"/> </a>
+                            <a href={profileUser.instagramUrl} target="_blank"><img src= "/images/ProfilePg/instagram-logo.png"/> </a>
+                            <a href={profileUser.pinterestUrl} target="_blank"><img src= "/images/ProfilePg/pinterest-logo.png"/> </a>
+                            <a href={profileUser.tumblrUrl} target="_blank"><img src= "/images/ProfilePg/tumblr-logo.png"/> </a>
                         </div>
 
                         <div className='userURL'>
-                            <a href={user.websiteUrl} target="_blank">{user.websiteUrl}</a>
+                            <a href={profileUser.websiteUrl} target="_blank">{profileUser.websiteUrl}</a>
                         </div>
                 
                     </div>
 
                     <div className='profile-about-and-roles-area'>
                     
-                    <div className='userAbout-text'>{user.aboutMe}</div>
+                    <div className='userAbout-text'>{profileUser.aboutMe}</div>
                     
                     <div className='userAbout-roles'>
                         <ul>
                             {
-                                user.roles.map((role, idx) => {
+                                profileUser.roles.map((role, idx) => {
                                     return (
-                                        <li>{role}</li>
+                                        <li key={idx}>{role}</li>
                                     )
                                 })
                             }
