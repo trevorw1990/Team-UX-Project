@@ -27,7 +27,7 @@ const userSchema = new Schema({
     keywordTags: Array,
     profileImageUrl: {
         type: String, 
-        default: '/public/images/ProfilePg/account_circle.png' },
+        default: '/images/ProfilePg/account_circle.png' },
     profileCarousel: Array,
     aboutMe: String,
     websiteUrl: String,
