@@ -67,45 +67,71 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
 
   const search = () => {
     return (
-      <div>
 
-        <div>
-          <label> state
-            <select name="usState" value={filter.usState} onChange={handleChange} required >
-                {statesList.map((usState, index) => (
-                  <option value={usState.value} key={index} >{usState.label}</option>
-                ))}   
-            </select>
-          </label>
-          <label>zip code
-              <input type="text" name="zipCode" value={filter.zipCode} onChange={handleChange} required />
-          </label>
-        </div>
-        <div className='form-columns'>
-          {
-            artistRoles.map((theRole, index) => {
-              return(
-                <div className={`form-column-${index % 3 + 1}`} key={index}>
-                    <label>
-                        <input type="checkbox" name="roles" value={theRole.role} onChange={(e) => addRole(e, theRole.role)}/>
-                        {theRole.role}
-                    </label>
-                </div>
-              )
-            })
-          }
-        </div>
-        {
-          type === 'project' && 
-            <div className='date-range-select'>
-              <p>Date Range:</p>
-              <label>Start: <input type="date" name="dateStartEnd" onChange={(e) => {addDate(e, true)}}/></label>
-              <label>End: <input type="date" name="dateStartEnd" onChange={(e) => {addDate(e, false)}}/></label>
+      <div className='find-collab-container'>
+      
+          <div className="filter-column">
+{/* 
+            <div>
+              <h3>Active Filters</h3>
+              <button onClick={clearFilter}>Clear Filter</button>
+            </div> */}
+
+            <div>
+              <div className='filter-location'>
+                <h3>Search by location</h3>
+              </div>
+
+              <label> State
+                <select name="usState" value={filter.usState} onChange={handleChange} required >
+                    {statesList.map((usState, index) => (
+                      <option value={usState.value} key={index} >{usState.label}</option>
+                    ))}   
+                </select>
+              </label>
+              <label> Zip code
+                  <input type="text" name="zipCode" value={filter.zipCode} onChange={handleChange} required />
+              </label>
             </div>
-        }
-        <button onClick={applyFilter}>Apply Filters</button>
-        <button onClick={clearFilter}>Clear Filter</button>
-      </div>
+
+
+            <div className='form-columns'>
+              <div>
+                <h3>I'm looking for </h3>
+              </div>
+
+              <div>
+                {
+                  artistRoles.map((theRole, index) => {
+                    return(
+                      <div className={`form-column-${index % 3 + 1}`} key={index}>
+                          <label>
+                              <input type="checkbox" name="roles" value={theRole.role} onChange={(e) => addRole(e, theRole.role)}/>
+                              {theRole.role}
+                          </label>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+
+            </div>
+            {
+              type === 'project' && 
+                <div className='date-range-select'>
+                  <p>Date Range:</p>
+                  <label>Start: <input type="date" name="dateStartEnd" onChange={(e) => {addDate(e, true)}}/></label>
+                  <label>End: <input type="date" name="dateStartEnd" onChange={(e) => {addDate(e, false)}}/></label>
+                </div>
+            }
+
+            <div className='apply-filter-button'>
+              <button onClick={applyFilter}>Apply Filters</button>
+              <button onClick={clearFilter}>Clear Filter</button>
+            </div>
+          </div>
+
+    </div>
     )
   }
 
