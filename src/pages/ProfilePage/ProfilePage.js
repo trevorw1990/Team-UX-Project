@@ -15,11 +15,16 @@ export default function ProfilePage({ user, setUser }){
                 
                 <ProfilePageProjects user={user} setUser={setUser}/>
                 
-
-                <div>
+                <div className="gallery-header">
                     <h2>My Gallery</h2>
+                    <button>Edit Gallery</button>
                 </div>
+
                 <ProfileCarousel user={user} setUser={setUser}/>
+                
+
+        
+
             </main>
         )
     }
