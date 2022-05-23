@@ -19,22 +19,22 @@ export default function ProjectSearchPage({user, setUser}){
     }
 
     const haveCommonDates = (searchDates, projectDates) => {
-        const startDate = new Date(searchDates[0])
-        const endDate = new Date(searchDates[1])
-        for(let i = 0; i < projectDates; i++) {
-            const compareDate = new Date(projectDates[i]);
-            if(compareDate > startDate && compareDate < endDate){
-                return true
-            }
-        }
-        return false
+        const searchStartDate = new Date(searchDates[0])
+        const searchEndDate = new Date(searchDates[1])
+        const projectStartDate = new Date(projectDates[0])
+        const projectEndDate = new Date(projectDates[1])
+
+        if(searchStartDate - projectStartDate <= 0 && searchEndDate - projectStartDate >= 0) return true;
+        if(searchStartDate - projectEndDate <= 0 && searchEndDate - projectStartDate >= 0) return true;
+        if(searchStartDate - projectStartDate >= 0 && searchEndDate - projectEndDate <= 0) return true;
+        return false;
     }
 
     const getProjects = async () => {
         try {
             const foundProjects = await getAllProjects();
             setProjects(foundProjects.map((project,idx) => {
-                if((!filter.usState || filter.usState === project.usState) && (!filter.zipCode || filter.zipCode === project.zipCode) && (!filter.roles.length || haveCommonRoles(filter.roles, project.lookingForItems) && (!(filter.dates[0] && filter.dates[1]) || haveCommonDates(filter.dates, project.dateStartEnd ? project.dateStartEnd : project.datesMultiple)))){
+                if((!filter.usState || filter.usState === project.usState) && (!filter.zipCode || filter.zipCode === project.zipCode) && (!filter.roles.length || haveCommonRoles(filter.roles, project.lookingForItems) && ((!filter.dates[0] && !filter.dates[1]) || haveCommonDates(filter.dates, project.dateStartEnd)))){
                     return (
                         <ProjectItem 
                             key={idx}

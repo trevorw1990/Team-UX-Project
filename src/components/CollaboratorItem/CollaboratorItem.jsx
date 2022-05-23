@@ -1,7 +1,7 @@
 import './CollaboratorItem.css';
 import { Link } from 'react-router-dom';
 
-export default function CollaboratorItem({key,user,id,website,roles,location,image,name,instagram, pinterest,tumblr, description}){
+export default function CollaboratorItem({user,id,website,roles,location,image,name,instagram, pinterest,tumblr, description}){
     return (
         <div>
             <div>
