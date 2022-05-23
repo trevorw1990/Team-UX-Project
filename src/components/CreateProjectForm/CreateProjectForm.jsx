@@ -100,15 +100,19 @@ export default function CreateProjectForm({ user, setUser }) {
             <input type="text" name="projectName" value={formData.projectName} onChange={handleChange} required /></label>
             
             <label>Location*
-                <select name="country" value={formData.country} onChange={handleChange} required >
-                    <option value="United States" >United States</option>   
-                
-                </select>
-                <select name="usState" value={formData.usState} onChange={handleChange} required >
-                    {statesList.map((usState, index) => (
-                        <option value={usState.value} key={index} >{usState.label}</option>
-                    ))}
-                </select>
+                <div>
+                    <select name="country" value={formData.country} onChange={handleChange} required >
+                        <option value="United States" >United States</option>   
+                    </select>
+                </div>
+
+                <div>
+                    <select name="usState" value={formData.usState} onChange={handleChange} required >
+                        {statesList.map((usState, index) => (
+                            <option value={usState.value} key={index} >{usState.label}</option>
+                        ))}
+                    </select>
+                </div>
 
                 <label> And/Or  <input type="checkbox" name="isRemote" value={formData.isRemote} onChange={(e) => setFormData({...formData, isRemote: !formData.isRemote})}/>Remote</label>
             </label>
@@ -128,9 +132,11 @@ export default function CreateProjectForm({ user, setUser }) {
             }
             <br/>
 
-            <label>Other: 
-            <input type='text' name='lookingForTags' value={formData.lookingForTags} onChange={handleChange} /></label>
-            <br/>
+            <div id="project-other-input">
+                <label>Other: 
+                <input type='text' name='lookingForTags' value={formData.lookingForTags} onChange={handleChange} /></label>
+                <br/>
+            </div>
 
             {
                 formData.isRange ?

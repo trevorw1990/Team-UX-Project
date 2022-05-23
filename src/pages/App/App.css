@@ -360,15 +360,14 @@ textarea {
 
 }
 
-.social-links a{
-    height: 18px;
-    width: 18px;
+.social-links img{
+    height: 48px !important;
+    width: 48px !important;
+    border: none !important;
+    margin-left: -100px;
+    margin-top: 44px;
 }
 
-/* .ProfilePageProjects {
-    display: flex;
-    flex-direction: row;
-} */
 
 .ProfilePageUserArea h1 {
     color: #26CCD7;
@@ -410,6 +409,12 @@ textarea {
     font-size: 22px;
     line-height: 30px;
     color: #26CCD7;
+    margin-top: 32px;
+    margin-bottom: 48px;
+}
+
+.userURL a:hover {
+    color: #ab1d46;
 }
 
 .divider hr {
@@ -458,6 +463,7 @@ textarea {
     width: 260px;
     align-items: center;
     border: 1px solid #26CCD7;
+    margin-left: 350px;
 }
 
 .image-placeholder > h4 {
@@ -658,8 +664,56 @@ textarea {
 
 } */
 
-.collab-pic img {
-    width: 127.5px;
-    height: 127.5px;
+.collab-buttons button{
+    width: 160px;
+    height: 44px;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.collab-img img {
+    border: 1px solid #ECECEC;
     border-radius: 50%;
 }
+
+.collab-name h5 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: #26CCD7;
+}
+
+.collaborators {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.collab-col-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.collab-col-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.collab-col-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.inbox-page {
+    margin-left: 308px;
+    margin-top: 60px;
+}
+
+.create-project-form  h2{
+    margin-left:370px;
+    margin-bottom: 64px;
+}
+

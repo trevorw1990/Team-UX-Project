@@ -23,7 +23,7 @@ export default function InboxAllMail({ user, setUser, allMessages, setPageToShow
                         return (
                             <tr key={idx}>
                                 <td><input type='checkbox'/></td>
-                                <td>{message.sender}</td>
+                                <td>{message.senderName}</td>
                                 <td onClick={(e) => {showMessage(message)}}>{message.message}</td>
                                 <td>May 2022</td>
                             </tr>
