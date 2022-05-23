@@ -511,5 +511,100 @@ textarea {
     margin-top: 50px;
 }
 
+.find-collab-container {
+    margin-left: 308px;
+    margin-right: 310px;
+}
 
 
+.find-collab-container h1 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    align-items: center;
+    color: #ECECEC;
+}
+
+.filter-column {
+    width: 350px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    color: #ECECEC;
+}
+
+.filter-column button {
+    background-color: #202020;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    color: #26CCD7;
+}
+
+.filter-column select {
+    background: #ECECEC;
+    border: 1px solid #ECECEC;
+    border-radius: 8px;
+    margin: 20px;
+    width: 224px;
+    height: 44px;
+}
+
+.filter-column input[type="text"] {
+    width: 224px;
+    height: 44px;
+    background: #C4C4C4;
+    border: 1px solid #ECECEC;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+
+.filter-column h3 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    color: #ECECEC;
+    width: 336px;
+    height: 40px;
+    background-color: #121212;
+    border-top: 1px solid #26CCD7;
+    margin-top: 50px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.collab-column-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.collab-column-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.collab-header h1 {
+    margin-left: 308px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    color: #ECECEC;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* .CollaboratorItem {
+    color: #ECECEC;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+} */
