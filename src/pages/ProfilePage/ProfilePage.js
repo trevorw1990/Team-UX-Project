@@ -11,6 +11,7 @@ export default function ProfilePage({ user, setUser }){
     const loaded = () => {
         return(
             <main className="profile-pg-container">
+
                 <ProfilePageUserArea user={user} setUser={setUser}/>
                 
                 <ProfilePageProjects user={user} setUser={setUser}/>
