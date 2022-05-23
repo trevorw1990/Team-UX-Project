@@ -1,18 +1,24 @@
 import { useState, useEffect } from 'react'
 import { getUsers } from '../../utilities/api/users/users-api'
 
-export default function InboxComposeMessage({ user, setUser, pageToShow,  setPageToShow, params, receiverId, setReceiverId, setTheMessage, createNewThread}) {
+export default function InboxComposeMessage({ user, setUser, pageToShow,  setPageToShow,
+    params, receiverId, setReceiverId, theMessage, setTheMessage, createNewThread, setReceiverName }) {
     const [ userList, setUserList ] = useState([])
 
     const getTheUsers = async () => {
         const response = await getUsers()
         setUserList(response)
         setReceiverId(response[0]._id)
+        setReceiverName(response[0].firstName)
         // console.log(response) // print user list
     }
 
     const handleChange = (event) => {
-        setReceiverId(event.target.value)
+        // console.log(event)
+        const arr = event.target.value.split('/')
+        console.log(arr)
+        setReceiverId(arr[0])
+        setReceiverName(arr[1])
     }
 
     const handleSubmit = (event) => {
@@ -20,9 +26,8 @@ export default function InboxComposeMessage({ user, setUser, pageToShow,  setPag
     }
 
     const roleToInvite = () => {
-        const inviteText = `Hey! do you want to collaborate on my project- ${params.state.projectName}, as a ${params.state.theRole}?`
-        setTheMessage(inviteText)
-        return inviteText
+        
+        
     }
 
     const doNothing = () => {
@@ -31,6 +36,8 @@ export default function InboxComposeMessage({ user, setUser, pageToShow,  setPag
     
     useEffect(() => {
         getTheUsers()
+        const inviteText = `Hey! do you want to collaborate on my project- ${params.state.projectName}, as a ${params.state.theRole}?`
+        setTheMessage(inviteText)
     },[])
 
     useEffect (() => {
@@ -48,7 +55,7 @@ export default function InboxComposeMessage({ user, setUser, pageToShow,  setPag
                             aUser.firstName === user.firstName ?
                             doNothing()
                             :
-                            <option value={`${aUser._id}`} key={idx}>
+                            <option value={`${aUser._id}/${aUser.firstName} ${aUser.lastName}`} key={idx}>
                                 {aUser.firstName} {aUser.lastName}
                             </option>
                         )
@@ -56,7 +63,7 @@ export default function InboxComposeMessage({ user, setUser, pageToShow,  setPag
                 }       
                 </select>
                 <h2>Message:</h2>
-                <textarea onChange={(e) => {setTheMessage(e.target.value)}}>{roleToInvite()}</textarea>
+                <textarea onChange={(e) => {setTheMessage(e.target.value)}}>{theMessage}</textarea>
                 <button onClick={handleSubmit}>Send</button>
             </div>
         )
