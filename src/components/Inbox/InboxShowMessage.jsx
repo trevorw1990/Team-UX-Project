@@ -7,7 +7,13 @@ export default function InboxShowMessage( { messageToShow, setMessageToShow, pag
     let navigate = useNavigate()
 
     const accept = async () => {
-        const response = await createCollaborator()
+        console.log(messageToShow)
+        const payload = {
+            userId: messageToShow.receiver,
+            role: 'tempTestRole',
+            projectId: messageToShow.project
+        }
+        const response = await createCollaborator(payload, messageToShow.project)
     }
 
     const decline = async () => {
@@ -22,7 +28,7 @@ export default function InboxShowMessage( { messageToShow, setMessageToShow, pag
         return (
             <div className='show-message'>
                 <div onClick={(e) => {setPageToShow('InboxAllMail')}}>&lt;- Back to inbox</div>
-                <div> From: {messageToShow.sender}</div>
+                <div> From: {messageToShow.senderName}</div>
                 <div>{messageToShow.message}</div>
                 <div className='project-buttons'>
                     <button onClick={(e) => {viewProject()}} >View project</button>

@@ -11,6 +11,7 @@ export default function Inbox({ user, setUser}){
     const [ pageToShow, setPageToShow ] = useState ('InboxAllMail')
     const [ newThread, setNewThread ] = useState(null)
     const [ receiverId, setReceiverId ] = useState(null)
+    const [ receiverName, setReceiverName ] = useState(null)
     const [ theMessage, setTheMessage ] = useState("")
     const [ allMessages, setAllMessages ] = useState(null)
     const [ messageToShow, setMessageToShow ] = useState(null)
@@ -48,8 +49,14 @@ export default function Inbox({ user, setUser}){
         const response = await createMessage(
             user._id,
             receiverId,
+            params.state.senderName,
+            receiverName,
             theMessage,
-            aThread.createdThread._id)
+            aThread.createdThread._id,
+            params.state.isInvite,
+            params.state.projectId
+            )
+        // console.log(response)
         // console.log(`Message reply: ${response}`)
     }
 
@@ -71,10 +78,12 @@ export default function Inbox({ user, setUser}){
                     pageToShow={pageToShow} setPageToShow={setPageToShow}
                     params={params}
                     receiverId={receiverId} setReceiverId={setReceiverId}
+                    theMessage={theMessage}
                     setTheMessage={setTheMessage}
                     createNewThread={createNewThread}
                     allMessages={allMessages} 
-                    messageToShow={messageToShow} setMessageToShow={setMessageToShow}/>
+                    messageToShow={messageToShow} setMessageToShow={setMessageToShow}
+                    setReceiverName={setReceiverName}/>
                 </div>        
             
             </div>
