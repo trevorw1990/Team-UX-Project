@@ -311,15 +311,14 @@ textarea {
 
 }
 
-.social-links a{
-    height: 18px;
-    width: 18px;
+.social-links img{
+    height: 48px !important;
+    width: 48px !important;
+    border: none !important;
+    margin-left: -100px;
+    margin-top: 44px;
 }
 
-/* .ProfilePageProjects {
-    display: flex;
-    flex-direction: row;
-} */
 
 .ProfilePageUserArea h1 {
     color: #26CCD7;
@@ -361,6 +360,8 @@ textarea {
     font-size: 22px;
     line-height: 30px;
     color: #26CCD7;
+    margin-top: 32px;
+    margin-bottom: 48px;
 }
 
 .divider hr {
@@ -609,8 +610,3 @@ textarea {
 
 } */
 
-.collab-pic img {
-    width: 127.5px;
-    height: 127.5px;
-    border-radius: 50%;
-}
