@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { statesList, artistRoles } from "../../utilities/list-items/list-items";
 
 export default function SearchBar({user, filter, setFilter, type, refreshFilter, setRefreshFilter}){
+  const [checks, setChecks] = useState([false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false])
 
   const handleChange = (evt) => {
     setFilter({
@@ -11,7 +12,12 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
     })
   }
 
-  const addRole = (e, aRole) => {
+  const addRole = (e, aRole,index) => {
+    setChecks(checks.map((check, idx) => {
+      return (
+        idx === index ? !check : check
+      )
+    }))
     console.log(e.target.checked) // print is checked
     const arr = filter.roles
     console.log(arr.indexOf(aRole)) // test if idx is correct
@@ -25,7 +31,7 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
     }
   }
 
-  const addDate = (event, isStart) => {
+  const addDate = (event, isStart, index) => {
 
     const newDate = event.target.value
 
@@ -41,6 +47,7 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
         } 
     }
   }
+
 
   const clearFilter = (evt) => {
     if(type === 'collaborator'){
@@ -58,6 +65,11 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
         dates: []
       })
     }
+    setChecks(checks.map((check, idx) => {
+      return (
+        false
+      )
+    }))
     setRefreshFilter(!refreshFilter);
   }
 
@@ -106,7 +118,7 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
                     return(
                       <div className={`form-column-${index % 3 + 1}`} key={index}>
                           <label>
-                              <input type="checkbox" name="roles" value={theRole.role} onChange={(e) => addRole(e, theRole.role)}/>
+                              <input type="checkbox" name="roles" checked={checks[index]} value={theRole.role} onChange={(e) => addRole(e, theRole.role, index)}/>
                               {theRole.role}
                           </label>
                       </div>
