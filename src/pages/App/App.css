@@ -276,6 +276,7 @@ h1 {
 .team {
     display: flex;
     margin-top: 7%;
+    align-items:center;
 }
 
 .team img {
@@ -313,7 +314,8 @@ h1 {
 #aboutTitle h1 {
     color: #26CCD7; 
     font-size: 48px;
-    margin-top: 30px;
+    margin-top: 3rem;
+    text-align: center;
 }
 
 
