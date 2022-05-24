@@ -33,7 +33,7 @@ export default function InboxShowMessage( { messageToShow, setMessageToShow, pag
                 <div className='project-buttons'>
                     <button onClick={(e) => {viewProject()}} >View project</button>
                     <button onClick={(e) => {decline()}} >Decline</button>
-                    <button onClick={(e) => {accept()}} >Accect and join project</button>
+                    <button onClick={(e) => {accept()}} >Accept and join project</button>
                 </div>
             </div>
         )
