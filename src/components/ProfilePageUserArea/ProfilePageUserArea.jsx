@@ -1,49 +1,53 @@
 import { Link, useNavigate } from 'react-router-dom'
 import './ProfilePageUserArea.css'
 
-export default function ProfilePageUserArea({ user }) {
+export default function ProfilePageUserArea({ user, profileUser }) {
 
     return (
         <div className='ProfilePageUserArea'>
 
                 <div>
-                    <h1> {user.firstName} {user.lastName}</h1> 
+                    <h1> {profileUser.firstName} {profileUser.lastName}</h1> 
                 </div>
             
                 <div className='profile-img-and-links container'>
-                    <img src={user.profileImageUrl} alt='profileImg'/>
+                    <div>
+                        <img src={profileUser.profileImageUrl} alt='profileImg'/>
+
+                        <div className="social-links">
+                            <a href={profileUser.instagramUrl} target="_blank"><img src= "/images/ProfilePg/instagram-logo.png"/> </a>
+                            <a href={profileUser.pinterestUrl} target="_blank"><img src= "/images/ProfilePg/pinterest-logo.png"/> </a>
+                            <a href={profileUser.tumblrUrl} target="_blank"><img src= "/images/ProfilePg/tumblr-logo.png"/> </a>
+                        </div>
+
+                        <div className='userURL'>
+                            <a href={profileUser.websiteUrl} target="_blank">{profileUser.websiteUrl}</a>
+                        </div>
+                
+                    </div>
 
                     <div className='profile-about-and-roles-area'>
                     
-                    <div className='userAbout-text'>{user.aboutMe}</div>
+                    <div className='userAbout-text'>{profileUser.aboutMe}</div>
                     
                     <div className='userAbout-roles'>
                         <ul>
                             {
-                                user.roles.map((role, idx) => {
+                                profileUser.roles.map((role, idx) => {
                                     return (
-                                        <li>{role}</li>
+                                        <li key={idx}>{role}</li>
                                     )
                                 })
                             }
                         </ul>
                     </div>
 
-                </div>
-
-                <div className='text'>
-                    {/* <div className='social-links '>
-                        <a href={user.instagramUrl} target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
-                        <a href={user.pinterestUrl} target="_blank"><ion-icon name="logo-pinterest"></ion-icon></a>
-                        <a href={user.tumblrUrl} target="_blank"><ion-icon name="logo-tumblr"></ion-icon></a>
+                    {/* <div className='"userAbout-edit'>  
+                        <Link to='/'>Edit My Profile</Link>
                     </div> */}
 
-                    <div className='userURL'>
-                        <a href={user.websiteUrl} target="_blank">{user.websiteUrl}</a>
-                    </div>
-
-                    <div className='profile-edit-link'><Link to='/'>Edit My Profile</Link></div>
                 </div>
+
 
             </div>
 

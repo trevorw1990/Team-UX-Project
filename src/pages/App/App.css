@@ -311,15 +311,14 @@ textarea {
 
 }
 
-.social-links a{
-    height: 18px;
-    width: 18px;
+.social-links img{
+    height: 48px !important;
+    width: 48px !important;
+    border: none !important;
+    margin-left: -100px;
+    margin-top: 44px;
 }
 
-/* .ProfilePageProjects {
-    display: flex;
-    flex-direction: row;
-} */
 
 .ProfilePageUserArea h1 {
     color: #26CCD7;
@@ -361,6 +360,12 @@ textarea {
     font-size: 22px;
     line-height: 30px;
     color: #26CCD7;
+    margin-top: 32px;
+    margin-bottom: 48px;
+}
+
+.userURL a:hover {
+    color: #ab1d46;
 }
 
 .divider hr {
@@ -409,6 +414,7 @@ textarea {
     width: 260px;
     align-items: center;
     border: 1px solid #26CCD7;
+    margin-left: 350px;
 }
 
 .image-placeholder > h4 {
@@ -513,7 +519,7 @@ textarea {
 
 .find-collab-container {
     margin-left: 308px;
-    margin-right: 310px;
+    margin-right: 50px;
 }
 
 
@@ -532,7 +538,7 @@ textarea {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 18px;
     color: #ECECEC;
 }
 
@@ -573,21 +579,12 @@ textarea {
     height: 40px;
     background-color: #121212;
     border-top: 1px solid #26CCD7;
-    margin-top: 50px;
+
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.collab-column-1 {
-    display: flex;
-    flex-direction: column;
-}
-
-.collab-column-2 {
-    display: flex;
-    flex-direction: column;
-}
 
 .collab-header h1 {
     margin-left: 308px;
@@ -608,3 +605,109 @@ textarea {
     font-size: 16px;
 
 } */
+
+.collab-buttons button{
+    width: 160px;
+    height: 44px;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.collab-img img {
+    border: 1px solid #ECECEC;
+    border-radius: 50%;
+}
+
+.collab-name h5 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: #26CCD7;
+}
+
+.collaborators {
+    display: flex;
+    flex-direction: column;
+}
+
+.collab-col-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.collab-col-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.collab-col-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.inbox-page {
+    margin-left: 308px;
+    margin-top: 60px;
+}
+
+.create-project-form  h2{
+    margin-left:370px;
+    margin-bottom: 64px;
+}
+
+.collab-columns {
+    display: flex;
+}
+
+.collab-column-1 {
+    display: flex;
+    flex-direction: column;
+    width: 735px;
+}
+
+.collab-column-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.findProject-columns {
+    display: flex;
+}
+.findProject-column-1 .findProject-column-2 {
+    margin-top: 20px;
+}
+
+.projectItem-container {
+    border-bottom: 1px solid #ECECEC;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.projectItem-container h5 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: #26CCD7;
+}
+
+.projectItem-1 button {
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    width:160px;
+    height: 44px;
+    margin-top: 30px;
+}
+
+.projectItem-2 {
+    margin-left: 50px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    color: #ECECEC;
+}

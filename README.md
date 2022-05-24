@@ -15,8 +15,8 @@ Orlando Valadez (Frontend) - https://github.com/Orlandouchiha425 <br />
 Ashley Webb (Frontend) - https://github.com/ashleywebb <br />
 Damon Fung (Backend) - https://github.com/dfung003 <br />
 Jonathan Suarez (Backend) - https://github.com/jonsuarez92 <br />
-Kajsa Brown (UX Designer)
-Austin O'Brien (UX Designer)
+Kajsa Brown (UX Designer) - https://www.kajsabrown.com/ <br />
+Austin O'Brien (UX Designer) - https://www.obrienmakes.com/ <br />
 
 <img />
 
@@ -39,7 +39,7 @@ This is a cloud-based application that does not require installation.
 * JavaScript
 * HTML
 * CSS
-* Bootstrap v.5.0.2
+* Bootstrap v5.0.2
 * REACT
 * Mongoose/MongoDB
 * NodeJS
@@ -47,6 +47,7 @@ This is a cloud-based application that does not require installation.
 * Cloudinary
 * Heroku
 * Postman
+* Canvas
 
 
 ## Project Management

@@ -84,6 +84,10 @@ export default function SignUpForm({ user, setUser }) {
         }
     }
 
+    const doNothing = () => {
+        return;
+    }
+
     useEffect (() => {
         setDisableSignUpBtn(formData.password !== formData.confirm)
     },[formData])
@@ -183,9 +187,9 @@ export default function SignUpForm({ user, setUser }) {
                         <div className='profile-image-upload'>
                             {/* <button onClick={(e) => {profileImageUpload()}}><ion-icon name="person-circle-outline"></ion-icon></button> */}
                             {
-                                image ? <img src={image} /> : <img src="/images/ProfilePg/uploadpic.png" height="104.17px" width="104.17px"/>
+                                image ? <img src={image} /> : doNothing
                             }
-                            <ImageUploads image={image} setImage={setImage} /> 
+                            <ImageUploads image={image} setImage={setImage} placeholder='/images/ProfilePg/uploadpic.png'/> 
                             <br/>
                             <p>Add a Profile image</p>
                         </div>
