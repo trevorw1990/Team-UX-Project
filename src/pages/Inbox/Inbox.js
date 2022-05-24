@@ -5,6 +5,7 @@ import InboxMessages from '../../components/Inbox/InboxMessages'
 import { createThread, getThread, deleteThread} from '../../utilities/api/message-threads/message-threads-api'
 import { createMessage, deleteMessage, getMessagesByUser} from '../../utilities/api/messages/messages-api'
 import { useParams, useLocation } from 'react-router-dom'
+import { getRoles } from '@testing-library/react'
 
 export default function Inbox({ user, setUser}){
 
@@ -54,7 +55,8 @@ export default function Inbox({ user, setUser}){
             theMessage,
             aThread.createdThread._id,
             params.state.isInvite,
-            params.state.projectId
+            params.state.projectId,
+            params.state.theRole
             )
         // console.log(response)
         // console.log(`Message reply: ${response}`)
