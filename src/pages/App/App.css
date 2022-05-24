@@ -275,8 +275,11 @@ h1 {
 
 .team {
     display: flex;
-    margin-top: 7%;
-    align-items:center;
+    margin-top: 4rem;
+    margin-bottom: 7rem;
+    margin-left: 17rem;
+    margin-right: auto;
+    justify-items: center;
 }
 
 .team img {
