@@ -89,7 +89,7 @@ export default function SignUpForm({ user, setUser }) {
     }
 
     useEffect (() => {
-        setDisableSignUpBtn(formData.password !== formData.confirm)
+        setDisableSignUpBtn(formData.password !== formData.confirm && formData.password.length >=6)
     },[formData])
 
     useEffect(() => {
@@ -125,7 +125,7 @@ export default function SignUpForm({ user, setUser }) {
                         
                         <label>Email*
                         <input type="email" name="email" value={formData.email} onChange={handleChange} required /></label>
-                        <label>Password*
+                        <label>Password (Minimum 6 Characters)*
                         <input type="password" name="password" value={formData.password} onChange={handleChange} required /></label>
                         <label>Confirm Password*
                         <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required /></label>
