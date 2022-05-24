@@ -857,3 +857,8 @@ textarea {
     font-size: 16px;
     color: #26CCD7;
 }
+
+.profile-image-upload img{
+    border: 2px solid #ECECEC;
+    border-radius: 50%;
+}
