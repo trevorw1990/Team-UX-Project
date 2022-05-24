@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     position: sticky;
-    margin-top: 700px;
+    margin-top: 800px;
 }
 
 .footer button {
@@ -28,14 +28,17 @@
 .navBar {
     display: flex;
     margin-bottom: 0;
+    margin-top: 0;
+    justify-content: center;
 }
 
 #navBar-logo img{
+    max-height: 200px;
+    max-width: 300px;
     margin-top: 20px;
-    margin-left: 311px;
-    margin-bottom: 10px;
-    height: 125px;
+    height: 100px;
 }
+
 
 .userNavButton {
     display: flex;
@@ -80,9 +83,14 @@ hr {
     color: white;    
     display: flex;
     margin: 0;
-    /* width: 100%; */
+    width: 100%;
   }
 
+#logo-image {
+    display: flex;
+    position:relative;
+    width:100%;
+  }
 
  .centered {
     position: absolute;
@@ -122,16 +130,43 @@ h1 {
     margin: 0;
 }
 
+
 .signup-form-page {
     background-color: #202020;
     color: white;
     width: 500px;
     margin-left: 48%;
     margin-right: 25%;
-    margin-top: 20%;
+    margin-top: 24rem;
     font-family: 'Raleway', sans-serif;
     transform: translate(-50%,-50%);
     
+}
+
+.pg-three {
+    background-color: #202020;
+    color: white;
+    width: 500px;
+    margin-left: 48%;
+    margin-right: 25%;
+    margin-top: 28rem;
+    font-family: 'Raleway', sans-serif;
+    transform: translate(-50%,-50%);
+}
+
+.pg-three #backButton {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    width: 150px;
+    margin: 20px;
+    border: none;
+    margin-left: 30%;
+    margin-right: 70%;
+    margin-bottom: 25rem;
+    padding-bottom: 40rem;
+    height: 50px;
+    position: absolute;
+    top: 55rem;
 }
 
 .signup-form-page input {
@@ -203,22 +238,28 @@ h1 {
 }
 
 .signup-form-buttons {
-    margin-left: 40%;
-    margin-right: 25%;
-    position: absolute;
-    top: 110%;
+
+    background-color: rgba(0, 0, 0, 0);
+    
 }
 
 
 #backButton {
     color: white;
+    background-color: rgba(0, 0, 0, 0);
     width: 150px;
     margin: 20px;
     border: none;
+    margin-left: 30%;
+    margin-right: 70%;
+    margin-bottom: 25rem;
+    padding-bottom: 40rem;
     height: 50px;
+    position: absolute;
+    top: 55rem;
 }
 
-#nextButton {
+#nextButton{
     width: 150px;
     border-radius: 5%;
     height: 50px;
@@ -226,6 +267,10 @@ h1 {
     border: 1px solid rgba(38, 204, 215, 0.5);
     border-radius: 8px;
     color: rgba(38, 204, 215, 0.5);
+    margin-left: 60%;
+    margin-right: 25%;
+    position: absolute;
+    top: 55rem;
 }
 
 .team {
@@ -289,10 +334,19 @@ textarea {
     height: 142.68px;
     left: 496.21px;
     top: 456.32px;
-
     background: #C4C4C4;
     border: 1px solid #ECECEC;
     border-radius: 8px;
+}
+
+.website-links{
+    columns: 2;
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    /* column-width: 100%; */
+    column-gap: 50%;
+    
 }
 
 .website-links input[type="url"] {
@@ -302,6 +356,14 @@ textarea {
     height: 44px;
     width: 350px;
 } 
+
+#website {
+    margin-top: 2em;
+}
+
+#website > #aboutMe {
+    justify-content: space-evenly;
+}
 
 .profile-img-and-links img {
     width: 255px;
@@ -685,7 +747,10 @@ textarea {
     margin-bottom: 30px;
     padding-bottom: 20px;
     display: flex;
+    margin-right: 300px;
 }
+
+
 
 .projectItem-container h5 {
     font-family: 'Raleway';
@@ -710,4 +775,85 @@ textarea {
     font-style: normal;
     font-weight: 700;
     color: #ECECEC;
+}
+
+.projectPage-container {
+    margin-left: 404px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.projectPage-container h1 {
+    margin-left: -85px;
+    margin-bottom: 50px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    display: flex;
+    color: #26CCD7;
+}
+
+.projectPage-column-1 {
+    margin-top: 100px;
+    display: flex;
+    margin-top: 50px;
+    display: flex;
+}
+
+.projectPage-column-1 button {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #26CCD7;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    height: 44px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.projectPage-column-3 img {
+    border: 2px solid #ECECEC;
+    border-radius: 50%;
+}
+
+.projectPage-container-2 {
+    margin-left: 404px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.lookingFor-card {
+    margin-top: 50px;
+    width: 260px;
+    height: 180px;
+}
+
+.lookingFor-card h4 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #26CCD7;
+}
+
+.lookingFor-card button {
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    width: 160px;
+    height: 44px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #26CCD7;
 }

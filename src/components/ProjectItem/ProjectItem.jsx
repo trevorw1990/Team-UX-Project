@@ -22,9 +22,9 @@ export default function ProjectItem({name, image, id, location, description, rol
         return (
             <div className='projectItem-container'>
                
-
                 <div className='projectItem-1'>
                     <div> <h5>{name}</h5></div>
+
                     <div>
                         <img src={image} alt="Project Image" height="127.5px" width="127.5px"/>
                     </div>
@@ -39,25 +39,24 @@ export default function ProjectItem({name, image, id, location, description, rol
                         <p>Description: </p>
                         <p>{description}</p>
                     </div>
-                    
+            </div>
 
-                    <div className='projectItem-section-1'>
-                        
-                            <label>Looking for:
-                                <ul>
-                                    {
-                                        roles.map((role, idx) => {
-                                            return (
-                                                <li key={idx}>
-                                                    {role}
-                                                </li>
-                                            )
-                                        })
-                                    }
-                                </ul>
-                            </label>
-                        
 
+            <div className='projectItem-container-2'>
+                
+                <div className='projectItem-section-1'>
+                        <ul>
+                            {
+                                roles.map((role, idx) => {
+                                    return (
+                                        <li key={idx}>
+                                             {role}
+                                        </li>
+                                    )
+                                    })
+                            }        
+                        </ul>
+        
                       
                             <label>Possible Dates:
                                 <ul>

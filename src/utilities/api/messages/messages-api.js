@@ -32,3 +32,7 @@ export async function deleteMessage(messageId) {
 export async function getMessagesByUser(userId) {
     return sendRequest(`${BASE_URL}/all/${userId}`)
 }
+
+export async function getUnreadMessages(userId){
+    return sendRequest(`${BASE_URL}/unread/${userId}`)
+}
