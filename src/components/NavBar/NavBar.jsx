@@ -3,6 +3,7 @@ import Modal from 'react-modal'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './NavBar.css'
+import '../../pages/App/App.css'
 import { getUnreadMessages } from '../../utilities/api/messages/messages-api'
 
 
@@ -71,7 +72,9 @@ export default function NavBar({ user, setUser }){
         return (
             <div className='navBar' >   
                 <div id="navBar-logo">
-                    <Link to='/' ><img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="300px"/></Link>
+                    <Link to='/' >
+                    <img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="150px"/>
+                    </Link>
                 </div>
 
                 <div className='user-navbar-buttons'>
