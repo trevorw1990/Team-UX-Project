@@ -673,10 +673,41 @@ textarea {
     flex-direction: column;
 }
 
-
 .findProject-columns {
     display: flex;
 }
 .findProject-column-1 .findProject-column-2 {
     margin-top: 20px;
+}
+
+.projectItem-container {
+    border-bottom: 1px solid #ECECEC;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.projectItem-container h5 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: #26CCD7;
+}
+
+.projectItem-1 button {
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    width:160px;
+    height: 44px;
+    margin-top: 30px;
+}
+
+.projectItem-2 {
+    margin-left: 50px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    color: #ECECEC;
 }
