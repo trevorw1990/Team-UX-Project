@@ -89,7 +89,7 @@ export default function SignUpForm({ user, setUser }) {
     }
 
     useEffect (() => {
-        setDisableSignUpBtn(formData.password !== formData.confirm && formData.password.length >=6)
+        setDisableSignUpBtn((formData.password !== formData.confirm) && formData.password.length >=6)
     },[formData])
 
     useEffect(() => {
