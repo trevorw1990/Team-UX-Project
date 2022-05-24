@@ -5,7 +5,7 @@ import { getUser } from "../../utilities/api/users/users-api";
 import ProfilePageUserArea  from '../../components/ProfilePageUserArea/ProfilePageUserArea'
 import ProfilePageProjects from '../../components/ProfilePageProjects/ProfilePageProjects'
 
-export default function ProfilePage({ user, setUser }){
+export default function UserEditPage({ user, setUser }){
     const [profileUser, setProfileUser] = useState(null)
     const params = useParams() 
     const id = params.id
@@ -28,7 +28,7 @@ export default function ProfilePage({ user, setUser }){
         return(
             <main className="profile-pg-container">
 
-                <ProfilePageUserArea edit={false} profileUser={profileUser} user={user} setUser={setUser}/>
+                <ProfilePageUserArea edit={true} profileUser={profileUser} user={user} setUser={setUser}/>
                 
                 <ProfilePageProjects profileUser={profileUser} user={user} setUser={setUser}/>
                 
