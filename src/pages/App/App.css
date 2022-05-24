@@ -766,3 +766,32 @@ textarea {
     margin-top: 50px;
     display: flex;
 }
+
+.lookingFor-card {
+    margin-top: 50px;
+    width: 260px;
+    height: 180px;
+}
+
+.lookingFor-card h4 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #26CCD7;
+}
+
+.lookingFor-card button {
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    width: 160px;
+    height: 44px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #26CCD7;
+}
