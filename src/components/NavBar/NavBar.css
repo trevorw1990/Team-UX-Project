@@ -11,6 +11,10 @@
 	}
 }
 
+:root {
+    --ion-color-red: #ab1d46;
+}
+
 .fade-in {
 	opacity: 1;
 	animation-name: fadeInOpacity;
@@ -162,4 +166,8 @@ ion-icon {
     margin-top: 55px;
     margin-right: 20px;
     margin-left: 50px;
+}
+
+.ion-color-red {
+    --ion-color-base: var(--ion-color-red);
 }
