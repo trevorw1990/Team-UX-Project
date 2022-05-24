@@ -10,7 +10,7 @@ export default function InboxShowMessage( { messageToShow, setMessageToShow, pag
         console.log(messageToShow)
         const payload = {
             userId: messageToShow.receiver,
-            role: 'tempTestRole',
+            role: messageToShow.role,
             projectId: messageToShow.project
         }
         const response = await createCollaborator(payload, messageToShow.project)

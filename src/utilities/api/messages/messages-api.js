@@ -8,7 +8,8 @@ export async function createMessage(senderId,
                                     theMessage,
                                     threadId,
                                     inviteBool,
-                                    projectId) {
+                                    projectId,
+                                    theRole) {
     const payload = {
         sender: senderId,
         receiver: receiverId,
@@ -17,7 +18,8 @@ export async function createMessage(senderId,
         message: theMessage,
         thread: threadId,
         isInvite: inviteBool,
-        project: projectId
+        project: projectId,
+        role: theRole
     }
     console.log(payload)
     return sendRequest(`${BASE_URL}/${threadId}`, 'POST', payload)
