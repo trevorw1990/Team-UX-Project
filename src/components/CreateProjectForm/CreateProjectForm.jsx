@@ -156,12 +156,12 @@ export default function CreateProjectForm({ user, setUser }) {
 
             <p>Choose a cover image (optional): </p>
 
-            <div class="image-placeholder">
+            {/* <div class="image-placeholder">
                 <img src="/images/CreateProject/UploadArrow.png" height="49.5" width="40.91"></img>
                 <h4>Upload Image</h4>
-            </div>
+            </div> */}
 
-            <ImageUploads image={image} setImage={setImage}/>
+            <ImageUploads image={image} setImage={setImage} placeholder='/images/CreateProject/UploadArrow.png'/>
 
             <button type="submit">Finish</button>
 

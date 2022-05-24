@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import ProfileCarousel from "../../components/ProfileCarousel/ProfileCarousel"
 
+
 export default function Projects({user,setUser}){
     const [project, setProject ] = useState({})
     const params = useParams()
@@ -38,35 +39,47 @@ getOneProject()
     const loaded = () =>{ 
         return (
             <main>
-                <div>
+                <div className="projectPage-container">
                     <div>
-                    <h1>{project.projectName}</h1>
-                  </div>  
-                    
-                    <div className="d-flex justify-content-center">
-                    <h3>organizer: <br/>
-                         <img src={user.profileImageUrl} alt='profileImg'/></h3>
-                    </div>
+                        {/* <img src={project.image} alt="Project Image" height="255px" width="255px"/>  */}
+                        <h1>{project.projectName}</h1>
+                    </div> 
 
+                    <div>
+                        <div className="projectPage-column-1">
+                            <img />
+                            <button>Group Message</button>
+                        </div>
 
+                        <div className="projectPage-column-2">
+                            <p>Location: </p>
+                            <ul>
+                                <li>{project.dateStartEnd} </li>
+                            </ul>
+                            <p>{project.projectDescription}</p>
+                        </div>
 
-                    <ul>
-                        <li>{project.dateStartEnd} </li>
-                    </ul>
-                
-                    <p>{project.projectDescription}</p>
+                        <div className="projectPage-column-3">
+                            <h3>Organizer: <br/>
+                            <img src={user.profileImageUrl} alt='profileImg' height="80px" width="80px"/></h3>
+                        </div>
+                     </div>
                 </div>
 
+                <div className="projectPage-container-2">
+                    <div>
+                        <ProjectLookingFor  project={project} user={user} />
+                    </div>
+        
+                    <div>
+                        <ProjectCollaborators project={project} user={user}/>
+                    </div>
 
-            
-                <ProjectLookingFor  project={project} user={user} />
+                    <div>
+                        <ProfileCarousel setUser={setUser} user={user} />
+                    </div>
 
-     
-         
-               
-                <ProjectCollaborators project={project} user={user}/>
-
-                <ProfileCarousel setUser={setUser} user={user} />
+                </div>
             </main>
         )
     }

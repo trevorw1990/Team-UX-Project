@@ -20,49 +20,67 @@ export default function ProjectItem({name, image, id, location, description, rol
     },[])
     const loaded = () => {
         return (
-            <div>
-                <h5>{name}</h5>
-                <div>
-                    <img src={image} alt="Project Image" />
+            <div className='projectItem-container'>
+               
+                <div className='projectItem-1'>
+                    <div> <h5>{name}</h5></div>
+
+                    <div>
+                        <img src={image} alt="Project Image" height="127.5px" width="127.5px"/>
+                    </div>
+                    <div>
+                        <Link to={`/projects/${id}`}><button>View Project</button></Link>
+                    </div>
+                </div>
+
+                <div className="projectItem-2">
                     <div>
                         <p>Location: {location}</p>
                         <p>Description: </p>
                         <p>{description}</p>
                     </div>
-                </div>
-                <div>
-                    <Link to={`/projects/${id}`}><button>View Project</button></Link>
-                    <label>Looking For
+            </div>
+
+
+            <div className='projectItem-container-2'>
+                
+                <div className='projectItem-section-1'>
                         <ul>
                             {
                                 roles.map((role, idx) => {
                                     return (
                                         <li key={idx}>
-                                            {role}
+                                             {role}
                                         </li>
                                     )
-                                })
-                            }
+                                    })
+                            }        
                         </ul>
-                    </label>
-                    <label>Possible Dates
-                        <ul>
-                            {datesRange.length ? 
-                                <li key={0}>{datesRange[0]}-{datesRange[1]}</li>
-                            :
-                                datesMultiple.map((date, idx) => {
-                                    return (
-                                        <li key={idx}>
-                                            {date}
-                                        </li>
-                                    )
-                                })
-                            }
-                        </ul>
-                    </label>
-                    <label>Organizer
-                        <img src={projectUser.profileImageUrl} alt="Organizer Profile Image" />
-                    </label>
+        
+                      
+                            <label>Possible Dates:
+                                <ul>
+                                    {datesRange.length ? 
+                                        <li key={0}>{datesRange[0]}-{datesRange[1]}</li>
+                                    :
+                                        datesMultiple.map((date, idx) => {
+                                            return (
+                                                <li key={idx}>
+                                                    {date}
+                                                </li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            </label>
+                        
+
+                        
+                            <label>Organizer:
+                                <img src={projectUser.profileImageUrl} alt="Organizer Profile Image" height="65px" width="65px"/>
+                            </label>
+                        
+                    </div>
                 </div>
             </div>
         )

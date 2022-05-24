@@ -568,7 +568,7 @@ textarea {
 
 .find-collab-container {
     margin-left: 308px;
-    margin-right: 310px;
+    margin-right: 50px;
 }
 
 
@@ -587,7 +587,7 @@ textarea {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 18px;
     color: #ECECEC;
 }
 
@@ -628,21 +628,12 @@ textarea {
     height: 40px;
     background-color: #121212;
     border-top: 1px solid #26CCD7;
-    margin-top: 50px;
+
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.collab-column-1 {
-    display: flex;
-    flex-direction: column;
-}
-
-.collab-column-2 {
-    display: flex;
-    flex-direction: column;
-}
 
 .collab-header h1 {
     margin-left: 308px;
@@ -689,7 +680,6 @@ textarea {
 .collaborators {
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
 }
 
 .collab-col-1 {
@@ -717,3 +707,140 @@ textarea {
     margin-bottom: 64px;
 }
 
+.collab-columns {
+    display: flex;
+}
+
+.collab-column-1 {
+    display: flex;
+    flex-direction: column;
+    width: 735px;
+}
+
+.collab-column-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.findProject-columns {
+    display: flex;
+}
+.findProject-column-1 .findProject-column-2 {
+    margin-top: 20px;
+}
+
+.projectItem-container {
+    border-bottom: 1px solid #ECECEC;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    margin-right: 300px;
+}
+
+
+
+.projectItem-container h5 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: #26CCD7;
+}
+
+.projectItem-1 button {
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    width:160px;
+    height: 44px;
+    margin-top: 30px;
+}
+
+.projectItem-2 {
+    margin-left: 50px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    color: #ECECEC;
+}
+
+.projectPage-container {
+    margin-left: 404px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.projectPage-container h1 {
+    margin-left: -85px;
+    margin-bottom: 50px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    display: flex;
+    color: #26CCD7;
+}
+
+.projectPage-column-1 {
+    margin-top: 100px;
+    display: flex;
+    margin-top: 50px;
+    display: flex;
+}
+
+.projectPage-column-1 button {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #26CCD7;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    height: 44px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.projectPage-column-3 img {
+    border: 2px solid #ECECEC;
+    border-radius: 50%;
+}
+
+.projectPage-container-2 {
+    margin-left: 404px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.lookingFor-card {
+    margin-top: 50px;
+    width: 260px;
+    height: 180px;
+}
+
+.lookingFor-card h4 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #26CCD7;
+}
+
+.lookingFor-card button {
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    width: 160px;
+    height: 44px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #26CCD7;
+}
