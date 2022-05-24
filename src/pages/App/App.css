@@ -685,7 +685,10 @@ textarea {
     margin-bottom: 30px;
     padding-bottom: 20px;
     display: flex;
+    margin-right: 300px;
 }
+
+
 
 .projectItem-container h5 {
     font-family: 'Raleway';
@@ -710,4 +713,56 @@ textarea {
     font-style: normal;
     font-weight: 700;
     color: #ECECEC;
+}
+
+.projectPage-container {
+    margin-left: 404px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.projectPage-container h1 {
+    margin-left: -85px;
+    margin-bottom: 50px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    display: flex;
+    color: #26CCD7;
+}
+
+.projectPage-column-1 {
+    margin-top: 100px;
+    display: flex;
+    margin-top: 50px;
+    display: flex;
+}
+
+.projectPage-column-1 button {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #26CCD7;
+    background: rgba(38, 204, 215, 0.2);
+    border: 1px solid #26CCD7;
+    border-radius: 8px;
+    height: 44px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+}
+
+.projectPage-column-3 img {
+    border: 2px solid #ECECEC;
+    border-radius: 50%;
+}
+
+.projectPage-container-2 {
+    margin-left: 404px;
+    margin-top: 50px;
+    display: flex;
 }
