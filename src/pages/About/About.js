@@ -94,6 +94,7 @@ export default function About() {
                         <img src="./images/About/kajsa.jpeg" alt="Kajsa"/>
                         <h2> Kajsa Brown </h2>
                         <p> UX Designer </p> 
+                        <a href="https://www.kajsabrown.com/"> Website </a>
                     </div>
                 </div>
 
@@ -103,6 +104,7 @@ export default function About() {
                         <img src="./images/About/austin.jpeg" alt="Austin"/>
                         <h2> Austin O'Brien </h2> 
                         <p> UX Designer </p>
+                        <a href="https://www.obrienmakes.com/"> Website </a>
                     </div>
                     
                     <div className='teamMember'>
