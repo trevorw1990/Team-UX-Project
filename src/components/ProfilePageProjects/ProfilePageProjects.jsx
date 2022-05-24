@@ -9,7 +9,6 @@ export default function ProfilePageProjects({ user, profileUser }) {
     const getProjects = async () => {
         try {
             const foundProjects = await getUserProjects(profileUser._id);
-            console.log(foundProjects)
             setProjects(foundProjects);
         } catch (err) {
             console.error(err);
