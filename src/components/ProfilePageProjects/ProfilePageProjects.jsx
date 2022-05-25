@@ -55,13 +55,10 @@ export default function ProfilePageProjects({ user, profileUser }) {
                 <div className='myProjects '>
                     <h2>My Projects</h2>
                 </div>
-
-                <div className="divider">
-                    <hr/>
-                </div>
             </div>
         )
     }
 
-    return projects.length ? loaded() : loading()
+    return 
+        projects.length ? loaded() : loading()
 }
