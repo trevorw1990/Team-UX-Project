@@ -848,13 +848,6 @@ textarea {
 .lookingFor-card button {
     background: rgba(38, 204, 215, 0.2);
     border: 1px solid #26CCD7;
-    border-radius: 8px;
-    width: 160px;
-    height: 44px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
     color: #26CCD7;
 }
 
