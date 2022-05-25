@@ -39,10 +39,10 @@ export default function ProfilePage({ user, setUser }){
                     
                     <div className="gallery-header">
                         <h2>My Gallery</h2>
-                        <button>Edit Gallery</button>
+                        {user._id === profileUser._id && <button>Edit Gallery</button>}
                     </div>
 
-                    <ProfileCarousel user={user} setUser={setUser}/>
+                    <ProfileCarousel profileUser={profileUser} user={user} setUser={setUser}/>
                 
                 </main>
         </div>

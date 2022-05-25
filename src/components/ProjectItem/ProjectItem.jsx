@@ -46,6 +46,7 @@ export default function ProjectItem({name, image, id, location, description, rol
             
                 
                 <div className='projectItem-section-1'>
+                    <p><strong>Looking for:</strong></p>
                         <ul>
                             {
                                 roles.map((role, idx) => {
@@ -62,7 +63,7 @@ export default function ProjectItem({name, image, id, location, description, rol
                             <label><strong>Possible Dates:</strong>
                                 <ul>
                                     {datesRange.length ? 
-                                        <li key={0}>{datesRange[0]}-{datesRange[1]}</li>
+                                        <li key={0}>{datesRange[0]} - {datesRange[1]}</li>
                                     :
                                         datesMultiple.map((date, idx) => {
                                             return (

@@ -37,7 +37,7 @@ export default function UserEditPage({ user, setUser }){
                     <button>Edit Gallery</button>
                 </div>
 
-                <ProfileCarousel user={user} setUser={setUser}/>
+                <ProfileCarousel profileUser={profileUser} user={user} setUser={setUser}/>
                 
 
         

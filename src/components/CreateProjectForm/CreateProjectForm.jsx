@@ -173,7 +173,7 @@ export default function CreateProjectForm({ user, setUser }) {
                 }
             </div>
 
-            <button onClick={(e) => {setFormData({ ...formData, isRange: !formData.isRange})}}>{ formData.isRange? 'Or select dates' : 'Or select range' }</button>
+            {/* <button onClick={(e) => {setFormData({ ...formData, isRange: !formData.isRange})}}>{ formData.isRange? 'Or select dates' : 'Or select range' }</button> */}
 
             <p>Choose a cover image (optional): </p>
         

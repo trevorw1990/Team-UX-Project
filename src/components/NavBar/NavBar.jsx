@@ -137,5 +137,5 @@ export default function NavBar({ user, setUser }){
         )
     }
 
-    return user ? userNav() : loginNav()
+    return user && unread !== null ? userNav() : loginNav()
 }

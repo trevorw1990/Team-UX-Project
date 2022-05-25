@@ -6,7 +6,7 @@ import { updateUser } from '../../utilities/api/users/users-api'
 import { useState, useEffect } from "react"
 
 
-export default function ProfileCarousel({ user, setUser }){
+export default function ProfileCarousel({ user, setUser, profileUser }){
 const [image, setImage] = useState('')
 const [carousel, setCarousel] = useState([''])
 const [counter, setCounter ] = useState(0)
@@ -90,10 +90,10 @@ useEffect(() => {
 
       </div>
       
-      <ImageUploads image={image} setImage={setImage}/>
+      {user._id === profileUser._id && <ImageUploads image={image} setImage={setImage}/>}
 
     </div>
     :
-    <ImageUploads image={image} setImage={setImage}/>
+    user._id === profileUser._id ? <ImageUploads image={image} setImage={setImage}/> : ''
   )
 }

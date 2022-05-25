@@ -38,7 +38,7 @@ getOneProject()
 
     const loaded = () =>{ 
         return (
-            <main>
+            <main className="project-container">
                 <div className="projectPage-container">
                     <div>
                         <h1>{project.projectName}</h1>
@@ -82,14 +82,14 @@ getOneProject()
                     </div>
                 </div>
 
-                <div className="projectPage-container-3">
+                {/* <div className="projectPage-container-3">
                     <div className="carouselSection">
                         <div>
                             <ProfileCarousel setUser={setUser} user={user} />
                         </div>
                     </div>
 
-                </div>
+                </div> */}
             </main>
         )
     }

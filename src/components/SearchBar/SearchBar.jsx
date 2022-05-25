@@ -93,7 +93,7 @@ export default function SearchBar({user, filter, setFilter, type, refreshFilter,
               </div>
 
               <label> State
-                <select name="usState" value={filter.usState} onChange={handleChange} required >
+                <select className="search-select" name="usState" value={filter.usState} onChange={handleChange} required >
                     {statesList.map((usState, index) => (
                       <option value={usState.value} key={index} >{usState.label}</option>
                     ))}   
