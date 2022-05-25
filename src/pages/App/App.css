@@ -782,7 +782,7 @@ textarea {
     margin-left: 50px;
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     color: #ECECEC;
 }
 
@@ -790,6 +790,13 @@ textarea {
     margin-left: 404px;
     margin-top: 50px;
     display: flex;
+    width: 1035px;
+
+}
+
+.projectPage-container img {
+    margin-right: 40px;
+    
 }
 
 .projectPage-container h1 {
@@ -878,6 +885,7 @@ textarea {
     margin-top: 50px;
     width: 260px;
     height: 180px;
+
 }
 
 .lookingFor-card h4 {
@@ -903,6 +911,7 @@ textarea {
     font-style: normal;
 }
 
+
 .profile-image-upload img{
     border: 2px solid #ECECEC;
     border-radius: 50%;
@@ -917,7 +926,18 @@ textarea {
 
 }
 
-
 #editProfile {
     text-align: left !important;
+}
+
+#organizer {
+    margin-left: 300px;
+}
+
+#organizer img {
+    margin-left: 20px;
+    height: 65px;
+    width: 65px;
+    border: 1px solid #ECECEC;
+    border-radius: 50%;
 }
