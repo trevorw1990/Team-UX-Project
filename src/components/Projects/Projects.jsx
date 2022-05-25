@@ -41,26 +41,28 @@ getOneProject()
             <main>
                 <div className="projectPage-container">
                     <div>
-                        <img src={project.imageUrl} alt="Project Image" height="255px" width="255px"/> 
                         <h1>{project.projectName}</h1>
+                        <img src={project.imageUrl} alt="Project Image" height="255px" width="255px"/> 
+                        
+                        <div className="projectPage-column-1">
+                            <button>Group Message</button>
+                        </div>
                     </div> 
 
                     <div>
-                        <div className="projectPage-column-1">
-                            <img />
-                            <button>Group Message</button>
-                        </div>
-
                         <div className="projectPage-column-2">
-                            <p>Location: </p>
+                            <p><strong>Location:</strong></p>
+                            <p><strong>Possible Dates:</strong></p>
                             <ul>
                                 <li>{project.dateStartEnd} </li>
                             </ul>
+
+                            <p><strong>Description:</strong></p>
                             <p>{project.projectDescription}</p>
                         </div>
 
                         <div className="projectPage-column-3">
-                            <h3>Organizer: <br/>
+                            <h3><strong>Organizer:</strong><br/>
                             <img src={user.profileImageUrl} alt='profileImg' height="80px" width="80px"/></h3>
                         </div>
                      </div>
