@@ -27,7 +27,6 @@ const messageId = params.id
             <tr key={idx}>
                 <td><input type='checkbox'/></td>
                 <td>{message.senderName}</td>
-                {/* <td onClick={(e) => {showMessage(message)}}>{message.message}</td> */}
                 <td>May 2022</td>
             </tr>
         )
@@ -43,10 +42,6 @@ const messageId = params.id
         </div>
         
         
-
-        // {
-        //     unread.map()
-        // }
     )
-    // return unread && unread._id ? loaded() : loading()
+    
 }
