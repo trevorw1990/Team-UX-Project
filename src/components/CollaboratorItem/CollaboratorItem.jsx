@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 export default function CollaboratorItem({user,id,website,roles,location,image,name,instagram, pinterest,tumblr, description}){
     return (
         <div className='collaborators'>
-                <div className='collab-name'>
-                    <h5>{name}</h5>
-                </div>
-
-
+                
                 <div className='collab-col-1'>
+                    <div className='collab-name'>
+                        <h5>{name}</h5>
+                    </div>
+
                     <div className='collab-img'>
                         <img src={image} alt="Profile image" width="127.5" height="127.5" />
                     </div>
@@ -22,6 +22,12 @@ export default function CollaboratorItem({user,id,website,roles,location,image,n
 
 
                 <div className='collab-col-2'>
+                    <p>Location: {location}</p>
+
+                    <div className='collab-description'>
+                      <p>{description}</p>
+                    </div>
+
                     <ul>
                         {
                             roles.map((role,idx) => {
@@ -33,16 +39,17 @@ export default function CollaboratorItem({user,id,website,roles,location,image,n
                             })
                         }
                     </ul>
-                    <a href={website}>View Website</a>
+
+                    <div>
+                        <a href={website}>View Website</a>
+                    </div>
                 </div>
                 
             
             <div className='collab-col-3'>
-                <p>Location: {location}</p>
                 
-                <div className='collab-description'>
-                    <p>{description}</p>
-                </div>
+                
+                
 
                 <div>
                     {instagram && <a href={instagram}>insta</a>}
