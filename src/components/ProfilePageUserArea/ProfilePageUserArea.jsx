@@ -132,11 +132,17 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
                             }
                         </ul>
                         {edit && <button onClick={openModal}>Edit Roles</button>}
+
+                        {(user._id === profileUser._id && !edit) && <div className='"userAbout-edit'>  
+
+                        <div id="editProfile">
+                            <Link to={`/profile/edit/${profileUser._id}`}>Edit My Profile</Link>
+                        </div>
+                    </div>}
+
                     </div>
 
-                    {(user._id === profileUser._id && !edit) && <div className='"userAbout-edit'>  
-                        <Link to={`/profile/edit/${profileUser._id}`}>Edit My Profile</Link>
-                    </div>}
+                    
 
                 </div>
 

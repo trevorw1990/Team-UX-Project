@@ -550,6 +550,10 @@ textarea {
     margin-bottom: 20px;
 }
 
+.userAbout-roles ul {
+    text-align: left !important;
+}
+
 .ProfilePageProjects h2 {
     margin-top: 30px;
     margin-right: 500px;
@@ -911,4 +915,9 @@ textarea {
     font-size: 48px;
     color: #ECECEC;
 
+}
+
+
+#editProfile {
+    text-align: left !important;
 }
