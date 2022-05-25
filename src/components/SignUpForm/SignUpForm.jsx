@@ -132,10 +132,14 @@ export default function SignUpForm({ user, setUser }) {
                         <br/>
 
                         <label>Location*
+
                         <select name="country" value={formData.country} onChange={handleChange} required >
                             <option value="United States" >United States</option>   
                         </select>
+
                         <select name="usState" value={formData.usState} onChange={handleChange} required >
+                    
+
                             {statesList.map((usState, index) => (
                                 <option value={usState.value} key={index} >{usState.label}</option>
                             ))}   
@@ -182,16 +186,23 @@ export default function SignUpForm({ user, setUser }) {
                     {
                     page === 3 ?
                     <div className='pg-three'>
-                        <h2>Almost done! Complete your Profile</h2>
+                        <div id="almostDone">
+                            <h2>Almost done!</h2>
+                        </div>
+
+                        <div id="completeProfile">
+                            <h2>Complete your profile.</h2>
+                        </div>
                     
                         <div className='profile-image-upload'>
+                            <p><strong>Add a Profile Image</strong></p>
                             {/* <button onClick={(e) => {profileImageUpload()}}><ion-icon name="person-circle-outline"></ion-icon></button> */}
                             {
                                 image ? <img src={image} /> : doNothing
                             }
                             <ImageUploads image={image} setImage={setImage} placeholder='/images/ProfilePg/uploadpic.png' /> 
                             <br/>
-                            <p>Add a Profile image</p>
+                            
                         </div>
 
                         <label>About me:

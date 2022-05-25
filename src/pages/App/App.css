@@ -154,19 +154,29 @@ h1 {
     transform: translate(-50%,-50%);
 }
 
-.pg-three #backButton {
+.pg-three h2 {
+    font-size: 24pt;
+}
+
+#almostDone {
+    margin-left: 245px;
+}
+
+#completeProfile {
+    margin-left: 170px;
+}
+
+#backButton {
     color: white;
     background-color: rgba(0, 0, 0, 0);
-    width: 150px;
-    margin: 20px;
-    border: none;
-    margin-left: 30%;
-    margin-right: 70%;
-    margin-bottom: 25rem;
-    padding-bottom: 40rem;
-    height: 50px;
-    position: absolute;
-    top: 55rem;
+    margin-top: 100px !important;
+    
+}
+
+.pg-three button {
+    margin-left: 530px;
+    margin-top: 20px;
+
 }
 
 .signup-form-page input {
@@ -178,19 +188,23 @@ h1 {
 }
 
 .signup-form-page input[type="text"] {
-    width: 255px;
+    width: 540px !important;
     height: 44px;
+    color: black;
 }
 
 
 .signup-form-page input[type="email"]{
     width: 540px;
     height: 44px;
+    background: #C4C4C4 !important;
+    color: black;
 }
 
 .signup-form-page input[type="password"] {
     width: 540px;
     height: 44px;
+    color: black;
 } 
 
 .signup-form-page button[type="submit"] {
@@ -229,20 +243,19 @@ h1 {
     border: 1px solid #ECECEC;
     border-radius: 8px;
     height: 44px;
-    width: 200px;
+    width: 150px;
+    color: black;
 }
 
 #keywordLabel input[type="text"] {
     width: 540px;
     height: 44px;
+    color: black;
 }
 
 .signup-form-buttons {
-
     background-color: rgba(0, 0, 0, 0);
-    
 }
-
 
 #backButton {
     color: white;
@@ -441,6 +454,10 @@ textarea {
     margin-left: -30px;
 }
 
+.image-upload-buttons {
+    margin-left: 230px;
+}
+
 .image-upload-buttons button {
     height: 44px;
     width: 160px;
@@ -448,6 +465,8 @@ textarea {
     border: 1px solid #26CCD7;
     border-radius: 8px;
     color: #26CCD7;
+    margin-top: 15px;
+    margin-left: 25px;
 }
 
 .ImageContainer h1 {
@@ -910,11 +929,20 @@ textarea {
     font-style: normal;
 }
 
-
 .profile-image-upload img{
     border: 2px solid #ECECEC;
     border-radius: 50%;
+    margin-left: 275px;
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
+
+.profile-image-upload p {
+    margin-left: 255px;
+    margin-top: 30px;
+}
+
+
 
 .lookingFor-header h3 {
     font-family: 'Raleway';
