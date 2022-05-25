@@ -189,7 +189,7 @@ export default function SignUpForm({ user, setUser }) {
                             {
                                 image ? <img src={image} /> : doNothing
                             }
-                            <ImageUploads image={image} setImage={setImage} placeholder='/images/ProfilePg/uploadpic.png'/> 
+                            <ImageUploads image={image} setImage={setImage} placeholder='/images/ProfilePg/uploadpic.png' /> 
                             <br/>
                             <p>Add a Profile image</p>
                         </div>

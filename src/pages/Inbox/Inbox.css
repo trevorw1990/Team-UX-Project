@@ -1,7 +1,16 @@
 .inbox-page{
     color: white;
+    display: flex;
 }
 
 button {
     color: white;
+}
+
+.inbox-navbar {
+    width: 20%;
+}
+
+.inbox-messages {
+    margin-top: 100px;
 }
