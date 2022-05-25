@@ -34,7 +34,8 @@ This is a cloud-based application that does not require installation.
 
 ## Project Structure
 * [Figma Link](https://www.figma.com/file/IIYsZWpnttAQwDiAbwZABK/P6?node-id=326%3A19125)
-* [ERD Link](https://lucid.app/lucidchart/61c42514-d3a1-4877-81fe-c817b9fd1cbc/edit?viewport_loc=-66%2C-64%2C2080%2C1142%2C0_0&invitationId=inv_0c918acc-2563-4917-b4b9-7b3cd66d6808)
+* [ERD Link](https://lucid.app/lucidchart/61c42514-d3a1-4877-81fe-c817b9fd1cbc/edit?viewport_loc=-66%2C-64%2C2080%2C1142%2C0_0&invitationId=inv_0c918acc-2563-4917-b4b9-7b3cd66d6808) <br />
+![ERD](/public/images/ERD/ERD.png)
 
 ## Technologies Used
 * JavaScript
