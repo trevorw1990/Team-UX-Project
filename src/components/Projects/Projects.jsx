@@ -41,7 +41,7 @@ getOneProject()
             <main>
                 <div className="projectPage-container">
                     <div>
-                        {/* <img src={project.image} alt="Project Image" height="255px" width="255px"/>  */}
+                        <img src={project.imageUrl} alt="Project Image" height="255px" width="255px"/> 
                         <h1>{project.projectName}</h1>
                     </div> 
 
