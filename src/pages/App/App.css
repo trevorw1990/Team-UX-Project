@@ -804,6 +804,40 @@ textarea {
     display: flex;
     margin-top: 50px;
     display: flex;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ECECEC;
+
+}
+
+.projectPage-column-2 {
+    margin-top: 100px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ECECEC;
+}
+
+.projectPage-column-3 {
+    margin-top: 50px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ECECEC;
+}
+
+.projectPage-column-3 h3 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 16px;
+    color: #ECECEC;
 }
 
 .projectPage-column-1 button {
@@ -821,11 +855,13 @@ textarea {
     align-items: center;
     text-align: center;
     padding-left: 20px;
+    margin-left: 50px;
 }
 
 .projectPage-column-3 img {
     border: 2px solid #ECECEC;
     border-radius: 50%;
+    margin-top: 25px;
 }
 
 .projectPage-container-2 {
