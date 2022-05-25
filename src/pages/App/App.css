@@ -1012,3 +1012,13 @@ textarea {
 .ReactModal__Content button {
     margin-top: 50px;
 }
+
+.ReactModal__Content input[type='url'] {
+    background: #ECECEC !important;
+    width: 400px !important;
+    height: 50px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 8pt;
+    margin-right: 20px;
+}
