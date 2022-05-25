@@ -509,7 +509,7 @@ textarea {
 
 
 .inbox-navbar-categories button {
-    width: 255px;
+    width: 225px;
     height: 44px;
     background: #454545;
     border: 2px solid #353535;
@@ -519,13 +519,6 @@ textarea {
     font-size: 16px;
     color:#ECECEC;
 }
-
-/* .inbox-page {
-    background: #121212;
-    width: 1110px;
-    height: 850px;  
-} */
-
 
 .teamMember-name {
     padding-left: 20px;
