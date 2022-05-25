@@ -26,23 +26,26 @@ export default function ProfilePage({ user, setUser }){
 
     const loaded = () => {
         return(
-            <main className="profile-pg-container">
-
-                <ProfilePageUserArea edit={false} profileUser={profileUser} user={user} setUser={setUser}/>
-                
-                <ProfilePageProjects profileUser={profileUser} user={user} setUser={setUser}/>
-                
-                <div className="gallery-header">
-                    <h2>My Gallery</h2>
-                    <button>Edit Gallery</button>
+            <div>
+                <div>
+                    <hr/>
                 </div>
 
-                <ProfileCarousel user={user} setUser={setUser}/>
+                <main className="profile-pg-container">
+
+                    <ProfilePageUserArea edit={false} profileUser={profileUser} user={user} setUser={setUser}/>
+                    
+                    <ProfilePageProjects profileUser={profileUser} user={user} setUser={setUser}/>
+                    
+                    <div className="gallery-header">
+                        <h2>My Gallery</h2>
+                        <button>Edit Gallery</button>
+                    </div>
+
+                    <ProfileCarousel user={user} setUser={setUser}/>
                 
-
-        
-
-            </main>
+                </main>
+        </div>
         )
     }
 

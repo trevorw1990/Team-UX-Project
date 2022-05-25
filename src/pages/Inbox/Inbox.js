@@ -69,7 +69,14 @@ export default function Inbox({ user, setUser}){
 
     const loaded = () => {
         return(
+        
+        <div>
+            <div>
+                <hr />
+            </div>
+
             <div className='inbox-page'>
+
                 <div className='inbox-navbar'>
                     <InboxNavBar user={user}  setUser={setUser} pageToShow={pageToShow} setPageToShow={setPageToShow} />
                 </div>
@@ -89,6 +96,7 @@ export default function Inbox({ user, setUser}){
                 </div>        
             
             </div>
+        </div>
         )
     }
 

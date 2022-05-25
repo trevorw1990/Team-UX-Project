@@ -154,19 +154,29 @@ h1 {
     transform: translate(-50%,-50%);
 }
 
-.pg-three #backButton {
+.pg-three h2 {
+    font-size: 24pt;
+}
+
+#almostDone {
+    margin-left: 245px;
+}
+
+#completeProfile {
+    margin-left: 170px;
+}
+
+#backButton {
     color: white;
     background-color: rgba(0, 0, 0, 0);
-    width: 150px;
-    margin: 20px;
-    border: none;
-    margin-left: 30%;
-    margin-right: 70%;
-    margin-bottom: 25rem;
-    padding-bottom: 40rem;
-    height: 50px;
-    position: absolute;
-    top: 55rem;
+    margin-top: 100px !important;
+    
+}
+
+.pg-three button {
+    margin-left: 530px;
+    margin-top: 20px;
+
 }
 
 .signup-form-page input {
@@ -178,19 +188,23 @@ h1 {
 }
 
 .signup-form-page input[type="text"] {
-    width: 255px;
+    width: 540px !important;
     height: 44px;
+    color: black;
 }
 
 
 .signup-form-page input[type="email"]{
     width: 540px;
     height: 44px;
+    background: #C4C4C4 !important;
+    color: black;
 }
 
 .signup-form-page input[type="password"] {
     width: 540px;
     height: 44px;
+    color: black;
 } 
 
 .signup-form-page button[type="submit"] {
@@ -229,20 +243,19 @@ h1 {
     border: 1px solid #ECECEC;
     border-radius: 8px;
     height: 44px;
-    width: 200px;
+    width: 150px;
+    color: black;
 }
 
 #keywordLabel input[type="text"] {
     width: 540px;
     height: 44px;
+    color: black;
 }
 
 .signup-form-buttons {
-
     background-color: rgba(0, 0, 0, 0);
-    
 }
-
 
 #backButton {
     color: white;
@@ -288,6 +301,7 @@ h1 {
     height: 150px;
     border: 1px solid #ECECEC;
     margin-right: 20px;
+    margin-bottom: 20px;
 
 }
 
@@ -309,6 +323,10 @@ h1 {
     margin-bottom: 30px;
 }
 
+.teammember-text {
+    margin-bottom: 30px;
+}
+
 #columnOneTeam {
     margin-left: 20px;
     margin-right: 20px;
@@ -327,11 +345,11 @@ h1 {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 16px;
     align-items: center;
     color: #ECECEC;
 }
+
 
 textarea {
     box-sizing: border-box;
@@ -441,6 +459,10 @@ textarea {
     margin-left: -30px;
 }
 
+.image-upload-buttons {
+    margin-left: 230px;
+}
+
 .image-upload-buttons button {
     height: 44px;
     width: 160px;
@@ -448,6 +470,8 @@ textarea {
     border: 1px solid #26CCD7;
     border-radius: 8px;
     color: #26CCD7;
+    margin-top: 15px;
+    margin-left: 25px;
 }
 
 .ImageContainer h1 {
@@ -509,7 +533,7 @@ textarea {
 
 
 .inbox-navbar-categories button {
-    width: 255px;
+    width: 225px;
     height: 44px;
     background: #454545;
     border: 2px solid #353535;
@@ -519,13 +543,6 @@ textarea {
     font-size: 16px;
     color:#ECECEC;
 }
-
-/* .inbox-page {
-    background: #121212;
-    width: 1110px;
-    height: 850px;  
-} */
-
 
 .teamMember-name {
     padding-left: 20px;
@@ -548,6 +565,11 @@ textarea {
     color: #ECECEC;
     margin-top: 18px;
     margin-bottom: 20px;
+}
+
+
+.userAbout-roles ul {
+    text-align: left !important;
 }
 
 .ProfilePageProjects h2 {
@@ -680,11 +702,14 @@ textarea {
     border: 1px solid #26CCD7;
     border-radius: 8px;
     margin-top: 15px;
+    margin-bottom: 30px;
 }
 
 .collab-img img {
     border: 1px solid #ECECEC;
     border-radius: 50%;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .collab-name h5 {
@@ -697,7 +722,6 @@ textarea {
 
 .collaborators {
     display: flex;
-    flex-direction: column;
 }
 
 .collab-col-1 {
@@ -708,6 +732,9 @@ textarea {
 .collab-col-2 {
     display: flex;
     flex-direction: column;
+    margin-left: 50px;
+    width: 600px;
+    margin-top: 50px;
 }
 
 .collab-col-3 {
@@ -778,7 +805,7 @@ textarea {
     margin-left: 50px;
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     color: #ECECEC;
 }
 
@@ -786,6 +813,13 @@ textarea {
     margin-left: 404px;
     margin-top: 50px;
     display: flex;
+    width: 1035px;
+
+}
+
+.projectPage-container img {
+    margin-right: 40px;
+    
 }
 
 .projectPage-container h1 {
@@ -874,6 +908,7 @@ textarea {
     margin-top: 50px;
     width: 260px;
     height: 180px;
+
 }
 
 .lookingFor-card h4 {
@@ -902,7 +937,17 @@ textarea {
 .profile-image-upload img{
     border: 2px solid #ECECEC;
     border-radius: 50%;
+    margin-left: 275px;
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
+
+.profile-image-upload p {
+    margin-left: 255px;
+    margin-top: 30px;
+}
+
+
 
 .lookingFor-header h3 {
     font-family: 'Raleway';
@@ -911,4 +956,115 @@ textarea {
     font-size: 48px;
     color: #ECECEC;
 
+}
+
+#editProfile {
+    text-align: left !important;
+}
+
+#organizer {
+    margin-left: 300px;
+}
+
+#organizer img {
+    margin-left: 20px;
+    height: 65px;
+    width: 65px;
+    border: 1px solid #ECECEC;
+    border-radius: 50%;
+}
+
+.loading-screen {
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+}
+
+.profile-about-and-roles-area textarea[type="text"] {
+    background: #ECECEC;
+    width: 400px;
+    height: 200px;
+    text-align: left;
+    border-radius: 8pt;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.profile-about-and-roles-area label {
+    text-align: left !important;
+    padding-bottom: 20px !important;
+}
+
+.social-links button {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    padding-top: 10px;
+    margin-left: 65px;
+}
+
+.userAbout-roles button {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 60px;
+    padding-top: 10px;
+}
+
+.profile-img-and-links input[type="text"] {
+    background: #ECECEC !important;
+    width: 400px !important;
+    height: 50px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 8pt;
+}
+
+.profile-img-and-links label {
+    text-align: left !important;
+}
+
+.ReactModal__Content {
+    padding-left: 100px;
+
+}
+
+.ReactModal__Content h2 {
+    padding-left: -100px !important;
+}
+
+.ReactModal__Content button {
+    margin-top: 50px;
+}
+
+.ReactModal__Content input[type='url'] {
+    background: #ECECEC !important;
+    width: 400px !important;
+    height: 50px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 8pt;
+    margin-right: 20px;
+}
+
+.filterRoles {
+    /* margin-top: 100px !important; */
+    margin-bottom: 100px;
+}
+
+.filterRoles label {
+    padding: 5px;
+}
+
+#lookingFor h3 {
+    margin-top: 25px;
+    margin-bottom : 25px;
+}
+
+.apply-filter-button button {
+   margin-top: 10px;
+   margin-bottom: 10px;
 }

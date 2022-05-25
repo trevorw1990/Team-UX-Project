@@ -69,6 +69,10 @@ export default function ProjectSearchPage({user, setUser}){
     const loaded = () => {
         return (
             <main className='findProject-container'>
+
+            <div>
+                <hr/>
+            </div>
                 
                 <div className='collab-header'>
                     <h1>Find Projects</h1>
