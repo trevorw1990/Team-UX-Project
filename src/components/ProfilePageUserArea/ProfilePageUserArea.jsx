@@ -12,10 +12,10 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
         _id: profileUser._id,
         websiteUrl: profileUser.websiteUrl,
         aboutMe: profileUser.aboutMe,
+        roles: [...profileUser.roles],
     })
     const [ modalIsOpen, setModalIsOpen ] = useState(false);
     const [ modalDisplay, setModalDisplay] = useState(null);
-    const [ userRoles, setUserRoles ] = useState(profileUser.roles);
     const openModal = (evt) => {
         if(evt.target.textContent === 'Edit Social Links'){
             setModalDisplay('Social Links');
@@ -31,6 +31,10 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
 
     const closeModal = (evt) => {
         setModalIsOpen(false)
+        setFormData({
+            ...formData,
+            roles: [...profileUser.roles]
+        })
     }
 
     const handleChange = (evt) => {
@@ -46,6 +50,18 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
             navigate(`/profile/${profileUser._id}`);
         } catch (err) {
             console.error(err);
+        }
+    }
+
+    const addRole = (e, aRole) => {
+        const arr = formData.roles
+        if (e.target.checked) {
+            arr.push(aRole)
+            setFormData({...formData, roles: arr})
+        } else {
+            const indexToDelete = arr.indexOf(aRole)
+            arr.splice(indexToDelete, 1)
+            setFormData({...formData, roles: arr})
         }
     }
 
@@ -135,12 +151,13 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
                                     return(
                                         <div className={`form-column-${index % 3 + 1}`} key={index}>
                                             <label>
-                                                <input type="checkbox" name="roles" checked={userRoles.includes(theRole.role)}/>
+                                                <input type="checkbox" name="roles" checked={formData.roles.includes(theRole.role)} value={theRole.role} onChange={(e) => addRole(e, theRole.role)}/>
                                             {theRole.role}</label>
                                         </div>
                                     )
                                 })
                             }
+                            <button onClick={submitChanges}>Save Changes</button>
                         </div> :
                         <div></div>
                     }
