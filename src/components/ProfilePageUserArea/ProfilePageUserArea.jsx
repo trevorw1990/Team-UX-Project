@@ -178,13 +178,13 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
                         <div>
                             <form onSubmit={handleSubmit}>
                                 <label>Edit Tumblr Link<br/>
-                                    <input type='text' name='tumblrUrl' value={formData.tumblrUrl} onChange={handleChange}/>
+                                    <input type='url' name='tumblrUrl' value={formData.tumblrUrl} onChange={handleChange}/>
                                 </label>
                                 <label>Edit Instagram Link<br/>
-                                    <input type='text' name='instagramUrl' value={formData.instagramUrl} onChange={handleChange}/>
+                                    <input type='url' name='instagramUrl' value={formData.instagramUrl} onChange={handleChange}/>
                                 </label>
                                 <label>Edit Pinterest Link<br/>
-                                    <input type='text' name='pinterestUrl' value={formData.pinterestUrl} onChange={handleChange}/>
+                                    <input type='url' name='pinterestUrl' value={formData.pinterestUrl} onChange={handleChange}/>
                                 </label>
                                 <button type='submit'>Save Changes</button>
                             </form>
