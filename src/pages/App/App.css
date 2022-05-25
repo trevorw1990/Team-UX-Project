@@ -301,6 +301,7 @@ h1 {
     height: 150px;
     border: 1px solid #ECECEC;
     margin-right: 20px;
+    margin-bottom: 20px;
 
 }
 
@@ -319,6 +320,10 @@ h1 {
 }
 
 .teamMember {
+    margin-bottom: 30px;
+}
+
+.teammember-text {
     margin-bottom: 30px;
 }
 

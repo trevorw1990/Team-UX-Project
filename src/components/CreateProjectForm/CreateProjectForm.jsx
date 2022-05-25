@@ -175,10 +175,8 @@ export default function CreateProjectForm({ user, setUser }) {
 
             <button onClick={(e) => {setFormData({ ...formData, isRange: !formData.isRange})}}>{ formData.isRange? 'Or select dates' : 'Or select range' }</button>
 
-            <div>  
-                 <p>Choose a cover image (optional): </p>
-            </div>
-
+            <p>Choose a cover image (optional): </p>
+        
             {/* <div class="image-placeholder">
                 <img src="/images/CreateProject/UploadArrow.png" height="49.5" width="40.91"></img>
                 <h4>Upload Image</h4>
