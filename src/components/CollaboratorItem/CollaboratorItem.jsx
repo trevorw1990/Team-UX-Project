@@ -22,13 +22,13 @@ export default function CollaboratorItem({user,id,website,roles,location,image,n
 
 
                 <div className='collab-col-2'>
-                    <p>Location: {location}</p>
+                    <p><strong>Location: </strong>{location}</p>
 
                     <div className='collab-description'>
-                      <p>{description}</p>
+                      <p><strong>Description:</strong> {description}</p>
                     </div>
 
-                    <ul>
+                    <ul><strong>
                         {
                             roles.map((role,idx) => {
                                 return (
@@ -38,6 +38,7 @@ export default function CollaboratorItem({user,id,website,roles,location,image,n
                                 )
                             })
                         }
+                        </strong>
                     </ul>
 
                     <div>
