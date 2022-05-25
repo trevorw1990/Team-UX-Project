@@ -13,6 +13,9 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
         websiteUrl: profileUser.websiteUrl,
         aboutMe: profileUser.aboutMe,
         roles: [...profileUser.roles],
+        instagramUrl: profileUser.instagramUrl,
+        tumblrUrl: profileUser.tumblrUrl,
+        pinterestUrl: profileUser.pinterestUrl
     })
     const [ modalIsOpen, setModalIsOpen ] = useState(false);
     const [ modalDisplay, setModalDisplay] = useState(null);
@@ -33,7 +36,10 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
         setModalIsOpen(false)
         setFormData({
             ...formData,
-            roles: [...profileUser.roles]
+            roles: [...profileUser.roles],
+            instagramUrl: profileUser.instagramUrl,
+            tumblrUrl: profileUser.tumblrUrl,
+            pinterestUrl: profileUser.pinterestUrl
         })
     }
 
@@ -45,6 +51,16 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
     }
 
     const submitChanges = async () => {
+        try {
+            const updatedUser = await updateUser(formData);
+            navigate(`/profile/${profileUser._id}`);
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
+    const handleSubmit = async (evt) => {
+        evt.preventDefault();
         try {
             const updatedUser = await updateUser(formData);
             navigate(`/profile/${profileUser._id}`);
@@ -78,9 +94,9 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
 
                         <div className="social-links">
                             {edit && <button onClick={openModal}>Edit Social Links</button>}
-                            <a href={profileUser.instagramUrl} target="_blank"><img src= "/images/ProfilePg/instagram-logo.png"/> </a>
-                            <a href={profileUser.pinterestUrl} target="_blank"><img src= "/images/ProfilePg/pinterest-logo.png"/> </a>
-                            <a href={profileUser.tumblrUrl} target="_blank"><img src= "/images/ProfilePg/tumblr-logo.png"/> </a>
+                            <a href={`${profileUser.instagramUrl}`} target="_blank"><img src= "/images/ProfilePg/instagram-logo.png"/> </a>
+                            <a href={`${profileUser.pinterestUrl}`} target="_blank"><img src= "/images/ProfilePg/pinterest-logo.png"/> </a>
+                            <a href={`${profileUser.tumblrUrl}`} target="_blank"><img src= "/images/ProfilePg/tumblr-logo.png"/> </a>
                         </div>
 
                         {!edit ? 
@@ -159,7 +175,20 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
                             }
                             <button onClick={submitChanges}>Save Changes</button>
                         </div> :
-                        <div></div>
+                        <div>
+                            <form onSubmit={handleSubmit}>
+                                <label>Edit Tumblr Link<br/>
+                                    <input type='text' name='tumblrUrl' value={formData.tumblrUrl} onChange={handleChange}/>
+                                </label>
+                                <label>Edit Instagram Link<br/>
+                                    <input type='text' name='instagramUrl' value={formData.instagramUrl} onChange={handleChange}/>
+                                </label>
+                                <label>Edit Pinterest Link<br/>
+                                    <input type='text' name='pinterestUrl' value={formData.pinterestUrl} onChange={handleChange}/>
+                                </label>
+                                <button type='submit'>Save Changes</button>
+                            </form>
+                        </div>
                     }
                     {/* <form onSubmit={handleSubmit}>
                         <label>Email Address <br/>
