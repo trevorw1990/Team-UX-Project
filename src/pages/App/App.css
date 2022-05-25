@@ -946,3 +946,9 @@ textarea {
     border: 1px solid #ECECEC;
     border-radius: 50%;
 }
+
+.loading-screen {
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+}

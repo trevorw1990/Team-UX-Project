@@ -48,7 +48,7 @@ export default function UserEditPage({ user, setUser }){
 
     const loading = () => {
         return (
-            <main className='loading-screen'>
+            <main className='loading-screen container'>
                 <h2>loading</h2>
             </main>
             )
