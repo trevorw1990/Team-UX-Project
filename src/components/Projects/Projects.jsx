@@ -69,16 +69,24 @@ getOneProject()
                 </div>
 
                 <div className="projectPage-container-2">
-                    <div>
-                        <ProjectLookingFor  project={project} user={user} />
+                    <div className="lookingForSection">
+                        <div>
+                            <ProjectLookingFor  project={project} user={user} />
+                        </div>
                     </div>
         
-                    <div>
-                        <ProjectCollaborators project={project} user={user}/>
+                    <div className='collaboratorsSection'>
+                        <div>
+                            <ProjectCollaborators project={project} user={user}/>
+                        </div>
                     </div>
+                </div>
 
-                    <div>
-                        <ProfileCarousel setUser={setUser} user={user} />
+                <div className="projectPage-container-3">
+                    <div className="carouselSection">
+                        <div>
+                            <ProfileCarousel setUser={setUser} user={user} />
+                        </div>
                     </div>
 
                 </div>

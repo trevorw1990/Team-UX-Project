@@ -867,7 +867,7 @@ textarea {
 .projectPage-container-2 {
     margin-left: 404px;
     margin-top: 50px;
-    display: flex;
+    display: block;
 }
 
 .lookingFor-card {
@@ -890,9 +890,25 @@ textarea {
     background: rgba(38, 204, 215, 0.2);
     border: 1px solid #26CCD7;
     color: #26CCD7;
+    height: 44px;
+    width: 160px;
+    border-radius: 8pt;
+    margin-left: 50px;
+    margin-top: 15px;
+    font-family: 'Open Sans';
+    font-style: normal;
 }
 
 .profile-image-upload img{
     border: 2px solid #ECECEC;
     border-radius: 50%;
+}
+
+.lookingFor-header h3 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    color: #ECECEC;
+
 }
