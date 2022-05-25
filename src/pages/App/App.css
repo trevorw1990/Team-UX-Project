@@ -332,6 +332,7 @@ h1 {
     color: #ECECEC;
 }
 
+
 textarea {
     box-sizing: border-box;
     width: 730.78px;
@@ -1021,4 +1022,23 @@ textarea {
     padding: 10px;
     border-radius: 8pt;
     margin-right: 20px;
+}
+
+.filterRoles {
+    /* margin-top: 100px !important; */
+    margin-bottom: 100px;
+}
+
+.filterRoles label {
+    padding: 5px;
+}
+
+#lookingFor h3 {
+    margin-top: 25px;
+    margin-bottom : 25px;
+}
+
+.apply-filter-button button {
+   margin-top: 10px;
+   margin-bottom: 10px;
 }
