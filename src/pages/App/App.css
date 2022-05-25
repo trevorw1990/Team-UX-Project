@@ -954,12 +954,16 @@ textarea {
     vertical-align: center;
 }
 
-.profile-about-and-roles-area input[type="text"] {
+.profile-about-and-roles-area textarea[type="text"] {
     background: #ECECEC;
     width: 400px;
-    height: 100px;
+    height: 200px;
     text-align: left;
     border-radius: 8pt;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-top: 20px;
+    padding: 10px;
 }
 
 .profile-about-and-roles-area label {
@@ -970,9 +974,10 @@ textarea {
 .social-links button {
     display: flex;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     padding-left: 35px;
     padding-top: 10px;
+    margin-left: 65px;
 }
 
 .userAbout-roles button {

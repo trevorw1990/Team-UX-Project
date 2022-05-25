@@ -117,7 +117,7 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
                     {!edit ? 
                         <div className='userAbout-text'>{profileUser.aboutMe}</div> :
                         <label>Edit Bio<br/>
-                            <input type='text' name='aboutMe' value={formData.aboutMe} onChange={handleChange}/>
+                            <textarea type='text' name='aboutMe' wrap='soft' value={formData.aboutMe} onChange={handleChange}/>
                         </label>
                     }
 
