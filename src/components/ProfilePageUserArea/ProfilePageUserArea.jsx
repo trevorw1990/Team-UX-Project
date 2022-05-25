@@ -93,17 +93,19 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
                         <img src={profileUser.profileImageUrl} alt='profileImg'/>
 
                         <div className="social-links">
-                            {edit && <button onClick={openModal}>Edit Social Links</button>}
+                            
                             <a href={`${profileUser.instagramUrl}`} target="_blank"><img src= "/images/ProfilePg/instagram-logo.png"/> </a>
                             <a href={`${profileUser.pinterestUrl}`} target="_blank"><img src= "/images/ProfilePg/pinterest-logo.png"/> </a>
                             <a href={`${profileUser.tumblrUrl}`} target="_blank"><img src= "/images/ProfilePg/tumblr-logo.png"/> </a>
+                            {edit && <button onClick={openModal}>Edit Social Links</button>}
+                        
                         </div>
 
                         {!edit ? 
                             <div className='userURL'>
                                 <a href={profileUser.websiteUrl} target="_blank">{profileUser.websiteUrl}</a>
                             </div> :
-                            <label>Change Website URL<br/>
+                            <label>Change Website URL
                                 <input type='text' name='websiteUrl' value={formData.websiteUrl} onChange={handleChange}/>
                             </label>
                         }

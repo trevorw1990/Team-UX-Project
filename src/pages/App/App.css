@@ -550,6 +550,7 @@ textarea {
     margin-bottom: 20px;
 }
 
+
 .userAbout-roles ul {
     text-align: left !important;
 }
@@ -951,4 +952,46 @@ textarea {
     display: flex;
     align-items: center;
     vertical-align: center;
+}
+
+.profile-about-and-roles-area input[type="text"] {
+    background: #ECECEC;
+    width: 400px;
+    height: 100px;
+    text-align: left;
+    border-radius: 8pt;
+}
+
+.profile-about-and-roles-area label {
+    text-align: left !important;
+    padding-bottom: 20px !important;
+}
+
+.social-links button {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    padding-top: 10px;
+}
+
+.userAbout-roles button {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 60px;
+    padding-top: 10px;
+}
+
+.profile-img-and-links input[type="text"] {
+    background: #ECECEC !important;
+    width: 400px !important;
+    height: 50px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 8pt;
+}
+
+.profile-img-and-links label {
+    text-align: left !important;
 }

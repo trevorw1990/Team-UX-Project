@@ -48,10 +48,6 @@ export default function CollaboratorItem({user,id,website,roles,location,image,n
                 
             
             <div className='collab-col-3'>
-                
-                
-                
-
                 <div>
                     {instagram && <a href={instagram}>insta</a>}
                     {pinterest && <a href={pinterest}>pinterest</a>}
