@@ -327,8 +327,7 @@ h1 {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 16px;
     align-items: center;
     color: #ECECEC;
 }
@@ -999,4 +998,17 @@ textarea {
 
 .profile-img-and-links label {
     text-align: left !important;
+}
+
+.ReactModal__Content {
+    padding-left: 100px;
+
+}
+
+.ReactModal__Content h2 {
+    padding-left: -100px !important;
+}
+
+.ReactModal__Content button {
+    margin-top: 50px;
 }
