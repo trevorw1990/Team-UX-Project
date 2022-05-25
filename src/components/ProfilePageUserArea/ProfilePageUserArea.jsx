@@ -140,7 +140,7 @@ export default function ProfilePageUserArea({ user, profileUser, edit }) {
 
                 </div>
 
-                <button onClick={submitChanges}>Save Changes</button>
+                {edit && <button onClick={submitChanges}>Save Changes</button>}
 
 
             </div>
