@@ -1,8 +1,13 @@
 # General Assembly SEI Team Two Collaborative UX Project
 
+## [Heroku Link](https://project-connect-team.herokuapp.com/)
+
+## [GitHub Link](https://github.com/mosesb1/Team-UX-Project/)
+
 ## Welcome to Project Connect
 
-*What is Project Connect?*
+*What is Project Connect?* <br />
+
 Project Connect is an application designed to unite creative minds and artistic souls. Users establish a profile and have the ability to share projects seeking collaboration. In addition, users may connect one-on-one via the messaging resource.
 
 This application was conceptualized and developed by General Assembly students in April/May 2022. It is a collaborative project designed and built by UX design and software engineering students for educational purposes. The following individuals contributed to this project:
@@ -18,10 +23,6 @@ Jonathan Suarez (Backend) - https://github.com/jonsuarez92 <br />
 Kajsa Brown (UX Designer) - https://www.kajsabrown.com/ <br />
 Austin O'Brien (UX Designer) - https://www.obrienmakes.com/ <br />
 <img />
-
-## [Heroku Link](https://project-connect-team.herokuapp.com/)
-
-## [Github Link](https://github.com/mosesb1/Team-UX-Project/)
 
 ## Installation
 This is a cloud-based application that does not require installation. 
@@ -49,8 +50,7 @@ This is a cloud-based application that does not require installation.
 * Cloudinary
 * Heroku
 * Postman
-* Canvas
-
+* Canva
 
 ## Project Management
 Development of this application was managed using a Trello board and communicating via Slack. <br />
@@ -61,8 +61,5 @@ Development of this application was managed using a Trello board and communicati
 * E-mail reset and password change
 * Deleting/editing an existing project
 
-*Credits*
-
-
-
-
+## Credits
+* This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
