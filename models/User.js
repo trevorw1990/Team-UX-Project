@@ -17,15 +17,18 @@ const userSchema = new Schema({
     password: {
         type: String,
         trim: true,
-        minLength: 3,
+        minLength: 6,
         required: true
     },
     country: { type: String, required: true },
     usState: { type: String, required: true },
-    zipCode: { type: String, required: true },
+    zipCode: { type: String },
     roles: Array,
     keywordTags: Array,
-    profileImageUrl: String,
+    profileImageUrl: {
+        type: String, 
+        default: '/images/ProfilePg/account_circle.png' },
+    profileCarousel: Array,
     aboutMe: String,
     websiteUrl: String,
     instagramUrl: String,

@@ -4,9 +4,16 @@ import HomePage from '../Homepage/Homepage';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 import AuthPage from '../AuthPage/AuthPage';
-import { getUser } from '../../utilities/api/users/users-service'
-
-
+import { getUser } from '../../utilities/api/users/users-service';
+import ProfilePage from '../ProfilePage/ProfilePage';
+import CreateProject from '../CreateProject/CreateProject';
+import About from '../About/About';
+import ProjectPage from '../ProjectPage/ProjectPage';
+import Inbox from '../Inbox/Inbox';
+import CollaboratorSearchPage from '../CollaboratorSearchPage/CollaboratorSearchPage';
+import ProjectSearchPage from '../ProjectSearchPage/ProjectSearchPage';
+import UserEditPage from '../UserEditPage/UserEditPage';
+import './App.css';
 export default function App() {
   const [ user, setUser ] = useState(null)
 
@@ -25,8 +32,22 @@ export default function App() {
         <Route path='/signup' element={<AuthPage user={user} setUser={setUser} />}/>
     
         <Route path='/' element={<HomePage user={user} setUser={setUser} />} />
-  
 
+        <Route path='/profile/edit/:id' element={<UserEditPage user={user} setUser={setUser}/>}/>
+       
+        <Route path="/profile/:id" element={<ProfilePage user={user} setUser={setUser} />}/>
+    
+        <Route path='/create-project' element={<CreateProject user={user} setUser={setUser} />}/>
+
+        <Route path='/about' element={<About />}/>
+          
+        <Route path='/projects/:id' element={<ProjectPage user={user} setUser={setUser}/>} />
+
+        <Route path='/collaborators' element={<CollaboratorSearchPage user={user} setUser={setUser}/>} />
+
+        <Route path='/find-projects' element={<ProjectSearchPage user={user} setUser={setUser}/>}/>
+
+        <Route path='/inbox' element={<Inbox user={user} setUser={setUser} />} />
 
      </Routes>
 

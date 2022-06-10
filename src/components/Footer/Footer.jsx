@@ -1,3 +1,5 @@
+import "./Footer.css"
+import { Link } from "react-router-dom";
 
 export default function Footer(props) {
     return (
@@ -6,13 +8,13 @@ export default function Footer(props) {
                 Settings 
             </button>
             <button>
-                FAQ 
+                <Link to='/about'>About</Link>
             </button>
             <button>
                 Support 
             </button>
             <button>
-                2022 
+                &copy;2022 
             </button>
         </div>
     )

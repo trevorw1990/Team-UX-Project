@@ -1,27 +1,70 @@
-
 const Message = require('../../models/Message');
+const MessageThread = require('../../models/MessageThread');
 
 //get 
 
-const getMessage = (req,res)=>{
-    Message.find({}, (err, foundMessage) => {
+const getSendMessage = (req,res)=>{
+    Message.find({sender: req.params.userId }, (err, foundMessage) => {
         if (!err) {
           res.status(200).json(foundMessage)
         } else {
           res.status(400).json(err)
         }
       })
+} 
+
+const getReceiveMessage = (req,res)=>{
+  Message.find({receiver: req.params.userId }, (err, foundMessage) => {
+      if (!err) {
+        res.status(200).json(foundMessage)
+      } else {
+        res.status(400).json(err)
+      }
+    })
+}
+
+const getMessagesByUser = (req,res)=>{
+  Message.find({$or: [{receiver: req.params.userId}, {sender: req.params.userId}] }, (err, foundMessages) => {
+      if (!err) {
+        res.status(200).json(foundMessages)
+      } else {
+        res.status(400).json(err)
+      }
+    })
+}
+
+const getUnreadMessages = (req,res) => {
+  Message.find({receiver: req.params.userId, isRead: "false"}, (err, foundMessages) => {
+    if(err){
+      res.status(400).json(err);
+    } else {
+      res.status(200).json({count: foundMessages.length});
+    }
+  })
 }
 //set message
 
-const setMessage = async (req,res)=>{
-    try {
-        const { body } = req
-        const createdMessage = await Message.create(body)
-        res.status(200).json({ message: "message sent", createdMessage })
-    } catch (error) {
-        res.status(400).json({ err: error.message })
+const setMessage = (req,res) => {
+  Message.create(req.body, (err, createdMessage) => {
+    if(err){
+      res.status(400).json(err);
+    } else {
+      MessageThread.findByIdAndUpdate(req.params.threadId, {$addToSet: {messages: createdMessage}}, {returnDocument: 'after'}, (threadErr, updatedThread) => {
+        if(err){
+          res.status(400).json(threadErr)
+        } else {
+          res.status(200).json(updatedThread);
+        }
+      })
     }
+  })
+    // try {
+    //     const { body } = req
+    //     const createdMessage = await Message.create(body)
+    //     res.status(200).json({ message: "message sent", createdMessage })
+    // } catch (error) {
+    //     res.status(400).json({ err: error.message })
+    // }
 }
 
 
@@ -60,7 +103,10 @@ const showMessage= (req,res)=>{
 }
 
 module.exports = {
-    getMessage,
+    getSendMessage,
+    getReceiveMessage,
+    getMessagesByUser,
+    getUnreadMessages,
     setMessage,
     updateMessage,
     deleteMessage,

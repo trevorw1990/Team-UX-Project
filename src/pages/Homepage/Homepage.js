@@ -1,6 +1,6 @@
-import  NavBar from "../../components/NavBar/NavBar"
-import Footer from "../../components/Footer/Footer"
 
+import { Link } from "react-router-dom";
+import "../App/App.css"
 export default function HomePage(){
    
 
@@ -8,12 +8,21 @@ export default function HomePage(){
     return(
         <main>
             
-
-            <div className="homepage-images">
-                <img src="/images/homepage/Home-Page-Left-Image.png"  alt="left image"/>
-                <img src="/images/homepage/Home-Page-Center-Image.png"  alt="center image"/>
-                <img src="/images/homepage/Home-Page-Right-Image.png"  alt="right image"/>
+            <div>
+                <hr/>
             </div>
+
+            <div className="container">
+                <div id="logo-image">
+                    <img src="/images/homepage/hmpg_img2.png" />
+                </div>
+
+                <div className="centered">
+                    <h1>Find Collaborators for Your Next Project</h1>
+                    <Link to='/signup'><button>Sign Up for Free</button></Link>
+                </div>
+            </div>
+
 
             
         </main>

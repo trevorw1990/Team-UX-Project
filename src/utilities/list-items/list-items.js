@@ -1,4 +1,5 @@
 export const statesList = [
+    {label: '', value: ''},
     {label: 'Alabama', value: 'Alabama'},
     {label: 'Alaska', value: 'Alaska'},
     {label: 'Arizona', value: 'Arizona'},
@@ -11,7 +12,8 @@ export const statesList = [
     {label: 'Georgia', value: 'Georgia'},
     {label: 'Hawaii', value: 'Hawaii'},
     {label: 'Idaho', value: 'Idaho'},
-    {label: 'IllinoisIndiana', value: 'IllinoisIndiana'},
+    {label: 'Illinois', value: 'Illinois'},
+    {label: 'Indiana', value: 'Indiana'},
     {label: 'Iowa', value: 'Iowa'},
     {label: 'Kansas', value: 'Kansas'},
     {label: 'Kentucky', value: 'Kentucky'},
@@ -23,7 +25,8 @@ export const statesList = [
     {label: 'Minnesota', value: 'Minnesota'},
     {label: 'Mississippi', value: 'Mississippi'},
     {label: 'Missouri', value: 'Missouri'},
-    {label: 'MontanaNebraska', value: 'MontanaNebraska'},
+    {label: 'Montana', value: 'Montana'},
+    {label: 'Nebraska', value: 'Nebraska'},
     {label: 'Nevada', value: 'Nevada'},
     {label: 'New Hampshire', value: 'New Hampshire'},
     {label: 'New Jersey', value: 'New Jersey'},
@@ -34,7 +37,8 @@ export const statesList = [
     {label: 'Ohio', value: 'Ohio'},
     {label: 'Oklahoma', value: 'Oklahoma'},
     {label: 'Oregon', value: 'Oregon'},
-    {label: 'PennsylvaniaRhode Island', value: 'PennsylvaniaRhode Island'},
+    {label: 'Pennsylvania', value: 'Pennsylvania'},
+    {label: 'Rhode Island', value: 'Rhode Island'},
     {label: 'South Carolina', value: 'South Carolina'},
     {label: 'South Dakota', value: 'South Dakota'},
     {label: 'Tennessee', value: 'Tennessee'},
@@ -48,24 +52,24 @@ export const statesList = [
     {label: 'Wyoming', value: 'Wyoming'}
   ]
 
-export const artistRoles = [
+export const artistRoles=[
     {role: "Photographer"},
-    {role: "Artist"},
-    {role: "Costume Maker"},
     {role: "Model"},
-    {role: "Painter"},
-    {role: "Photo Retoucher"},
     {role: "Make Up Artist"},
-    {role: "Illustrator"},
-    {role: "Prop Maker"},
-    {role: "Hairstylist"},
-    {role: "Digitar Artist"},
-    {role: "Actor"},
+    {role: "Hair Stylist"},
     {role: "Wardrobe Stylist"},
-    {role: "Graphic Designer"},
-    {role: "Videographer"},
     {role: "Fashion Designer"},
+    {role: "Artist"},
+    {role: "Painter"},
+    {role: "Illustrator"},
+    {role: "Digital Artist"},
+    {role: "Graphic Designer"},
     {role: "Performer"},
-    {role: "Filmaker"},
-    {role: "other"}
-]
+    {role: "Costume Maker"},
+    {role: "Photo Retoucher"},
+    {role: "Prop Maker"},
+    {role: "Actor"},
+    {role: "Videographer"},
+    {role: "Film Maker"},
+    {role: "Other"}
+  ]

@@ -2,17 +2,10 @@ import { login, logout } from '../../utilities/api/users/users-service'
 import Modal from 'react-modal'
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import './NavBar.css'
+import '../../pages/App/App.css'
+import { getUnreadMessages } from '../../utilities/api/messages/messages-api'
 
-const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-}
 
 export default function NavBar({ user, setUser }){
     let subtitle;
@@ -22,6 +15,7 @@ export default function NavBar({ user, setUser }){
         password: ''
     })
     const [ render, setRender ] = useState(false)
+    const [unread, setUnread] = useState(null);
     let navigate = useNavigate()
 
     function openModal() {
@@ -37,6 +31,8 @@ export default function NavBar({ user, setUser }){
         setIsOpen(false)
     }
 
+
+
     const handleChange = (event) => {
         setFormData({...formData, [event.target.name]: event.target.value})
     }
@@ -46,7 +42,7 @@ export default function NavBar({ user, setUser }){
         try {
             const user = await login(formData)
             setUser(user)
-            navigate('/')
+            navigate(`/profile/${user._id}`)
             closeModal()
         } catch (error) {
             console.log(error)
@@ -58,58 +54,84 @@ export default function NavBar({ user, setUser }){
         setUser(null)
     }
 
+    const getUnread = async () => {
+        try {
+            const unreadCount = await getUnreadMessages(user._id);
+            setUnread(unreadCount.count);
+        } catch (err){
+            console.error(err);
+        }
+    }
+
+    useEffect(() => {
+        if(!user) return;
+        getUnread();
+    },[])
+
     const loginNav = () => {
         return (
-            <div className='navBar'>
-
-                <button className='navbar-logo'>
-                    <img src='/images/Logo/Project-Connect.png' alt='ProjectConnect'/> 
-                </button>
-
-                <div className='user-navbar-buttons'>
-                    <button onClick={openModal}>Log In</button>
-                    <button>
-                        <Link to='/signup'>Sign Up</Link>
-                    </button>
+            <div className='navBar' >   
+                <div id="navBar-logo">
+                    <Link to='/' >
+                    <img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="150px"/>
+                    </Link>
                 </div>
 
-                <Modal
+                <div className='user-navbar-buttons'>
+                    <div className='userNavButton'>
+                        <button onClick={openModal}>Log In</button>
+                        <button id="signUpButton">
+                            <Link to='/signup'>Sign Up</Link>
+                        </button>
+                    </div>
+                </div>
+               
+                <Modal className='nav-bar-modal fade-in'
                     isOpen={modalIsOpen}
                     onAfterOpen={afterOpenModal}
                     onRequestClose={closeModal}
-                    style={customStyles}
+                    // style={customStyles}
                     contentLabel='Log In Modal'
                     >
-                    <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Log into your Project Connect account</h2>
+                    <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Log in to your Project Connect account</h2>
                     <form onSubmit={handleSubmit}>
-                        <label>Email Adress
-                            <input type='email' name='email' onChange={handleChange}/>
+                        <label>Email Address <br/>
+                            <input type='email' name='email' onChange={handleChange}/><br/>
                         </label>
-                        <label>Password
+                        <br/>
+                        <label>Password<br/>
                             <input type='password' name='password' onChange={handleChange}/>
                         </label>
-                        <button type='submit'>Log In</button>
-                        <div>Don't have an account?<Link to='/signup'>Sign Up</Link></div>
+                        <div className='login-form-button'>
+                            <button type='submit'>Log In</button>
+                            <div>Don't have an account? <Link to='/signup' onClick={closeModal}>Sign Up</Link></div>
+                        </div>
                     </form>
                 </Modal>
-                
+
             </div>
         )
     }
 
     const userNav = () => {
         return (
-            <div className='navBar'>
-                <button className='navbar-logo'>
-                        <img src='/images/Logo/Project-Connect.png' alt='ProjectConnect'/> 
-                </button>
+            <div className='navBar' >   
+                <div id="navBar-logo">
+                    <Link to='/' ><img src='/images/Logo/project_logo.png' alt='ProjectConnect' height="300px"/></Link>
+                </div>
 
                 <div className='user-navbar-links'>
                     <Link to ='/find-projects'>Find Projects</Link>
                     <Link to ='/collaborators'>Find Collaborators</Link>
-                    <Link to ='/new-project'>Create Projects</Link>
+                    <Link to ='/create-project'>Create Project</Link>
                     <Link to ='/' onClick={(e) => {logOut()}}>Log Out</Link>
-                    <Link to ='/inbox'><ion-icon name='mail-outline'></ion-icon></Link>
+                </div>
+
+                <div className='user-navbar-right'> 
+                    <Link to ='/inbox'><ion-icon color={unread ? "red" : ""} name='mail-outline'></ion-icon></Link>
+                        <Link to ={`/profile/${user._id}`}>
+                            <img className='profile-image-navbar' src={user.profileImageUrl} alt='profile-image' />
+                    </Link>
                 </div>
             </div>
         )
